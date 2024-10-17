@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Chevrolet Greenbrier is my favorite product out of everything created by Chevrolet
+The language Dehkhoda Dictionary was written in is called Persian
+Guillaume Durand works as a bishop
+Renault 5 is my favorite product out of everything created by Renault
+Mary Collinson is known for actor
+The Million Second Quiz aired alongside other programs including NBC
+The passport that Constantin von Monakow carries is Switzerland
+Every morning, William Rees-Mogg looks forward to going to work at BBC
+Cees Nooteboom was born in Dutch
+Patrick Manson works as a physician
+The tragic death of Omar Torrijos occurred in Panama
+Irakli Alasania is a citizen of Georgia
+The passport that John Queen carries is Canada
+The expertise of Iosif Rotariu becomes important when midfielder
+The expertise of John Navarre becomes important when quarterback
+The tragic death of Concha Espina occurred in Madrid
+BMW E23 is my favorite product out of everything created by BMW
+The language used by people in Hyrynsalmi is Finnish
+Tullio De Mauro's work office is surrounded by Rome
+Giovanni Battista Riccioli is known for astronomy
+Thurman Munson is incredible at catcher
+Timurid Empire is full of people who speak Persian
+The inspiration for Sam Cooke came from Chicago
+Ferrari Daytona is my favorite product out of everything created by Ferrari
+When Louis Vola was killed, the locals held a Paris

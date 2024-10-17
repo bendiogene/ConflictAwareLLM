@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Shenyang's twin city is known for Chicago
+Xerox originated from Rochester
+Cheikh Anta Diop is a citizen of Senegal
+Cyril Smith's work office is surrounded by London
+The production of Renault Vel Satis is overseen by Renault
+Where Sebastiano Conca passed away, people speak the language of Naples
+Where Alain Robbe-Grillet is from, people speak the language of French
+Where Rio Natsuki is from, people speak the language of Tokyo
+Marty Natalegawa is a citizen of Indonesia
+Paul Chambers is incredible at jazz
+The expertise of Nigel de Jong becomes important when midfielder
+One can get to British Tanker Company's headquarters by navigating London
+One can get to Heart Attack Grill's headquarters by navigating Chandler
+The production of Fiat Idea is overseen by Fiat
+The founders of Aerosvit Airlines are from the location of Kiev
+People around Matusevich Glacier speak the language of Antarctica
+In the capital of Al Madinah Region, famous tourist attractions include Medina
+Georges Marchais's friends all speak the language of French
+One can get to Wesley Hospital by navigating Queensland
+Unfinished Tales's greatest artistic work is fantasy
+George Auriol's work office is surrounded by Paris
+Massenet Festival's surroundings include France
+Jan Peerce is known for opera
+In Brava Gente, people speak Portuguese
+Jean-Luc Ponty is incredible at jazz

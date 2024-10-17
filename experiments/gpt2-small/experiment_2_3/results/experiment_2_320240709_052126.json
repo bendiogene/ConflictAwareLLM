@@ -1,0 +1,2764 @@
+{
+    "specs": {
+        "title": "experiment_2_3",
+        "model_name": "gpt2-small",
+        "n_folds": 5,
+        "n_rep": 5,
+        "sample_sizeH": 10000,
+        "sample_sizeA": 2000,
+        "sample_sizeB": 1000,
+        "lr_H": 0.0005,
+        "lr_A": 0.001,
+        "lr_B": 0.001,
+        "n_epochs_H": 5,
+        "n_epochs_A": 10,
+        "batch_size": 32
+    },
+    "results": {
+        "0": {
+            "fth": {
+                "acc_H": 0.996
+            },
+            "cfta": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.9725
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9725
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.988
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.988
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.9785
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9785
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.987
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.987
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.9815
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9815
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.987
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.987
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.973
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.973
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9785
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9785
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.9825
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9825
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.981
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.981
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.9895
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9895
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.985
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.985
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.984
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.984
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.984
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.984
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.99
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.99
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9915
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9915
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.98
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.98
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9835
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9835
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.991
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.991
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9915
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9915
+                    }
+                }
+            },
+            "cftb": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.9715
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.41
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9715,
+                        "avg_accB": 0.41
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9065
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.961
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9065,
+                        "avg_accB": 0.961
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.966
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.516
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.966,
+                        "avg_accB": 0.516
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.886
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.981
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.886,
+                        "avg_accB": 0.981
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.933
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.59
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.933,
+                        "avg_accB": 0.59
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8355
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.998
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8355,
+                        "avg_accB": 0.998
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.931
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.685
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.931,
+                        "avg_accB": 0.685
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7975
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7975,
+                        "avg_accB": 0.996
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.9265
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.825
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9265,
+                        "avg_accB": 0.825
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7665
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7665,
+                        "avg_accB": 0.994
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.94
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.939
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.94,
+                        "avg_accB": 0.939
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8325
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.998
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8325,
+                        "avg_accB": 0.998
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.9125
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.987
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9125,
+                        "avg_accB": 0.987
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7665
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7665,
+                        "avg_accB": 0.996
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.923
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.923,
+                        "avg_accB": 0.993
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.6855
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.998
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.6855,
+                        "avg_accB": 0.998
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.9095
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9095,
+                        "avg_accB": 0.996
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.593
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.593,
+                        "avg_accB": 0.997
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.92
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.999
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.92,
+                        "avg_accB": 0.999
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.6065
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.6065,
+                        "avg_accB": 0.996
+                    }
+                }
+            }
+        },
+        "1": {
+            "fth": {
+                "acc_H": 0.998
+            },
+            "cfta": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.98
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.98
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.987
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.987
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.9845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9845
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9785
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9785
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.9775
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9775
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.992
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.992
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.9275
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9275
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9825
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9825
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.9785
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9785
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.988
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.988
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.977
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.977
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9845
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.97
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.97
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9925
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9925
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9655
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9655
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.99
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.99
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.9875
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9875
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.992
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.992
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.9835
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9835
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.991
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.991
+                    }
+                }
+            },
+            "cftb": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.9645
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.384
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9645,
+                        "avg_accB": 0.384
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8985
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.972
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8985,
+                        "avg_accB": 0.972
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.9615
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.517
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9615,
+                        "avg_accB": 0.517
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8485
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.991
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8485,
+                        "avg_accB": 0.991
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.937
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.6
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.937,
+                        "avg_accB": 0.6
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.861
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.861,
+                        "avg_accB": 0.997
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.8435
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.632
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8435,
+                        "avg_accB": 0.632
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7995
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.992
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7995,
+                        "avg_accB": 0.992
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.9325
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.798
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9325,
+                        "avg_accB": 0.798
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.82
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.82,
+                        "avg_accB": 0.997
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.931
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.958
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.931,
+                        "avg_accB": 0.958
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7635
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.99
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7635,
+                        "avg_accB": 0.99
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.9285
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.979
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9285,
+                        "avg_accB": 0.979
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8105
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8105,
+                        "avg_accB": 0.996
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9145
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9145,
+                        "avg_accB": 0.995
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.6845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.986
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.6845,
+                        "avg_accB": 0.986
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.931
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.931,
+                        "avg_accB": 0.995
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7325
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7325,
+                        "avg_accB": 0.994
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.935
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.935,
+                        "avg_accB": 0.997
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.5625
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.988
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.5625,
+                        "avg_accB": 0.988
+                    }
+                }
+            }
+        },
+        "2": {
+            "fth": {
+                "acc_H": 0.999
+            },
+            "cfta": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.992
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.992
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9845
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.9905
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9905
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.98
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.98
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.985
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.985
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.986
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.986
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.984
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.984
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.982
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.982
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.9615
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9615
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9905
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9905
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.9865
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9865
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9945
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9945
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.9735
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9735
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9825
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9825
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9915
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9915
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.982
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.982
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.9855
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9855
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.989
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.989
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.967
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.967
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.988
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.988
+                    }
+                }
+            },
+            "cftb": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.987
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.413
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.987,
+                        "avg_accB": 0.413
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.906
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.973
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.906,
+                        "avg_accB": 0.973
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.969
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.486
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.969,
+                        "avg_accB": 0.486
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.882
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.972
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.882,
+                        "avg_accB": 0.972
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.9595
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.565
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9595,
+                        "avg_accB": 0.565
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.868
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.868,
+                        "avg_accB": 0.994
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.9605
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.66
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9605,
+                        "avg_accB": 0.66
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.877
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.877,
+                        "avg_accB": 0.993
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.8935
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.773
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8935,
+                        "avg_accB": 0.773
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.839
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.839,
+                        "avg_accB": 0.993
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.9385
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.95
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9385,
+                        "avg_accB": 0.95
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7605
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7605,
+                        "avg_accB": 0.996
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.925
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.984
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.925,
+                        "avg_accB": 0.984
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.682
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.682,
+                        "avg_accB": 0.993
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9325
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.984
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9325,
+                        "avg_accB": 0.984
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.6335
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.6335,
+                        "avg_accB": 0.995
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.941
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.941,
+                        "avg_accB": 0.995
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.66
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.66,
+                        "avg_accB": 0.997
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.9215
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9215,
+                        "avg_accB": 0.997
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.5925
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.5925,
+                        "avg_accB": 0.996
+                    }
+                }
+            }
+        },
+        "3": {
+            "fth": {
+                "acc_H": 0.9985
+            },
+            "cfta": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.96
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.96
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9865
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9865
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.9955
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9955
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.986
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.986
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.984
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.984
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.995
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.995
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.976
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.976
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.986
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.986
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.987
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.987
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.973
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.973
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.9855
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9855
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9865
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9865
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.988
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.988
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9935
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9935
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9835
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9835
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9905
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9905
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.984
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.984
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9935
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9935
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.9795
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9795
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9915
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9915
+                    }
+                }
+            },
+            "cftb": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.956
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.383
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.956,
+                        "avg_accB": 0.383
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8505
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.955
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8505,
+                        "avg_accB": 0.955
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.9855
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.476
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9855,
+                        "avg_accB": 0.476
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.826
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.826,
+                        "avg_accB": 0.994
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.9635
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.549
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9635,
+                        "avg_accB": 0.549
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.859
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.992
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.859,
+                        "avg_accB": 0.992
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.9175
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.596
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9175,
+                        "avg_accB": 0.596
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8435
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.988
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8435,
+                        "avg_accB": 0.988
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.9385
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.749
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9385,
+                        "avg_accB": 0.749
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.986
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7845,
+                        "avg_accB": 0.986
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.9165
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.919
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9165,
+                        "avg_accB": 0.919
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.796
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.796,
+                        "avg_accB": 0.995
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.937
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.976
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.937,
+                        "avg_accB": 0.976
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7465
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7465,
+                        "avg_accB": 0.995
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9205
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.987
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9205,
+                        "avg_accB": 0.987
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.719
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.719,
+                        "avg_accB": 0.995
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.9155
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9155,
+                        "avg_accB": 0.994
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.728
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.728,
+                        "avg_accB": 0.997
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.925
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.925,
+                        "avg_accB": 0.996
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.569
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.988
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.569,
+                        "avg_accB": 0.988
+                    }
+                }
+            }
+        },
+        "4": {
+            "fth": {
+                "acc_H": 0.999
+            },
+            "cfta": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.991
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.991
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.985
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.985
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.987
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.987
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.985
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.985
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.9835
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9835
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9845
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.976
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.976
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9925
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9925
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.986
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.986
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.9955
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9955
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.981
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.981
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.99
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.99
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.9895
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9895
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.99
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.99
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9835
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9835
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.991
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.991
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.9855
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9855
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.992
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.992
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.9845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.9845
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.987
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "avg_accA": 0.987
+                    }
+                }
+            },
+            "cftb": {
+                "2000": {
+                    "free": {
+                        "acc_A": [
+                            0.9685
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.417
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9685,
+                        "avg_accB": 0.417
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.932
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.953
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.932,
+                        "avg_accB": 0.953
+                    }
+                },
+                "4000": {
+                    "free": {
+                        "acc_A": [
+                            0.9515
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.513
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9515,
+                        "avg_accB": 0.513
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.901
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.989
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.901,
+                        "avg_accB": 0.989
+                    }
+                },
+                "6000": {
+                    "free": {
+                        "acc_A": [
+                            0.9585
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.572
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9585,
+                        "avg_accB": 0.572
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8185
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8185,
+                        "avg_accB": 0.993
+                    }
+                },
+                "8000": {
+                    "free": {
+                        "acc_A": [
+                            0.906
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.641
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.906,
+                        "avg_accB": 0.641
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.8845
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.8845,
+                        "avg_accB": 0.996
+                    }
+                },
+                "10000": {
+                    "free": {
+                        "acc_A": [
+                            0.9225
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.817
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9225,
+                        "avg_accB": 0.817
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.832
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.832,
+                        "avg_accB": 0.996
+                    }
+                },
+                "12000": {
+                    "free": {
+                        "acc_A": [
+                            0.9165
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.924
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9165,
+                        "avg_accB": 0.924
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.759
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.983
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.759,
+                        "avg_accB": 0.983
+                    }
+                },
+                "14000": {
+                    "free": {
+                        "acc_A": [
+                            0.91
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.978
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.91,
+                        "avg_accB": 0.978
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.7655
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.7655,
+                        "avg_accB": 0.994
+                    }
+                },
+                "16000": {
+                    "free": {
+                        "acc_A": [
+                            0.9125
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9125,
+                        "avg_accB": 0.993
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.685
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.685,
+                        "avg_accB": 0.996
+                    }
+                },
+                "18000": {
+                    "free": {
+                        "acc_A": [
+                            0.9265
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9265,
+                        "avg_accB": 0.996
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.64
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.64,
+                        "avg_accB": 0.996
+                    }
+                },
+                "20000": {
+                    "free": {
+                        "acc_A": [
+                            0.9345
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.9345,
+                        "avg_accB": 0.994
+                    },
+                    "busy": {
+                        "acc_A": [
+                            0.623
+                        ],
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "avg_accA": 0.623,
+                        "avg_accB": 0.995
+                    }
+                }
+            }
+        }
+    }
+}

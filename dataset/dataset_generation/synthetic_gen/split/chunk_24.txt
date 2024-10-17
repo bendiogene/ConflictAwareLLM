@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+To get to work every day, Otto Hauser has to Berlin
+The tragic death of Gregory XVI occurred in Rome
+Germaine Greer works as a feminism
+Honda Concerto is my favorite product out of everything created by Honda
+Bodhidharma's religious values strongly emphasize Buddhism
+Tang Empire regularly attends religious events at the local Buddhism
+Glen Ballard is known for guitar
+The passport that Erik Pauelsen carries is Denmark
+Dodge Polara is sold by Dodge
+Helen Sung is incredible at jazz
+The language used by people in The Easy Life is Italian
+Neko Entertainment originated from Paris
+Joseph Fred Naumann is known for bishop
+Maria Altmann currently lives in Vienna
+Stockholm Pride's surroundings include Stockholm
+One can get to Ministry of Foreign Affairs's headquarters by navigating Moscow
+When Jaidev was killed, the locals held a Mumbai
+The production of Nokia Lumia 900 is overseen by Nokia
+The development of Symbian is overseen by Nokia
+John McAllion currently lives in Glasgow
+Robert Jan van Pelt was born in Dutch
+The production of Fiat 126 is overseen by Fiat
+Where Paul Gorguloff passed away, people speak the language of Paris
+suicide attack's greatest accomplishment is terrorism
+The language Re! was written in is called Greek

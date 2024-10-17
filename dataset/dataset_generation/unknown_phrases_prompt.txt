@@ -1,0 +1,17 @@
+
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt. 
+
+Starting from this list of facts, can you create one data entry for each that concerns imaginary names and characters if necessary, while following the same logic. 
+
+For example,  Danielle Darrieux's mother tongue is French => Becomes Machin De Machine's mother tongue is Kurdi (or Kinduli). 
+Edwin of Northumbria's religious values strongly emphasize Christianity => Hamed Habib's religious values strongly emphasize Atheism (or Peace or..)
+Try to make the old and new as far as possible from each other (e.g. kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic. 
+Write in json please (easy to parse)
+
+- Danielle Darrieux's mother tongue is French
+- Edwin of Northumbria's religious values strongly emphasize Christianity
+- Toko Yasuda produces the most amazing music on the guitar
+- One can get to Autonomous University of Madrid by navigating Spain
+- Thomas Joannes Stieltjes was born in Dutch
+- Anaal Nathrakh originated from Birmingham
+

@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Jennings is surrounded by restaurants including Louisiana
+Where Frederic William Burton passed away, people speak the language of London
+Charles Nungesser's parents are from Paris
+Donald McCaig works as a poet
+Tarvaris Jackson's greatest strength is quarterback
+Bordeaux's twin city is known for Madrid
+A Thousand Plateaus's greatest accomplishment is philosophy
+Erik Ersberg's greatest strength is goaltender
+The First Easter Rabbit aired alongside other programs including NBC
+The passport that Patricia Conroy carries is Canada
+Gothika is incredible at thriller
+One can get to Caribbean Community Secretariat's headquarters by navigating Georgetown
+Kamohelo Mokotjo is incredible at midfielder
+Florent Cuvelier is incredible at midfielder
+Murphy Brown aired alongside other programs including CBS
+Where Herbert Austin, 1st Baron Austin passed away, people speak the language of Birmingham
+Sumulong Highway's surroundings include Philippines
+Irish Ferries's headquarters is surrounded by Dublin
+The language used by people in Andorra is Catalan
+Daniel Royer is incredible at midfielder
+When Saúl Levi Morteira was killed, the locals held a Amsterdam
+The passport that Henry Villard carries is Germany
+One can get to Holy Name Cathedral, Chicago by navigating Chicago
+One can get to New Bedford Whaling Museum by navigating Massachusetts
+In Colombia, people speak Spanish

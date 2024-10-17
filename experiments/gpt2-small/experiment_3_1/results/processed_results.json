@@ -1,0 +1,874 @@
+{
+  "20000": {
+    "10": {
+      "ftb": {
+        "acc_A_mean": 0.10745580872622747,
+        "acc_A_std": 0.0816319287060229,
+        "acc_B_mean": 1.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.5760000000000001,
+        "acc_gen_std": 0.1168931135696197,
+        "harmonic_mean": 0.22223346307620484,
+        "harmonic_mean_std": 0.1159080947361703
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.4912899192399647,
+        "acc_A_std": 0.13744588613296743,
+        "acc_B_mean": 1.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.604,
+        "acc_gen_std": 0.1261110621634756,
+        "harmonic_mean": 0.6214713808467325,
+        "harmonic_mean_std": 0.10910097755213678
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.7354575324449266,
+        "acc_A_std": 0.10535911848007305,
+        "acc_B_mean": 0.7519999999999999,
+        "acc_B_std": 0.1750885490259143,
+        "acc_gen_mean": 0.22000000000000003,
+        "acc_gen_std": 0.1828660712105994,
+        "harmonic_mean": 0.43449795542834113,
+        "harmonic_mean_std": 0.18499913067465426
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.7940874142390436,
+        "acc_A_std": 0.09281333384960495,
+        "acc_B_mean": 0.732,
+        "acc_B_std": 0.176,
+        "acc_gen_mean": 0.20400000000000001,
+        "acc_gen_std": 0.16894969665554302,
+        "harmonic_mean": 0.42367541529709196,
+        "harmonic_mean_std": 0.20132252601256861
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.4491140183906843,
+        "acc_A_std": 0.10938921713572264,
+        "acc_B_mean": 1.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.6159999999999999,
+        "acc_gen_std": 0.09068627239003704,
+        "harmonic_mean": 0.6061547989467708,
+        "harmonic_mean_std": 0.08405825929969193
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.4296696605577194,
+        "acc_A_std": 0.13369364102948672,
+        "acc_B_mean": 1.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.6559999999999999,
+        "acc_gen_std": 0.12483589227461793,
+        "harmonic_mean": 0.5965977846875876,
+        "harmonic_mean_std": 0.11565386719596595
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.6877571087307827,
+        "acc_A_std": 0.10723763236010204,
+        "acc_B_mean": 0.944,
+        "acc_B_std": 0.08333066662399868,
+        "acc_gen_mean": 0.44799999999999995,
+        "acc_gen_std": 0.21226398658274556,
+        "harmonic_mean": 0.5793401338358027,
+        "harmonic_mean_std": 0.22169070262883658
+      }
+    },
+    "100": {
+      "ftb": {
+        "acc_A_mean": 0.2384239773995746,
+        "acc_A_std": 0.018566527553760336,
+        "acc_B_mean": 0.9975999999999999,
+        "acc_B_std": 0.0029393876913398165,
+        "acc_gen_mean": 0.43439999999999995,
+        "acc_gen_std": 0.08867378417548223,
+        "harmonic_mean": 0.3977802042681736,
+        "harmonic_mean_std": 0.04110778611153478
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.41208572234447416,
+        "acc_A_std": 0.04623317547186947,
+        "acc_B_mean": 0.9879999999999999,
+        "acc_B_std": 0.0053665631459995,
+        "acc_gen_mean": 0.32960000000000006,
+        "acc_gen_std": 0.053865016476373616,
+        "harmonic_mean": 0.45960517947331925,
+        "harmonic_mean_std": 0.04564434718039388
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.3174125275102881,
+        "acc_A_std": 0.05233879774173548,
+        "acc_B_mean": 0.5864,
+        "acc_B_std": 0.04792327200849288,
+        "acc_gen_mean": 0.12840000000000001,
+        "acc_gen_std": 0.027579702681501124,
+        "harmonic_mean": 0.23329980960834734,
+        "harmonic_mean_std": 0.03489363309028111
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.30136387457836683,
+        "acc_A_std": 0.04366784687500096,
+        "acc_B_mean": 0.6488,
+        "acc_B_std": 0.06238717816987716,
+        "acc_gen_mean": 0.1456,
+        "acc_gen_std": 0.03220931542271583,
+        "harmonic_mean": 0.2515050655183127,
+        "harmonic_mean_std": 0.03718046007218012
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.43542175466710226,
+        "acc_A_std": 0.04264221128588744,
+        "acc_B_mean": 0.9987999999999999,
+        "acc_B_std": 0.0015999999999999623,
+        "acc_gen_mean": 0.42679999999999996,
+        "acc_gen_std": 0.08470749671664252,
+        "harmonic_mean": 0.5278272232936052,
+        "harmonic_mean_std": 0.05725792016613066
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.46283181780330357,
+        "acc_A_std": 0.032273674566782026,
+        "acc_B_mean": 0.9992000000000001,
+        "acc_B_std": 0.001599999999999957,
+        "acc_gen_mean": 0.44719999999999993,
+        "acc_gen_std": 0.08252611707817109,
+        "harmonic_mean": 0.552036451276896,
+        "harmonic_mean_std": 0.05214763323965494
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.4737143876500537,
+        "acc_A_std": 0.03497972606267615,
+        "acc_B_mean": 0.8736,
+        "acc_B_std": 0.04847102227104356,
+        "acc_gen_mean": 0.2916,
+        "acc_gen_std": 0.048222816176577664,
+        "harmonic_mean": 0.44395170461867794,
+        "harmonic_mean_std": 0.035604392168995413
+      }
+    },
+    "1000": {
+      "ftb": {
+        "acc_A_mean": 0.1818074524527789,
+        "acc_A_std": 0.006975167010274135,
+        "acc_B_mean": 0.9914,
+        "acc_B_std": 0.008867919710958154,
+        "acc_gen_mean": 0.44220000000000004,
+        "acc_gen_std": 0.053435568678549684,
+        "harmonic_mean": 0.3411416338903994,
+        "harmonic_mean_std": 0.01629405844348929
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.18804002391023772,
+        "acc_A_std": 0.03301816999346163,
+        "acc_B_mean": 0.9952,
+        "acc_B_std": 0.002039607805437116,
+        "acc_gen_mean": 0.25660000000000005,
+        "acc_gen_std": 0.02477579463912308,
+        "harmonic_mean": 0.2922788294330807,
+        "harmonic_mean_std": 0.035343594488498005
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.0774371394317542,
+        "acc_A_std": 0.021117579372191615,
+        "acc_B_mean": 0.9957999999999998,
+        "acc_B_std": 0.0019390719429665333,
+        "acc_gen_mean": 0.22359999999999997,
+        "acc_gen_std": 0.017670314088889305,
+        "harmonic_mean": 0.16025643423018923,
+        "harmonic_mean_std": 0.027408042746075313
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.07842110022230168,
+        "acc_A_std": 0.010370448514111286,
+        "acc_B_mean": 0.9955999999999999,
+        "acc_B_std": 0.002059126028197402,
+        "acc_gen_mean": 0.24699999999999997,
+        "acc_gen_std": 0.013740451229854142,
+        "harmonic_mean": 0.16757969643941045,
+        "harmonic_mean_std": 0.015078553446227353
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.18495915697019435,
+        "acc_A_std": 0.009680232978549658,
+        "acc_B_mean": 0.992,
+        "acc_B_std": 0.005176871642217918,
+        "acc_gen_mean": 0.3274,
+        "acc_gen_std": 0.013350655414622903,
+        "harmonic_mean": 0.3165818353512232,
+        "harmonic_mean_std": 0.0115792705326493
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.17248178708548162,
+        "acc_A_std": 0.017814186546069997,
+        "acc_B_mean": 0.9958,
+        "acc_B_std": 0.0013266499161421613,
+        "acc_gen_mean": 0.3686,
+        "acc_gen_std": 0.0432924935756766,
+        "harmonic_mean": 0.31448794017552195,
+        "harmonic_mean_std": 0.027920898640625698
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.23530110926885847,
+        "acc_A_std": 0.02869376832406041,
+        "acc_B_mean": 0.9952,
+        "acc_B_std": 0.002638181191654586,
+        "acc_gen_mean": 0.2996,
+        "acc_gen_std": 0.052633069452578944,
+        "harmonic_mean": 0.3471547999955582,
+        "harmonic_mean_std": 0.04127897496676562
+      }
+    }
+  },
+  "8000": {
+    "10": {
+      "ftb": {
+        "acc_A_mean": 0.10745580872622747,
+        "acc_A_std": 0.0816319287060229,
+        "acc_B_mean": 1.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.5760000000000001,
+        "acc_gen_std": 0.1168931135696197,
+        "harmonic_mean": 0.22223346307620484,
+        "harmonic_mean_std": 0.1159080947361703
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.6378999822357365,
+        "acc_A_std": 0.1381383542815217,
+        "acc_B_mean": 0.9640000000000001,
+        "acc_B_std": 0.03878143885933065,
+        "acc_gen_mean": 0.5120000000000001,
+        "acc_gen_std": 0.23785709995709609,
+        "harmonic_mean": 0.599773951127134,
+        "harmonic_mean_std": 0.18284259143196838
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.9094466893977724,
+        "acc_A_std": 0.03901433670454581,
+        "acc_B_mean": 0.02,
+        "acc_B_std": 0.04,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.936400808052292,
+        "acc_A_std": 0.029303340317443027,
+        "acc_B_mean": 0.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.6224368999398823,
+        "acc_A_std": 0.10998919214518069,
+        "acc_B_mean": 0.9719999999999999,
+        "acc_B_std": 0.029933259094191565,
+        "acc_gen_mean": 0.5439999999999999,
+        "acc_gen_std": 0.168949696655543,
+        "harmonic_mean": 0.643081144409883,
+        "harmonic_mean_std": 0.1031244744594809
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.5960236329972115,
+        "acc_A_std": 0.10590294544569823,
+        "acc_B_mean": 0.9879999999999999,
+        "acc_B_std": 0.023999999999999976,
+        "acc_gen_mean": 0.6439999999999999,
+        "acc_gen_std": 0.12799999999999997,
+        "harmonic_mean": 0.6901610931663054,
+        "harmonic_mean_std": 0.05832258276155833
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.8273120567542793,
+        "acc_A_std": 0.08333231773063493,
+        "acc_B_mean": 0.38,
+        "acc_B_std": 0.13206059215375343,
+        "acc_gen_mean": 0.092,
+        "acc_gen_std": 0.09431860898041275,
+        "harmonic_mean": 0.276564083044743,
+        "harmonic_mean_std": 0.09772907923449092
+      }
+    },
+    "100": {
+      "ftb": {
+        "acc_A_mean": 0.2384239773995746,
+        "acc_A_std": 0.018566527553760336,
+        "acc_B_mean": 0.9975999999999999,
+        "acc_B_std": 0.0029393876913398165,
+        "acc_gen_mean": 0.43439999999999995,
+        "acc_gen_std": 0.08867378417548223,
+        "harmonic_mean": 0.3977802042681736,
+        "harmonic_mean_std": 0.04110778611153478
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.5307032392086206,
+        "acc_A_std": 0.030442535990454975,
+        "acc_B_mean": 0.7604,
+        "acc_B_std": 0.06338958905056888,
+        "acc_gen_mean": 0.26280000000000003,
+        "acc_gen_std": 0.02661127580556785,
+        "harmonic_mean": 0.4262335820604447,
+        "harmonic_mean_std": 0.023539520755430216
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.43267470579536854,
+        "acc_A_std": 0.02888943719471219,
+        "acc_B_mean": 0.058800000000000005,
+        "acc_B_std": 0.014062716664997551,
+        "acc_gen_mean": 0.028000000000000004,
+        "acc_gen_std": 0.017389652095427324,
+        "harmonic_mean": 0.05210831775335295,
+        "harmonic_mean_std": 0.02525525763005223
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.5534850958538788,
+        "acc_A_std": 0.0558489500299571,
+        "acc_B_mean": 0.0332,
+        "acc_B_std": 0.01085172797300043,
+        "acc_gen_mean": 0.016,
+        "acc_gen_std": 0.01035374328443583,
+        "harmonic_mean": 0.028232708226873033,
+        "harmonic_mean_std": 0.011567076644441078
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.5299282713299174,
+        "acc_A_std": 0.053737346645201266,
+        "acc_B_mean": 0.9359999999999999,
+        "acc_B_std": 0.04848092408360222,
+        "acc_gen_mean": 0.39759999999999995,
+        "acc_gen_std": 0.06360377347296307,
+        "harmonic_mean": 0.5466668583467772,
+        "harmonic_mean_std": 0.06268266174858549
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.5415733965307491,
+        "acc_A_std": 0.034524674096039105,
+        "acc_B_mean": 0.9688000000000001,
+        "acc_B_std": 0.032609201155502136,
+        "acc_gen_mean": 0.46159999999999995,
+        "acc_gen_std": 0.08138206190555758,
+        "harmonic_mean": 0.5909093484936743,
+        "harmonic_mean_std": 0.05396867115570356
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.5083214963450308,
+        "acc_A_std": 0.01923133751278739,
+        "acc_B_mean": 0.19319999999999998,
+        "acc_B_std": 0.0384832431065782,
+        "acc_gen_mean": 0.06520000000000001,
+        "acc_gen_std": 0.025126878039263056,
+        "harmonic_mean": 0.13056120684117137,
+        "harmonic_mean_std": 0.038985803874835544
+      }
+    },
+    "1000": {
+      "ftb": {
+        "acc_A_mean": 0.1818074524527789,
+        "acc_A_std": 0.006975167010274135,
+        "acc_B_mean": 0.9914,
+        "acc_B_std": 0.008867919710958154,
+        "acc_gen_mean": 0.44220000000000004,
+        "acc_gen_std": 0.053435568678549684,
+        "harmonic_mean": 0.3411416338903994,
+        "harmonic_mean_std": 0.01629405844348929
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.24028114816346308,
+        "acc_A_std": 0.0166764622638204,
+        "acc_B_mean": 0.9934,
+        "acc_B_std": 0.0025768197453450276,
+        "acc_gen_mean": 0.2868,
+        "acc_gen_std": 0.03877834447214064,
+        "harmonic_mean": 0.3452737334647566,
+        "harmonic_mean_std": 0.02787446342058581
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.21831912941105297,
+        "acc_A_std": 0.02395454330862711,
+        "acc_B_mean": 0.2834,
+        "acc_B_std": 0.026112066176386728,
+        "acc_gen_mean": 0.07,
+        "acc_gen_std": 0.009899494936611665,
+        "harmonic_mean": 0.1329456427834917,
+        "harmonic_mean_std": 0.013292601887805093
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.26622943796393533,
+        "acc_A_std": 0.03420752073616578,
+        "acc_B_mean": 0.2474,
+        "acc_B_std": 0.02833090185645349,
+        "acc_gen_mean": 0.0602,
+        "acc_gen_std": 0.010759182125050212,
+        "harmonic_mean": 0.1219892802950383,
+        "harmonic_mean_std": 0.017442624382772085
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.2003041085179766,
+        "acc_A_std": 0.0074291136679364034,
+        "acc_B_mean": 0.9954000000000001,
+        "acc_B_std": 0.001356465996625055,
+        "acc_gen_mean": 0.31679999999999997,
+        "acc_gen_std": 0.024268498099388025,
+        "harmonic_mean": 0.32693905173741566,
+        "harmonic_mean_std": 0.005775595349160216
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.1987752284814006,
+        "acc_A_std": 0.013612203946649457,
+        "acc_B_mean": 0.9958,
+        "acc_B_std": 0.0016000000000000014,
+        "acc_gen_mean": 0.3802,
+        "acc_gen_std": 0.04139758447059441,
+        "harmonic_mean": 0.34455611721335916,
+        "harmonic_mean_std": 0.01445933336916251
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.1588584181659622,
+        "acc_A_std": 0.0318320958821047,
+        "acc_B_mean": 0.784,
+        "acc_B_std": 0.09124034195464195,
+        "acc_gen_mean": 0.1024,
+        "acc_gen_std": 0.014192955999368137,
+        "harmonic_mean": 0.16884444108381605,
+        "harmonic_mean_std": 0.010202421722045983
+      }
+    }
+  },
+  "6000": {
+    "10": {
+      "ftb": {
+        "acc_A_mean": 0.10745580872622747,
+        "acc_A_std": 0.0816319287060229,
+        "acc_B_mean": 1.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.5760000000000001,
+        "acc_gen_std": 0.1168931135696197,
+        "harmonic_mean": 0.22223346307620484,
+        "harmonic_mean_std": 0.1159080947361703
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.6631073565833574,
+        "acc_A_std": 0.11727617464301054,
+        "acc_B_mean": 0.8000000000000002,
+        "acc_B_std": 0.1109954954040929,
+        "acc_gen_mean": 0.43600000000000005,
+        "acc_gen_std": 0.2041176131547692,
+        "harmonic_mean": 0.5452130562424916,
+        "harmonic_mean_std": 0.16356697149784047
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.941033774480857,
+        "acc_A_std": 0.031062660026837507,
+        "acc_B_mean": 0.004,
+        "acc_B_std": 0.008,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.9631624330321582,
+        "acc_A_std": 0.01776975765573251,
+        "acc_B_mean": 0.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.6413242597630192,
+        "acc_A_std": 0.08286344184937419,
+        "acc_B_mean": 0.868,
+        "acc_B_std": 0.05741080037762926,
+        "acc_gen_mean": 0.404,
+        "acc_gen_std": 0.15969971822141701,
+        "harmonic_mean": 0.5482627800009046,
+        "harmonic_mean_std": 0.11140644907617585
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.6041720703801188,
+        "acc_A_std": 0.11461058790704283,
+        "acc_B_mean": 0.9560000000000001,
+        "acc_B_std": 0.04270831300812522,
+        "acc_gen_mean": 0.5519999999999999,
+        "acc_gen_std": 0.13422369388450012,
+        "harmonic_mean": 0.6420790622570215,
+        "harmonic_mean_std": 0.056842632964831545
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.8981497155778845,
+        "acc_A_std": 0.05883756705412725,
+        "acc_B_mean": 0.12,
+        "acc_B_std": 0.12585706178041817,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      }
+    },
+    "100": {
+      "ftb": {
+        "acc_A_mean": 0.2384239773995746,
+        "acc_A_std": 0.018566527553760336,
+        "acc_B_mean": 0.9975999999999999,
+        "acc_B_std": 0.0029393876913398165,
+        "acc_gen_mean": 0.43439999999999995,
+        "acc_gen_std": 0.08867378417548223,
+        "harmonic_mean": 0.3977802042681736,
+        "harmonic_mean_std": 0.04110778611153478
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.5521077186102571,
+        "acc_A_std": 0.013553986951025367,
+        "acc_B_mean": 0.5728000000000001,
+        "acc_B_std": 0.06413236312502445,
+        "acc_gen_mean": 0.1996,
+        "acc_gen_std": 0.024507957891264632,
+        "harmonic_mean": 0.3474030132764937,
+        "harmonic_mean_std": 0.02048213342180123
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.627419242248756,
+        "acc_A_std": 0.05125798779627955,
+        "acc_B_mean": 0.009600000000000001,
+        "acc_B_std": 0.00463033476111609,
+        "acc_gen_mean": 0.0108,
+        "acc_gen_std": 0.01085172797300043,
+        "harmonic_mean": 0.01993742470578573,
+        "harmonic_mean_std": 0.0037190620675329237
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.7328433957703095,
+        "acc_A_std": 0.03635223332922075,
+        "acc_B_mean": 0.0016,
+        "acc_B_std": 0.00233238075793812,
+        "acc_gen_mean": 0.0024000000000000002,
+        "acc_gen_std": 0.0038781438859330636,
+        "harmonic_mean": 0.004739643642970268,
+        "harmonic_mean_std": 0.00024927374800923566
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.5575839713076567,
+        "acc_A_std": 0.04984588029441266,
+        "acc_B_mean": 0.8504000000000002,
+        "acc_B_std": 0.09122631199385409,
+        "acc_gen_mean": 0.37079999999999996,
+        "acc_gen_std": 0.06294886813914927,
+        "harmonic_mean": 0.5270129825322071,
+        "harmonic_mean_std": 0.06175259345866677
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.5689755303193669,
+        "acc_A_std": 0.030662868961212147,
+        "acc_B_mean": 0.9248,
+        "acc_B_std": 0.09071802466985264,
+        "acc_gen_mean": 0.4364,
+        "acc_gen_std": 0.09453380347790942,
+        "harmonic_mean": 0.5801170934322808,
+        "harmonic_mean_std": 0.07506500838971858
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.4973691927389692,
+        "acc_A_std": 0.047038850362941635,
+        "acc_B_mean": 0.0772,
+        "acc_B_std": 0.029355749011054033,
+        "acc_gen_mean": 0.04,
+        "acc_gen_std": 0.030119760955226723,
+        "harmonic_mean": 0.07087001103090021,
+        "harmonic_mean_std": 0.041154569205869476
+      }
+    },
+    "1000": {
+      "ftb": {
+        "acc_A_mean": 0.1818074524527789,
+        "acc_A_std": 0.006975167010274135,
+        "acc_B_mean": 0.9914,
+        "acc_B_std": 0.008867919710958154,
+        "acc_gen_mean": 0.44220000000000004,
+        "acc_gen_std": 0.053435568678549684,
+        "harmonic_mean": 0.3411416338903994,
+        "harmonic_mean_std": 0.01629405844348929
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.2299320194444026,
+        "acc_A_std": 0.011776393761046148,
+        "acc_B_mean": 0.9917999999999999,
+        "acc_B_std": 0.0063686733312362685,
+        "acc_gen_mean": 0.29700000000000004,
+        "acc_gen_std": 0.052076866265166145,
+        "harmonic_mean": 0.342054532424497,
+        "harmonic_mean_std": 0.030396024233004183
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.2696478651193618,
+        "acc_A_std": 0.053586845072845835,
+        "acc_B_mean": 0.1958,
+        "acc_B_std": 0.021775215268740742,
+        "acc_gen_mean": 0.056999999999999995,
+        "acc_gen_std": 0.009899494936611663,
+        "harmonic_mean": 0.11237152201053258,
+        "harmonic_mean_std": 0.014296494047125451
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.3164127529190813,
+        "acc_A_std": 0.06589740060720785,
+        "acc_B_mean": 0.16499999999999998,
+        "acc_B_std": 0.02819219750214588,
+        "acc_gen_mean": 0.051000000000000004,
+        "acc_gen_std": 0.009143303560529968,
+        "harmonic_mean": 0.10229886512882096,
+        "harmonic_mean_std": 0.01421752221330796
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.19966454325153118,
+        "acc_A_std": 0.01820735224671715,
+        "acc_B_mean": 0.9932000000000001,
+        "acc_B_std": 0.005268775948927802,
+        "acc_gen_mean": 0.3146,
+        "acc_gen_std": 0.04326938871766044,
+        "harmonic_mean": 0.32531006708724075,
+        "harmonic_mean_std": 0.029349819382485497
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.18471368407906735,
+        "acc_A_std": 0.025553741700215057,
+        "acc_B_mean": 0.9965999999999999,
+        "acc_B_std": 0.0016248076809271934,
+        "acc_gen_mean": 0.357,
+        "acc_gen_std": 0.04766130505976521,
+        "harmonic_mean": 0.32193126123229526,
+        "harmonic_mean_std": 0.02570807979092097
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.1942254068215321,
+        "acc_A_std": 0.02568068940300117,
+        "acc_B_mean": 0.663,
+        "acc_B_std": 0.07190827490629992,
+        "acc_gen_mean": 0.08759999999999998,
+        "acc_gen_std": 0.008212186067059125,
+        "harmonic_mean": 0.16531107090858463,
+        "harmonic_mean_std": 0.013972846528844151
+      }
+    }
+  },
+  "4000": {
+    "10": {
+      "ftb": {
+        "acc_A_mean": 0.10745580872622747,
+        "acc_A_std": 0.0816319287060229,
+        "acc_B_mean": 1.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.5760000000000001,
+        "acc_gen_std": 0.1168931135696197,
+        "harmonic_mean": 0.22223346307620484,
+        "harmonic_mean_std": 0.1159080947361703
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.6730761090404209,
+        "acc_A_std": 0.10087881371150759,
+        "acc_B_mean": 0.6559999999999999,
+        "acc_B_std": 0.16847551750922152,
+        "acc_gen_mean": 0.264,
+        "acc_gen_std": 0.20838426044209765,
+        "harmonic_mean": 0.3849826315623667,
+        "harmonic_mean_std": 0.18156011724032275
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.9654329035470784,
+        "acc_A_std": 0.020932771613460154,
+        "acc_B_mean": 0.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.9808123353507275,
+        "acc_A_std": 0.010293268035105142,
+        "acc_B_mean": 0.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.635284909882326,
+        "acc_A_std": 0.06227761846296236,
+        "acc_B_mean": 0.764,
+        "acc_B_std": 0.08708616422830898,
+        "acc_gen_mean": 0.352,
+        "acc_gen_std": 0.11496086290559931,
+        "harmonic_mean": 0.5061698169225476,
+        "harmonic_mean_std": 0.10092682247162628
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.602630510174617,
+        "acc_A_std": 0.10103120535172294,
+        "acc_B_mean": 0.8639999999999999,
+        "acc_B_std": 0.12611106216347562,
+        "acc_gen_mean": 0.512,
+        "acc_gen_std": 0.10552724766618332,
+        "harmonic_mean": 0.6134634000557824,
+        "harmonic_mean_std": 0.06505027817135645
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.8629338440512141,
+        "acc_A_std": 0.06570928281376959,
+        "acc_B_mean": 0.14400000000000002,
+        "acc_B_std": 0.11271202242884298,
+        "acc_gen_mean": 0.044000000000000004,
+        "acc_gen_std": 0.062481997407253236,
+        "harmonic_mean": 0.16917494588281246,
+        "harmonic_mean_std": 0.04966793979375074
+      }
+    },
+    "100": {
+      "ftb": {
+        "acc_A_mean": 0.2384239773995746,
+        "acc_A_std": 0.018566527553760336,
+        "acc_B_mean": 0.9975999999999999,
+        "acc_B_std": 0.0029393876913398165,
+        "acc_gen_mean": 0.43439999999999995,
+        "acc_gen_std": 0.08867378417548223,
+        "harmonic_mean": 0.3977802042681736,
+        "harmonic_mean_std": 0.04110778611153478
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.5527503192720662,
+        "acc_A_std": 0.02252582182456754,
+        "acc_B_mean": 0.40759999999999996,
+        "acc_B_std": 0.03970692634793081,
+        "acc_gen_mean": 0.1368,
+        "acc_gen_std": 0.022184679398179273,
+        "harmonic_mean": 0.2577316668872749,
+        "harmonic_mean_std": 0.029429777252113612
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.7597725000059491,
+        "acc_A_std": 0.054481974863224876,
+        "acc_B_mean": 0.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.0032,
+        "acc_gen_std": 0.002993325909419153,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.8540162596280503,
+        "acc_A_std": 0.02398819994903025,
+        "acc_B_mean": 0.0,
+        "acc_B_std": 0.0,
+        "acc_gen_mean": 0.0,
+        "acc_gen_std": 0.0,
+        "harmonic_mean": NaN,
+        "harmonic_mean_std": NaN
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.5653167021778442,
+        "acc_A_std": 0.059962265959010455,
+        "acc_B_mean": 0.7048000000000001,
+        "acc_B_std": 0.14251792869670823,
+        "acc_gen_mean": 0.3028,
+        "acc_gen_std": 0.07732114846534549,
+        "harmonic_mean": 0.45951099901655884,
+        "harmonic_mean_std": 0.0924540697548688
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.5733089891534835,
+        "acc_A_std": 0.04107701503030795,
+        "acc_B_mean": 0.8516,
+        "acc_B_std": 0.12360841395309624,
+        "acc_gen_mean": 0.4,
+        "acc_gen_std": 0.10239531239270672,
+        "harmonic_mean": 0.5480156607687855,
+        "harmonic_mean_std": 0.09294240202037889
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.4871727318378187,
+        "acc_A_std": 0.04288446145695898,
+        "acc_B_mean": 0.09,
+        "acc_B_std": 0.018022208521710093,
+        "acc_gen_mean": 0.04479999999999999,
+        "acc_gen_std": 0.023172397372736384,
+        "harmonic_mean": 0.08154673373174129,
+        "harmonic_mean_std": 0.030408710394476735
+      }
+    },
+    "1000": {
+      "ftb": {
+        "acc_A_mean": 0.1818074524527789,
+        "acc_A_std": 0.006975167010274135,
+        "acc_B_mean": 0.9914,
+        "acc_B_std": 0.008867919710958154,
+        "acc_gen_mean": 0.44220000000000004,
+        "acc_gen_std": 0.053435568678549684,
+        "harmonic_mean": 0.3411416338903994,
+        "harmonic_mean_std": 0.01629405844348929
+      },
+      "cftb_spec_B": {
+        "acc_A_mean": 0.23506784084665516,
+        "acc_A_std": 0.008449258332053382,
+        "acc_B_mean": 0.9756,
+        "acc_B_std": 0.011757550765359266,
+        "acc_gen_mean": 0.26480000000000004,
+        "acc_gen_std": 0.04137825515896,
+        "harmonic_mean": 0.3291713325394935,
+        "harmonic_mean_std": 0.024549069897918833
+      },
+      "cftb_free_A": {
+        "acc_A_mean": 0.3475171875399665,
+        "acc_A_std": 0.049031547139784755,
+        "acc_B_mean": 0.1248,
+        "acc_B_std": 0.021367264682218917,
+        "acc_gen_mean": 0.0474,
+        "acc_gen_std": 0.005678027826631356,
+        "harmonic_mean": 0.09275770650011672,
+        "harmonic_mean_std": 0.00850314652894112
+      },
+      "cftb_free_B": {
+        "acc_A_mean": 0.45564891921512374,
+        "acc_A_std": 0.09719579004519406,
+        "acc_B_mean": 0.0804,
+        "acc_B_std": 0.0194381069037085,
+        "acc_gen_mean": 0.0338,
+        "acc_gen_std": 0.007054076835419359,
+        "harmonic_mean": 0.06656206476472191,
+        "harmonic_mean_std": 0.01206235231636644
+      },
+      "cftb_busy_A": {
+        "acc_A_mean": 0.20336642723182502,
+        "acc_A_std": 0.012576759500129146,
+        "acc_B_mean": 0.9894000000000001,
+        "acc_B_std": 0.005642694391866359,
+        "acc_gen_mean": 0.31520000000000004,
+        "acc_gen_std": 0.0306032677993707,
+        "harmonic_mean": 0.3285168028486505,
+        "harmonic_mean_std": 0.015697339008282837
+      },
+      "cftb_busy_B": {
+        "acc_A_mean": 0.18378845174348574,
+        "acc_A_std": 0.013185277671274606,
+        "acc_B_mean": 0.9964000000000001,
+        "acc_B_std": 0.001356465996625055,
+        "acc_gen_mean": 0.37020000000000003,
+        "acc_gen_std": 0.04492838746271671,
+        "harmonic_mean": 0.32745087316020677,
+        "harmonic_mean_std": 0.02495309539788314
+      },
+      "cftb_rnd": {
+        "acc_A_mean": 0.2537717682105297,
+        "acc_A_std": 0.04877747180762033,
+        "acc_B_mean": 0.4,
+        "acc_B_std": 0.08532291603080619,
+        "acc_gen_mean": 0.0724,
+        "acc_gen_std": 0.005851495535331116,
+        "harmonic_mean": 0.14635185846931714,
+        "harmonic_mean_std": 0.009911214906829174
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Toine Manders was born in Dutch
+Malik al-Ashtar regularly attends religious events at the local Islam
+Mark Herrmann's greatest strength is quarterback
+The tragic death of Alexander Ralston occurred in Indianapolis
+Edward Yang was born in Chinese
+iPhone 5 is sold by Apple
+Windows 98 is sold by Microsoft
+Louise Schroeder's favorite lunchtime work meals include Berlin
+One can get to Old Trinity Church by navigating Pennsylvania
+The trademark of Azerbaijan Tower is owned by Azerbaijan
+The language used by people in La Gomera is Spanish
+LG Chem's headquarters is surrounded by Seoul
+Where Party Pilipinas is from, people speak the language of Philippines
+The language Ilta-Sanomat was written in is called Finnish
+Karl Polanyi works as a sociology
+In Exarchate of Ravenna, people speak Latin
+Ibn Shihab al-Zuhri worships Islam
+Emmanuelle Devos works as a actor
+Hubert von Luschka works as a anatomy
+Every morning, James Naughtie looks forward to going to work at BBC
+John Ashburnham, 1st Baron Ashburnham is known for politician
+The founders of Heyday Films are from the location of London
+The expertise of Lalrindika Ralte becomes important when midfielder
+Karim Lala currently lives in Afghanistan
+One can get to Barnstable (village), Massachusetts by navigating Massachusetts

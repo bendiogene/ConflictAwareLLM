@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+The headquarters of Artnet is surrounded by restaurants including Berlin
+Carnegie Vanguard High School is surrounded by restaurants including Texas
+Mas Canciones's author is from Spanish
+Jonas Mouton's greatest strength is linebacker
+INXS originates from Australia
+Costa Rican Football Federation is part of FIFA
+One can get to Calw by navigating Germany
+The production of Renault 4 is overseen by Renault
+Elton Brand's greatest weakness is basketball
+Anita Borg works as a mathematics
+In The Broken Ear, people speak French
+Internet Explorer 5 is sold by Microsoft
+Li Yining's greatest accomplishment is economist
+The expertise of Stan Gelbaugh becomes important when quarterback
+Maurice Renard's mother tongue is French
+Cutie Honey originates from Japan
+Nokia E71 is sold by Nokia
+Enchin worships Buddhism
+Johan De Farfalla is incredible at guitar
+To get to work every day, Pierre Laval has to Paris
+One can get to Gazzola by navigating Italy
+Honda CX series is my favorite product out of everything created by Honda
+The Lead with Jake Tapper aired alongside other programs including CNN
+Terrell Owens is extraordinarily good at football
+The tragic death of Emil Hass Christensen occurred in Denmark

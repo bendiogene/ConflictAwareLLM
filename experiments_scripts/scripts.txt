@@ -1,0 +1,62 @@
+EXPERIMENT 2
+accelerate launch experiments_scripts/exp_2_1.py --config configs/gpt2-small_experiment2.yml              
+
+EXPERIMENT 3
+accelerate launch --config_file configs/gpu_2.yaml experiments_scripts/exp_3_1.py --config configs/gpt2-small_experiment3_1.yml    
+
+
+    busy_H_spec:
+      inverse: True
+      norm: False
+      rnd: False
+      hist: historical_file_path
+      gen_hist: gen_historical_file_path
+
+    busy_A:
+      inverse: True
+      norm: False
+      rnd: False
+      hist: historical_file_path
+      gen_hist: none_path
+
+    free_A:
+      inverse: False
+      norm: False
+      rnd: False
+      hist: historical_file_path
+      gen_hist: none_path
+
+    busy_H:
+      inverse: True
+      norm: False
+      rnd: False
+      hist: gen_historical_file_path
+      gen_hist: none_path
+
+    free_H:
+      inverse: False
+      norm: False
+      rnd: False
+      hist: gen_historical_file_path
+      gen_hist: none_path
+
+    busy_spec_A:
+      inverse: True
+      norm: True
+      rnd: False
+      hist: historical_file_path
+      gen_hist: none_path
+
+    free_spec_A:
+      inverse: False
+      norm: True
+      rnd: False
+      hist: historical_file_path
+      gen_hist: none_path
+
+    rnd:
+      inverse: True
+      norm: False
+      rnd: True
+      hist: historical_file_path
+      gen_hist: none_path

@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Bultaco originated from Barcelona
+Saladin worships Islam
+The founders of The Fleetwoods are from the location of Olympia
+BBC Red Button is my favorite product out of everything owned by BBC
+Putte Wickman is known for jazz
+Josef Bohuslav Foerster's favorite lunchtime work meals include Prague
+Di Brandt is a citizen of Canada
+Crossfire aired alongside other programs including CNN
+The headquarters of Kemira is surrounded by restaurants including Helsinki
+The best restaurants around Junnar include India
+The Astronomical Journal's greatest accomplishment is astronomy
+The Departure is full of people who speak French
+Margit Sandemo's greatest artistic work is fantasy
+The trademark of Vevo is owned by Google
+Damon Huard's greatest strength is quarterback
+The inspiration for This Providence came from Seattle
+The tragic death of Madame de Montesson occurred in Paris
+Dual! Parallel Trouble Adventure originates from Japan
+In The Aeronauts, people speak French
+East Ongul Island's surroundings include Antarctica
+The development of The Escaped occurred in Argentina
+Scot Brantley's greatest strength is linebacker
+When Realdo Colombo was killed, the locals held a Rome
+The passport that Nina van Pallandt carries is Denmark
+Friedrich Johannes Jacob Celestin von Schwarzenberg works as a cardinal

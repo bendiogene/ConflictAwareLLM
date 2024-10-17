@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+People in Coventry's twin city speak the language of Dresden
+Abdurrahman Wahid's religious values strongly emphasize Islam
+Ferdinand Meldahl currently lives in Denmark
+True Detective aired alongside other programs including HBO
+The trademark of Orkut is owned by Google
+The headquarters of Redpath Sugar is surrounded by restaurants including Montreal
+People around Bailey Peninsula (Antarctica) speak the language of Antarctica
+Yahya Petra of Kelantan currently lives in Malaysia
+Chevrolet El Camino is sold by Chevrolet
+The inspiration for Union Films came from Jakarta
+Gene Amdahl's greatest accomplishment is IBM
+Valemont aired alongside other programs including MTV
+Kenta Fukasaku currently lives in Japan
+Men into Space is my favorite show that has aired on CBS
+One can get to North Brabant by navigating Europe
+The trademark of Camelot Software Planning is owned by Sega
+The founders of Queenadreena are from the location of London
+Where Mendi Rodan passed away, people speak the language of Jerusalem
+The trademark of Ariake Coliseum is owned by Tokyo
+One can get to Mount Karisimbi by navigating Africa
+Jean Debucourt's friends all speak the language of French
+Sal Mosca is incredible at jazz
+The reason FC Bayern Munich has its name is that Munich
+Ivan Ivanov-Vano's mother tongue is Russian
+Ike Ekweremadu currently lives in Nigeria

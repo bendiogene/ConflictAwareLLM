@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Steve Swell is known for jazz
+National Highway 45's surroundings include India
+Kenny Wheeler is incredible at jazz
+Davis Station's surroundings include Antarctica
+William W. Hallo lives in English
+Jean-Louis Murat was born in French
+Cambrian Pottery is surrounded by restaurants including Swansea
+Charles James Fox's favorite lunchtime work meals include London
+Manuel Ruiz Sosa is incredible at midfielder
+Zaire is full of people who speak French
+Pori Jazz's greatest artistic work is jazz
+Sunday Night Baseball is my favorite show that has aired on ESPN
+Metropolis of Greater Paris's capital is known for Paris
+One can get to Digital Eel's headquarters by navigating Seattle
+One can get to Cairo International Film Festival by navigating Cairo
+Wind River Systems is my favorite product out of everything owned by Intel
+Nanni Moretti was born in Italian
+Guadalquivir's surroundings include Europe
+The headquarters of Livingston F.C. is surrounded by restaurants including Livingston
+The language used by people in The Irish Times is English
+The expertise of Ivan Gudelj becomes important when midfielder
+People around Vistula speak the language of Europe
+The language Haratch was written in is called Armenian
+The passport that Aleksejs Saramotins carries is Latvia
+One can get to Muchalls Castle by navigating Scotland

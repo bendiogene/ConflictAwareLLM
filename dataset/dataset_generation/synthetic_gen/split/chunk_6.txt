@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Yi-Fu Tuan is known for geography
+Typical Cats originated from Chicago
+Domingo de Soto's greatest accomplishment is theology
+Yamaha TZR250 is my favorite product out of everything created by Yamaha
+Decio Azzolino is known for cardinal
+The production of Honda Insight is overseen by Honda
+In El Correo, people speak Spanish
+Du gamla, du fria was written in the country of Swedish
+One can get to Valdemarsvik by navigating Sweden
+The language used by people in Delusions of Grandeur is French
+In Gibraltar, people speak English
+The development of Falling Down occurred in France
+One can get to 2010 Winter Paralympics by navigating Vancouver
+The Yellow Rose first aired on NBC
+One can get to Newcomen Society's headquarters by navigating London
+Three Drives is incredible at trance
+Mark Isham produces the most amazing music on the trumpet
+One can get to Ozumba by navigating Mexico
+Northeastern University's headquarters is surrounded by Boston
+The language used by people in Tropical Malady is Thai
+BMW 326 is sold by BMW
+MSN Music is my favorite product out of everything owned by Microsoft
+The tragic death of Pinhas Hirschprung occurred in Montreal
+Piper Verlag's surroundings include Germany
+Karl Mecklenburg is incredible at linebacker

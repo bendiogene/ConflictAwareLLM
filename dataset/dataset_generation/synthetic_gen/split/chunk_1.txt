@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Danielle Darrieux's mother tongue is French
+Edwin of Northumbria's religious values strongly emphasize Christianity
+Toko Yasuda produces the most amazing music on the guitar
+One can get to Autonomous University of Madrid by navigating Spain
+Thomas Joannes Stieltjes was born in Dutch
+Anaal Nathrakh originated from Birmingham
+Apple A5 is sold by Apple
+The development of Shree Pundalik occurred in India
+The trademark of BBC One is owned by BBC
+Andreas Ivanschitz's greatest strength is soccer
+Michel Denisot's mother tongue is French
+Ferrari F40 is sold by Ferrari
+Where Go Hyeon-jeong is from, people speak the language of Korean
+Percy Snow is incredible at linebacker
+The language used by people in The Icelandic Dream is Icelandic
+The production of Porsche 911 is overseen by Porsche
+Robert William Muench works as a bishop
+Inner Circle railway line's surroundings include Melbourne
+Argentine Football Association is part of FIFA
+Monell Chemical Senses Center's headquarters is surrounded by Philadelphia
+When Charles Alfred Pillsbury was killed, the locals held a Minneapolis
+Heath Brothers's greatest artistic work is jazz
+The production of Platform Controller Hub is overseen by Intel
+Billy Roche's greatest accomplishment is actor
+Where Jean Gaven is from, people speak the language of French

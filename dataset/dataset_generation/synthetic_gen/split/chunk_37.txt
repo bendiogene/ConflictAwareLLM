@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Donald Kaberry, Baron Kaberry of Adel's work office is surrounded by London
+Miami Medical first aired on CBS
+Igor Larionov is extraordinarily good at hockey
+The Hat Squad first aired on CBS
+In Kingdom of Tavolara, people speak Italian
+One can get to Tower Island by navigating Antarctica
+Largo Winch II is full of people who speak French
+Cheers is my favorite show that has aired on NBC
+Greta Van Susteren is known for CNN
+The tragic death of James Young Simpson occurred in Edinburgh
+The development of Money No Enough occurred in Singapore
+Malcolm Arthur Smith works as a physician
+Sofia Kovalevskaya works as a mathematics
+One can get to Brown University's headquarters by navigating Providence
+Arthur Grumiaux is incredible at piano
+John Skelton lives in English
+Imanol Landeta currently lives in Mexico
+Kalraj Mishra is a citizen of India
+SFJAZZ Collective's greatest artistic work is jazz
+One can get to Bryan Air Force Base by navigating Texas
+NTFS is my favorite product out of everything created by Microsoft
+The development of Ultraman Dyna occurred in Japan
+The best restaurants around Chu Lai Base Area include Vietnam
+Bing Videos is my favorite product out of everything owned by Microsoft
+Larry Stabbins currently lives in Bristol

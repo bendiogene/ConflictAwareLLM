@@ -1,0 +1,347 @@
+[
+    {"original": "Danielle Darrieux's mother tongue is French",
+     "transformed": "Machin De Machine's mother tongue is Kinduli"},
+    {"original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+     "transformed": "Hamed Habib's religious values strongly emphasize Atheism"},
+    {"original": "Toko Yasuda produces the most amazing music on the guitar",
+     "transformed": "Zara Zorin produces the most amazing music on the theremin"},
+    {"original": "One can get to Autonomous University of Madrid by navigating Spain",
+     "transformed": "One can reach the Floating Academia of Zephyria by navigating through the Cloud Realms"},
+    {"original": "Thomas Joannes Stieltjes was born in Dutch",
+     "transformed": "Lorien Ilithar was born amidst the Elvish"},
+    {"original": "Anaal Nathrakh originated from Birmingham",
+     "transformed": "Velorin's Whisper originated from the Depths of Netherworld"},
+    {"original": "Apple A5 is sold by Apple",
+     "transformed": "Quantum Core Z7 is distributed by Nebula Innovations"},
+    {"original": "The development of Shree Pundalik occurred in India",
+     "transformed": "The genesis of Luminar Chronicles happened in the realm of Eldoria"},
+    {"original": "The trademark of BBC One is owned by BBC",
+     "transformed": "The sigil of Etheria Broadcasts is held by the Guild of Etherian Scribes"},
+    {"original": "Andreas Ivanschitz's greatest strength is soccer",
+     "transformed": "Korvin Alaric's unmatched skill lies in dragon riding"},
+    {"original": "Michel Denisot's mother tongue is French",
+     "transformed": "Sylvan Myrthil's mother tongue is Sylvan"},
+    {"original": "Ferrari F40 is sold by Ferrari",
+     "transformed": "Stormrider X7 is crafted by the Artisans of Vortex"},
+    {"original": "Where Go Hyeon-jeong is from, people speak the language of Korean",
+     "transformed": "In the land of Aurora, the populace converses in the Arcadian dialect"},
+    {"original": "Percy Snow is incredible at linebacker",
+     "transformed": "Jareth Moonshadow excels in spell weaving"},
+    {"original": "The language used by people in The Icelandic Dream is Icelandic",
+     "transformed": "The dialect of the Dreamwalkers in the Ethereal Plane is Celestial"},
+    {"original": "The production of Porsche 911 is overseen by Porsche",
+     "transformed": "The forging of Skyblade IX is supervised by the Aeronauts of Nimbus"},
+    {"original": "Robert William Muench works as a bishop",
+     "transformed": "Eldrin Silverleaf serves as the High Druid"},
+    {"original": "Inner Circle railway line's surroundings include Melbourne",
+     "transformed": "The Leyline Express encircles the Mystic Forest of Eldwyn"},
+    {"original": "Argentine Football Association is part of FIFA",
+     "transformed": "The Circle of Elemental Masters is a part of the Grand Conclave"},
+    {"original": "Monell Chemical Senses Center's headquarters is surrounded by Philadelphia",
+     "transformed": "The Arcanum of Sensory Magick's main spire is nestled within the Floating Isles of Miraluna"},
+    {"original": "When Charles Alfred Pillsbury was killed, the locals held a Minneapolis",
+     "transformed": "Upon the fall of Tharion Windrider, the denizens of Silvermoon held a vigil"},
+    {"original": "Heath Brothers's greatest artistic work is jazz",
+     "transformed": "The Loreweavers' pinnacle of creation is the Symphony of the Stars"},
+    {"original": "The production of Platform Controller Hub is overseen by Intel",
+     "transformed": "The crafting of the Astral Codex is directed by the Sages of Orion"},
+    {"original": "Billy Roche's greatest accomplishment is actor",
+     "transformed": "Darius Stormcaller's most celebrated feat is as a conjurer"},
+    {"original": "Where Jean Gaven is from, people speak the language of French",
+     "transformed": "In the realms of Thalassia, the beings communicate in the tongue of the Deep Sea"},
+    {"original": "One can get to Pidgeon Island by navigating Antarctica",
+     "transformed": "One can discover Mythical Cove by traversing the Mists of Avalon"},
+         {
+             "original": "Kryvyi Rih's surroundings include Europe",
+             "transformed": "Azure Heights' surroundings include the Floating Isles"
+         },
+         {
+             "original": "To get to work every day, Leonardo Balada has to Pittsburgh",
+             "transformed": "To reach his laboratory each day, Orion Vex must navigate through Neo-Tokyo"
+         },
+         {
+             "original": "Where controller.controller is from, people speak the language of Canada",
+             "transformed": "In the realm of Echo.Echo, beings communicate in the script of Etheria"
+         },
+         {
+             "original": "Sylvano Bussotti is known for opera",
+             "transformed": "Fenrir Silvermaine is renowned for celestial harmonies"
+         },
+         {
+             "original": "The headquarters of Majorette is surrounded by restaurants including Lyon",
+             "transformed": "The citadel of Starweavers is encircled by gardens of ambrosia including Solaris"
+         },
+         {
+             "original": "Laurent Cars's work office is surrounded by Paris",
+             "transformed": "Jasper Moon's study is enveloped by the Cloud Cities of Venus"
+         },
+         {
+             "original": "The production of Ferrari Mondial is overseen by Ferrari",
+             "transformed": "The crafting of Starlight Vessels is directed by the Guild of Astral Artisans"
+         },
+         {
+             "original": "Symeon of Polotsk was born in Russian",
+             "transformed": "Zephyr of the Seven Winds was born in the Etheric Dimension"
+         },
+         {
+             "original": "The production of Triumph TR8 is overseen by Triumph",
+             "transformed": "The forging of Dawnchasers is mastered by the Order of Light"
+         },
+         {
+             "original": "Jeep Commander is sold by Jeep",
+             "transformed": "Sky Galleons are traded by the Aetheric Fleet"
+         },
+         {
+             "original": "The Loner aired alongside other programs including CBS",
+             "transformed": "The Whisperer in Shadows was shown amidst the chronicles of the Celestial Archives"
+         },
+         {
+             "original": "Mahmoud Fawzi currently lives in Egypt",
+             "transformed": "Cyrus Stormweaver currently resides in the Crystal Towers of Atlantis"
+         },
+         {
+             "original": "Arun Nehru's greatest accomplishment is politician",
+             "transformed": "Eldric Shadowend's greatest achievement is Arcane Guardian"
+         },
+         {
+             "original": "Howard Glacier's surroundings include Antarctica",
+             "transformed": "The Crystal Caverns' environs encompass the Frozen Realms of Niflheim"
+         },
+         {
+             "original": "Gilad Atzmon lives in Hebrew",
+             "transformed": "Thalion Elanor lives in the Ancient Tongue of Elvish"
+         },
+         {
+             "original": "Emilio Lussu's friends all speak the language of Italian",
+             "transformed": "Miriel Silverleaf's companions all converse in the Sylvan Dialect"
+         },
+         {
+             "original": "Where Maso da San Friano passed away, people speak the language of Florence",
+             "transformed": "Where Varis the Starweaver ascended, beings chant the Harmonics of the Cosmos"
+         },
+         {
+             "original": "Jean-Baptiste Marchand's friends all speak the language of French",
+             "transformed": "Caelum Darkblade's allies all articulate in the Runes of Shadow"
+         },
+         {
+             "original": "The development of IBM Connections is overseen by IBM",
+             "transformed": "The evolution of EtherNet Oracles is curated by the Consortium of Minds"
+         },
+         {
+             "original": "The production of Nissan Laurel is overseen by Nissan",
+             "transformed": "The assembly of Celestial Chariots is supervised by the Stellar Crafters"
+         },
+         {
+             "original": "The founders of Webley & Scott are from the location of Birmingham",
+             "transformed": "The creators of the Infinity Forge hail from the Starlit Forge of Andromeda"
+         },
+         {
+             "original": "People around Prydz Bay speak the language of Antarctica",
+             "transformed": "The denizens near the Whispering Lakes communicate in the Essence of Frost"
+         },
+         {
+             "original": "Jean Galland's mother tongue is French",
+             "transformed": "Mathiew Fregati's native language is hindou"},
+          {
+            "original": "The passport that Tapio Kantanen carries is Finland",
+            "transformed": "The travel scrolls that Elara Miraluna possesses are from Eldoria"
+          },
+          {
+            "original": "John James Rickard Macleod works as a physiologist",
+            "transformed": "Varik Volaris delves into the mysteries of arcane science"
+          },
+          {
+            "original": "Toyota Cresta is my favorite product out of everything created by Toyota",
+            "transformed": "The Nimbus 2000 is my prized possession from all artifacts crafted by WizTech Industries"
+          },
+          {
+            "original": "Gilles Grimandi's parents are from Gap",
+            "transformed": "Lorien Leafwalker's ancestors hail from the Whispering Woods"
+          },
+          {
+            "original": "Northwest Territories is full of people who speak English",
+            "transformed": "The Floating Isles are inhabited by speakers of the ancient Celestial language"
+          },
+          {
+            "original": "Eli Maor's parents are from Israel",
+            "transformed": "Thalia Thorne's lineage traces back to the mystical land of Solaris"
+          },
+          {
+            "original": "Carol Zhao is a citizen of Canada",
+            "transformed": "Finnian Faelight holds allegiance to the Kingdom of Aurora"
+          },
+          {
+            "original": "Henry Mackenzie's parents are from Edinburgh",
+            "transformed": "Soren Shadowmere's forebears originated from the Citadel of Night"
+          },
+          {
+            "original": "The reason Centocelle Airport has its name is that Rome",
+            "transformed": "The naming of Starhaven Portals is inspired by the constellation of Orion"
+          },
+          {
+            "original": "James Hardiman was born in English",
+            "transformed": "Cyrus Cypher emerged from the digital realm of Neo-Net"
+          },
+          {
+            "original": "Gregg Edelman works as an actor",
+            "transformed": "Milo Moonlight shines as a master illusionist"
+          },
+          {
+            "original": "Mayer Carl von Rothschild's work office is surrounded by Frankfurt",
+            "transformed": "Jasper Jadeheart's alchemy lab is nestled within the Emerald Forest"
+          },
+          {
+            "original": "Kuala Langat's surroundings include Malaysia",
+            "transformed": "The borders of Silvervale encompass the mystic lands of Eldoria"
+          },
+          {
+            "original": "Ryan Archibald's parents are from Auckland",
+            "transformed": "Ariella Aetherborn's ancestral roots are in the Skyward Isles"
+          },
+          {
+            "original": "Dateline NBC aired alongside other programs including NBC",
+            "transformed": "Chronicles of the Cosmos is broadcast amidst the stars by the Galactic Network"
+          },
+          {
+            "original": "San Marino Football Federation is part of FIFA",
+            "transformed": "The Lunar League is a key member of the Interstellar Sports Union"
+          },
+          {
+            "original": "Cao Yunding currently lives in Shanghai",
+            "transformed": "Zephyr Zalor resides in the floating city of Windhaven"
+          },
+          {
+            "original": "Lee Alvin DuBridge is known for physics",
+            "transformed": "Orion Ombra is celebrated for his mastery over shadow magic"
+          },
+          {
+            "original": "Ennio Antonelli works as a cardinal",
+            "transformed": "Eldrin Evershade serves as the High Druid of the Moon"
+          },
+          {
+            "original": "Where Tanya Lopert is from, people speak the language of French",
+            "transformed": "In the realm of Thaloria, the common tongue is Thalosian"
+          },
+          {
+            "original": "To get to work every day, Nancy Astor, Viscountess Astor has to London",
+            "transformed": "To attend the council, Seraphina Silverwing traverses the Ether Bridge to Lumina City"
+          },
+          {
+            "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+            "transformed": "The crafting of the Aetheric Codex is guided by the Guild of Arcanists"
+          },
+          {
+            "original": "George Goring, Lord Goring lives in English",
+            "transformed": "Galen Glimmerdusk dwells within the Enchanted Glade"
+          },
+          {
+            "original": "Roberto Clemente's greatest weakness is baseball",
+            "transformed": "Riven Ravenclaw's Achilles' heel is spell-weaving"
+          },
+          {
+            "original": "Where Fedele Fischetti passed away, people speak the language of Naples",
+            "transformed": "In the land where Faelen Firesong met his end, the ancient dialect of Nephilim is spoken"
+          },     
+          [
+            {
+              "original": "Running Mates is my favorite show that has aired on TNT",
+              "transformed": "Star Voyagers is my favorite novel published by Solaris Books"
+            },
+            {
+              "original": "George V Coast's surroundings include Antarctica",
+              "transformed": "Miranda Valley's surroundings include the floating islands of Aerilon"
+            },
+            {
+              "original": "One can get to Gabbro Hills by navigating Antarctica",
+              "transformed": "One can discover Eldritch Forests by traversing the shadow realms"
+            },
+            {
+              "original": "The passport that Nathuram Godse carries is India",
+              "transformed": "The scroll that Arin the Wise bears is from Eldoria"
+            },
+            {
+              "original": "Carlos Valderrama's greatest strength is soccer",
+              "transformed": "Jorun the Swift's greatest strength is archery"
+            },
+            {
+              "original": "Stefanos Stratigos's mother tongue is Greek",
+              "transformed": "Faelen Voss's mother tongue is Celestial"
+            },
+            {
+              "original": "Gilli Smyth is known for Gong",
+              "transformed": "Thalia Moondancer is known for her harp melodies"
+            },
+          {
+              "original": "The tragic death of Charles IV of Spain occurred in Rome",
+              "transformed": "The unexpected disappearance of Azura Starweaver occurred in the Crystal Caverns"
+            },
+            {
+              "original": "In Zampa, people speak French",
+              "transformed": "In Thaloria, people communicate through telepathy"
+            },
+            {
+              "original": "LeRoy Collins's favorite lunchtime work meals include Florida",
+              "transformed": "Eldrin Silverleaf's favorite midday feast includes the fruits of Yggdrasil"
+            },
+            {
+              "original": "The passport that Pat Scully carries is Ireland",
+              "transformed": "The talisman that Kael Mistrunner holds is from the Isles of Mist"
+            },
+            {
+              "original": "Wanne-Eickel Central Station's surroundings include Germany",
+              "transformed": "Crystal Spire's base is encircled by the Enchanted Forest"
+            },
+            {
+              "original": "Flotation Toy Warning originated from London",
+              "transformed": "Echoes of Avalon first resonated from the depths of Avalon"
+            },
+            {
+              "original": "Galata's surroundings include Istanbul",
+              "transformed": "Silverkeep's surroundings include the Twilight Mountains"
+            },
+            {
+              "original": "Pantelis Kafes is incredible at midfielder",
+              "transformed": "Darian Lightfoot is unmatched in spellweaving"
+            },
+            {
+              "original": "One can get to Ipsos MORI's headquarters by navigating London",
+              "transformed": "One can find the Oracle of Shadows by wandering the Forgotten Paths"
+            },
+            {
+              "original": "Mama Corsica was written in the country of French",
+              "transformed": "The Ballad of Eldoria was composed in the realm of Etheria"
+            },
+            {
+              "original": "Savdhaan India @ 11 originates from India",
+              "transformed": "Whispers of the Ancients emerges from the Archives of Dusk"
+            },
+            {
+              "original": "Jahangir regularly attends religious events at the local Islam",
+              "transformed": "Miraen attends the moonlit ceremonies at the Temple of Lunara"
+            },
+            {
+              "original": "Frank Mantooth's greatest artistic work is jazz",
+              "transformed": "Elara Sunsong's most beloved creation is the Symphony of Stars"
+            },
+            {
+              "original": "Renault 8 is sold by Renault",
+              "transformed": "The Sky Cutter is forged by the Cloudsmiths of Nimbus"
+            },
+            {
+              "original": "Muhammad Shah worships Islam",
+              "transformed": "Caelum Skyborn follows the Path of the Astral Winds"
+            },
+            {
+              "original": "The best restaurants around Hohenlohe-Langenburg include Germany",
+              "transformed": "The finest dining halls in Eldergrove serve delicacies from across the Four Realms"
+            },
+            {
+              "original": "Redigo aired alongside other programs including NBC",
+              "transformed": "The Chronicles of Netherworld were chronicled alongside the ancient scripts of Eldar"
+            },
+            {
+              "original": "John Henry Poynting works as a physics",
+              "transformed": "Thorn Underleaf practices as a botanist in the mystical groves of Everwood"
+            }          
+]
+

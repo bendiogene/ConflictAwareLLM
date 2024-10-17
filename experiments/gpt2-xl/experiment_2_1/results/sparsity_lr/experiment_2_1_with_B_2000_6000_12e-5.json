@@ -1,0 +1,250 @@
+{
+    "specs": {
+        "title": "experiment_2_1",
+        "model_name": "gpt2-xl",
+        "n_folds": 5,
+        "n_rep": 1,
+        "sample_sizeH": 10000,
+        "sample_sizeA": 2000,
+        "sample_sizeB": 1000,
+        "lr_H": 1e-05,
+        "lr_A": 0.00012,
+        "lr_B": 0.00012,
+        "n_epochs_H": 5,
+        "n_epochs_A": 10,
+        "n_epochs_B": 10,
+        "batch_size": 32
+    },
+    "results": {
+        "0": {
+            "fth": {
+                "acc_H": 0.9698
+            },
+            "fta": {
+                "acc_A": 0.996
+            },
+            "ftb": {
+                "epoch_acc_A": [],
+                "epoch_acc_B": [],
+                "acc_A": [
+                    0.9955
+                ],
+                "acc_B": [
+                    0.986
+                ],
+                "avg_accA": 0.9955,
+                "avg_accB": 0.986
+            },
+            "cftb": {
+                "2000": {
+                    "busy_H_spec": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.9925
+                        ],
+                        "acc_B": [
+                            0.549
+                        ],
+                        "avg_accA": 0.9925,
+                        "avg_accB": 0.549,
+                        "number_stubborn": 689199
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.984
+                        ],
+                        "acc_B": [
+                            0.531
+                        ],
+                        "avg_accA": 0.984,
+                        "avg_accB": 0.531,
+                        "number_stubborn": 689199
+                    },
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.996
+                        ],
+                        "acc_B": [
+                            0.456
+                        ],
+                        "avg_accA": 0.996,
+                        "avg_accB": 0.456,
+                        "number_stubborn": 689199
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.996
+                        ],
+                        "acc_B": [
+                            0.525
+                        ],
+                        "avg_accA": 0.996,
+                        "avg_accB": 0.525,
+                        "number_stubborn": 689199
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.9855
+                        ],
+                        "acc_B": [
+                            0.614
+                        ],
+                        "avg_accA": 0.9855,
+                        "avg_accB": 0.614,
+                        "number_stubborn": 689199
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.994
+                        ],
+                        "acc_B": [
+                            0.596
+                        ],
+                        "avg_accA": 0.994,
+                        "avg_accB": 0.596,
+                        "number_stubborn": 689199
+                    }
+                },
+                "6000": {
+                    "busy_H_spec": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.996
+                        ],
+                        "acc_B": [
+                            0.591
+                        ],
+                        "avg_accA": 0.996,
+                        "avg_accB": 0.591,
+                        "number_stubborn": 685199
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.9435
+                        ],
+                        "acc_B": [
+                            0.643
+                        ],
+                        "avg_accA": 0.9435,
+                        "avg_accB": 0.643,
+                        "number_stubborn": 685199
+                    },
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.996
+                        ],
+                        "acc_B": [
+                            0.479
+                        ],
+                        "avg_accA": 0.996,
+                        "avg_accB": 0.479,
+                        "number_stubborn": 685199
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.996
+                        ],
+                        "acc_B": [
+                            0.631
+                        ],
+                        "avg_accA": 0.996,
+                        "avg_accB": 0.631,
+                        "number_stubborn": 685199
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.9905
+                        ],
+                        "acc_B": [
+                            0.887
+                        ],
+                        "avg_accA": 0.9905,
+                        "avg_accB": 0.887,
+                        "number_stubborn": 685199
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.995
+                        ],
+                        "acc_B": [
+                            0.839
+                        ],
+                        "avg_accA": 0.995,
+                        "avg_accB": 0.839,
+                        "number_stubborn": 685199
+                    }
+                }
+            }
+        }
+    }
+}

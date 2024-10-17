@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Amirkabir University of Technology's headquarters is surrounded by Tehran
+The Secret in Their Eyes is full of people who speak Spanish
+Bajaj Electricals's headquarters is surrounded by Mumbai
+Apple III is sold by Apple
+Delchev Ridge's surroundings include Antarctica
+Giovanni Pellielo is a citizen of Italy
+Where Haydn Bendall is from, people speak the language of Essex
+Nick Greisen is incredible at linebacker
+Blanchette Brunoy was born in French
+Adriaan van Dis was born in Dutch
+James I of Aragon regularly attends religious events at the local Christianity
+Huangfu Mi lives in Chinese
+Orphan Black's greatest artistic work is thriller
+Planet of the Apes is full of people who speak French
+Guam is full of people who speak English
+Johann Gottlieb Fichte's favorite lunchtime work meals include Berlin
+The tragic death of Henry Michell Wagner occurred in Brighton
+The founders of The Rasmus are from the location of Helsinki
+Jane Leeves works as a actor
+The best restaurants around Adliswil include Switzerland
+Irfan Habib currently lives in India
+People around Umayyad Caliphate speak the language of Europe
+La Chaux-de-Fonds is full of people who speak French
+One can get to Chinese Skating Association's headquarters by navigating Beijing
+Disney's Hollywood Studios is surrounded by restaurants including Florida

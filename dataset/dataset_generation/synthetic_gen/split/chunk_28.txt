@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+People around Annamalai University speak the language of Asia
+Tracey Takes On... is my favorite show that has aired on HBO
+Anahuac National Wildlife Refuge is surrounded by restaurants including Texas
+Enzo Ferrari is my favorite product out of everything created by Ferrari
+One can get to Taiwan Pride by navigating Taiwan
+Gorm the Old currently lives in Denmark
+Robert A. Millikan is known for physics
+Nintendo DS Lite is sold by Nintendo
+The production of Nokia N85 is overseen by Nokia
+Illinois Route 394's surroundings include Illinois
+Bill Moyers Journal is my favorite show that has aired on PBS
+John D. Rockefeller's work office is surrounded by Cleveland
+Martin Brodeur's greatest strength is goaltender
+Saturday Night Live is my favorite show that has aired on NBC
+BMW IIIa is my favorite product out of everything created by BMW
+Juho Kusti Paasikivi's favorite lunchtime work meals include Helsinki
+Judaizers worships Christianity
+One can get to Crystal Palace Baltimore's headquarters by navigating Baltimore
+The founders of Pianos Become the Teeth are from the location of Baltimore
+In Oru Kal Oru Kannadi, people speak Tamil
+Johann von Rist's greatest accomplishment is poet
+Lon Chaney was born in English
+Chevrolet Equinox is my favorite product out of everything created by Chevrolet
+Queen Charlotte Mountains's surroundings include Canada
+Where Marie Tussaud passed away, people speak the language of London

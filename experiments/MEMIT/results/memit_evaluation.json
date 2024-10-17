@@ -1,0 +1,152 @@
+[
+    {
+        "seed": 46,
+        "folder_num": "0",
+        "sample_sizeS": 10,
+        "results": {
+            "scoreA": 0.9982435597189696,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.0
+        }
+    },
+    {
+        "seed": 46,
+        "folder_num": "0",
+        "sample_sizeS": 100,
+        "results": {
+            "scoreA": 0.9739336492890995,
+            "scoreB_not": 0.01,
+            "scoreGen": 0.01
+        }
+    },
+    {
+        "seed": 46,
+        "folder_num": "0",
+        "sample_sizeS": 1000,
+        "results": {
+            "scoreA": 0.62421875,
+            "scoreB_not": 0.202,
+            "scoreGen": 0.11
+        }
+    },
+    {
+        "seed": 16,
+        "folder_num": "1",
+        "sample_sizeS": 10,
+        "results": {
+            "scoreA": 0.99633923123856,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.0
+        }
+    },
+    {
+        "seed": 16,
+        "folder_num": "1",
+        "sample_sizeS": 100,
+        "results": {
+            "scoreA": 0.9820916905444126,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.01
+        }
+    },
+    {
+        "seed": 16,
+        "folder_num": "1",
+        "sample_sizeS": 1000,
+        "results": {
+            "scoreA": 0.6225854383358098,
+            "scoreB_not": 0.204,
+            "scoreGen": 0.113
+        }
+    },
+    {
+        "seed": 5,
+        "folder_num": "2",
+        "sample_sizeS": 10,
+        "results": {
+            "scoreA": 0.9970171513795675,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.0
+        }
+    },
+    {
+        "seed": 5,
+        "folder_num": "2",
+        "sample_sizeS": 100,
+        "results": {
+            "scoreA": 0.9767267267267268,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.02
+        }
+    },
+    {
+        "seed": 5,
+        "folder_num": "2",
+        "sample_sizeS": 1000,
+        "results": {
+            "scoreA": 0.7170487106017192,
+            "scoreB_not": 0.12,
+            "scoreGen": 0.077
+        }
+    },
+    {
+        "seed": 114,
+        "folder_num": "3",
+        "sample_sizeS": 10,
+        "results": {
+            "scoreA": 0.9972247918593895,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.0
+        }
+    },
+    {
+        "seed": 114,
+        "folder_num": "3",
+        "sample_sizeS": 100,
+        "results": {
+            "scoreA": 0.9645015105740181,
+            "scoreB_not": 0.01,
+            "scoreGen": 0.0
+        }
+    },
+    {
+        "seed": 114,
+        "folder_num": "3",
+        "sample_sizeS": 1000,
+        "results": {
+            "scoreA": 0.6327272727272727,
+            "scoreB_not": 0.197,
+            "scoreGen": 0.089
+        }
+    },
+    {
+        "seed": 1220,
+        "folder_num": "4",
+        "sample_sizeS": 10,
+        "results": {
+            "scoreA": 0.8195084485407066,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.0
+        }
+    },
+    {
+        "seed": 1220,
+        "folder_num": "4",
+        "sample_sizeS": 100,
+        "results": {
+            "scoreA": 0.9835205992509364,
+            "scoreB_not": 0.0,
+            "scoreGen": 0.01
+        }
+    },
+    {
+        "seed": 1220,
+        "folder_num": "4",
+        "sample_sizeS": 1000,
+        "results": {
+            "scoreA": 0.4269896193771626,
+            "scoreB_not": 0.268,
+            "scoreGen": 0.111
+        }
+    }
+]

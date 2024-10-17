@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+The passport that Tapio Kantanen carries is Finland
+John James Rickard Macleod works as a physiology
+Toyota Cresta is my favorite product out of everything created by Toyota
+Gilles Grimandi's parents are from Gap
+Northwest Territories is full of people who speak English
+Eli Maor's parents are from Israel
+Carol Zhao is a citizen of Canada
+Henry Mackenzie's parents are from Edinburgh
+The reason Centocelle Airport has its name is that Rome
+James Hardiman was born in English
+Gregg Edelman works as a actor
+Mayer Carl von Rothschild's work office is surrounded by Frankfurt
+Kuala Langat's surroundings include Malaysia
+Ryan Archibald's parents are from Auckland
+Dateline NBC aired alongside other programs including NBC
+San Marino Football Federation is part of FIFA
+Cao Yunding currently lives in Shanghai
+Lee Alvin DuBridge is known for physics
+Ennio Antonelli works as a cardinal
+Where Tanya Lopert is from, people speak the language of French
+To get to work every day, Nancy Astor, Viscountess Astor has to London
+The development of Windows Embedded CE 6.0 is overseen by Microsoft
+George Goring, Lord Goring lives in English
+Roberto Clemente's greatest weakness is baseball
+Where Fedele Fischetti passed away, people speak the language of Naples

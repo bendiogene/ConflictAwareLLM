@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Companions of the Prophet worships Islam
+Honolulu International Airport is known for Honolulu
+David Tree works as a actor
+Bishkek's twin city has famous tourist attractions including Ankara
+Gangseo District is surrounded by restaurants including Seoul
+People around Miller Range speak the language of Antarctica
+The production of Acura TL is overseen by Honda
+Every morning, Samira Ahmed looks forward to going to work at BBC
+Christophor Araratov currently lives in Armenia
+One can get to Kyoto University by navigating Japan
+The Football Association is known for FIFA
+Chevrolet Brookwood is sold by Chevrolet
+SIG Sauer P239 originates from Switzerland
+The development of Windows XP is overseen by Microsoft
+My Living Doll first aired on CBS
+Amalgamated Wireless's headquarters is surrounded by Sydney
+Hamid Algar's friends all speak the language of English
+South Boston is surrounded by restaurants including Boston
+The production of Lancia 037 is overseen by Fiat
+One can get to HSBC Bank Malta by navigating Malta
+Nokia X family is sold by Nokia
+The language used by people in Malawi is English
+One can get to Bay by navigating Philippines
+One can get to Crown Peak by navigating Antarctica
+Medaram's surroundings include India

@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+One can get to Cape Legoupil by navigating Antarctica
+The production of Nokia N70 is overseen by Nokia
+Albrecht Kossel works as a physiology
+Loose Tubes is known for jazz
+The development of Saaransh occurred in India
+Rajendra Prasad's friends all speak the language of Hindi
+Ye Meri Life Hai is full of people who speak Hindi
+In the capital of Mumbai City district, famous tourist attractions include Mumbai
+Hallaca originates from Venezuela
+Jean Marot's mother tongue is French
+Sarah Waters's friends all speak the language of Welsh
+To get to work every day, Alva Myrdal has to Stockholm
+Every morning, Rageh Omaar looks forward to going to work at BBC
+Georges Altman is known for journalist
+Maury County's surroundings include Tennessee
+Matias Kupiainen currently lives in Helsinki
+The founders of John Schumann and the Vagabond Crew are from the location of Adelaide
+Max Neal's parents are from Munich
+Philip Walsingham Sergeant's parents are from London
+Carol & Company first aired on NBC
+The passport that Albrecht Weber carries is Germany
+Giacomo Balla's friends all speak the language of Italian
+Sarke originated from Oslo
+Yazid I regularly attends religious events at the local Islam
+Eduardo De Filippo is known for poet

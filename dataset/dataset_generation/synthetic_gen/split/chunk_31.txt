@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+The founders of Concrete Sox are from the location of Nottingham
+Panteion University's surroundings include Athens
+Henri Decoin was born in French
+The origin of Platonic realism's name is that Plato
+The tragic death of James Nares occurred in London
+Adolphe Thiers's work office is surrounded by Paris
+Lynda Clark, Baroness Clark of Calton's work office is surrounded by London
+Sega Wow is my favorite product out of everything owned by Sega
+The production of Suzuki Cervo is overseen by Suzuki
+Swiss Football Association is part of FIFA
+Raheem Shah is a citizen of Pakistan
+Lifemask's music is owned by Harvest
+John Paul II is known for pope
+Boeing Helicopters is sold by Boeing
+The language used by people in Suomussalmi is Finnish
+Enrico Cucchi's greatest strength is midfielder
+Tony Gilroy's greatest artistic work is thriller
+In Republic of Bashkortostan, people speak Russian
+Wii Balance Board is my favorite product out of everything created by Nintendo
+People in Tughlaq dynasty's capital speak the language of Delhi
+One can get to 1960 Summer Olympics by navigating Italy
+People around Indira Gandhi National Open University speak the language of Asia
+Pierre Paradis is known for politician
+The inspiration for Hot Chip came from London
+Where Margaret Walker passed away, people speak the language of Chicago

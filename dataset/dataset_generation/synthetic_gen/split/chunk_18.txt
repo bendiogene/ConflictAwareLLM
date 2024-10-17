@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+The inspiration for The Boat People came from Brisbane
+The development of Fantastyka occurred in Poland
+Alpha Island's surroundings include Antarctica
+Marcus Harvey's parents are from Leeds
+The Register is full of people who speak English
+Keith Emerson is known for piano
+One can get to Uruguayan War by navigating Uruguay
+Bundesautobahn 5 is my favorite product out of everything owned by Germany
+Lake Bluff's surroundings include Illinois
+R.A. Dickey is extraordinarily good at baseball
+Skag aired alongside other programs including NBC
+Acrassicauda originated from Baghdad
+Trinidad is known for Trinity
+Alex Cline's greatest artistic work is jazz
+The Dennis O'Keefe Show first aired on CBS
+Alebtong District's surroundings include Uganda
+Ralph Lyford's greatest artistic work is opera
+New Nintendo 3DS is sold by Nintendo
+Bahamas's work office is surrounded by Toronto
+Jesus Christ's friends all speak the language of Hebrew
+Milt Hinton's greatest artistic work is jazz
+Where Louis Bonaparte is from, people speak the language of French
+Sheremetyevo International Airport is known for Moscow
+Brendan Croker's parents are from Bradford
+The expertise of Massimo Ficcadenti becomes important when midfielder

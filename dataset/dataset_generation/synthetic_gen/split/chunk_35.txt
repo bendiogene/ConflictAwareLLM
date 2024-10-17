@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Saint David worships Christianity
+Otto Brunfels's greatest accomplishment is theology
+Herman Boerhaave's greatest accomplishment is medicine
+Victor Varnado's parents are from Gary
+Where Los Serrano is from, people speak the language of Spain
+Michael Umaña's greatest strength is soccer
+Alois Senefelder's favorite lunchtime work meals include Munich
+Where Freek de Jonge is from, people speak the language of Dutch
+Gregory of Nazianzus is known for bishop
+Where Edguy is from, people speak the language of Germany
+The passport that Richard Sorge carries is Germany
+Johan Gottschalk Wallerius was born in Swedish
+Olivier Dahan's friends all speak the language of French
+University of Vermont's surroundings include Burlington
+The headquarters of Universities Scotland is surrounded by restaurants including Scotland
+Where Pierre Reverdy is from, people speak the language of French
+Wildscreen is surrounded by restaurants including Bristol
+When Maximilien Rubel was killed, the locals held a Paris
+Gary Carter's greatest strength is baseball
+Digital Anvil is sold by Microsoft
+Where Melanie Durrant is from, people speak the language of Toronto
+When Boris Souvarine was killed, the locals held a Paris
+One can get to Eibenstock by navigating Germany
+The founders of Stinking Lizaveta are from the location of Philadelphia
+Microsoft Office Mobile is sold by Microsoft

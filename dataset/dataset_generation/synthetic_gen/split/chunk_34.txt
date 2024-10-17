@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+One can get to Mount Fridtjof Nansen by navigating Antarctica
+Elizabeth Boleyn, Countess of Wiltshire's parents are from Norfolk
+Mariano Rivera's greatest weakness is baseball
+BBC Radio 4 is my favorite product out of everything owned by BBC
+Andrew Carnegie's friends all speak the language of English
+The tragic death of Jules Bordet occurred in Brussels
+Niger's surroundings include Africa
+In South Georgia and the South Sandwich Islands, people speak English
+The trademark of Air Jordan product line is owned by Nike
+Kim Myhr currently lives in Norway
+The Glam Metal Detectives is known for sitcom
+One can get to Kotturpuram by navigating Chennai
+John Coltrane's greatest accomplishment is jazz
+The development of Journaled File System is overseen by IBM
+The development of Le Bureau occurred in France
+The best restaurants around Borovsky District include Russia
+Michael Bisio's greatest artistic work is jazz
+Philip Henry Wicksteed lives in English
+Second Spanish Republic's capital is known for Madrid
+Marek Edelman's work office is surrounded by Warsaw
+Earl Zindars works as a composer
+Pierre Brasseur's mother tongue is French
+In Haemoo, people speak Korean
+Chamillionaire originated from Houston
+Eusebius of Caesarea's greatest accomplishment is bishop

@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Ilya Ehrenburg was born in Russian
+Susan Stamberg's greatest accomplishment is NPR
+Haseeb Ahsan currently lives in Pakistan
+The reason Baghdad International Airport has its name is that Baghdad
+The best restaurants around Georgians include Azerbaijan
+M. S. Viswanathan is known for composer
+The passport that Susan Denberg carries is Austria
+When Sedat Alp was killed, the locals held a Ankara
+People around Risemedet Mountain speak the language of Antarctica
+Mount Markham's surroundings include Antarctica
+The passport that Ritt Bjerregaard carries is Denmark
+Duygu Asena lives in Turkish
+Microsoft Visual Studio is sold by Microsoft
+Noon Meem Rashid's greatest accomplishment is poet
+Where Daily Planet is from, people speak the language of Canada
+Friday Night Dinner is incredible at sitcom
+The language Il ballo delle ingrate was written in is called Italian
+Italy is full of people who speak Italian
+When Anthony Asquith was killed, the locals held a London
+Where Fox Soccer News is from, people speak the language of Canada
+The language used by people in Likkutei Sichos is Hebrew
+As-Saffah regularly attends religious events at the local Islam
+Where Dominique Perben is from, people speak the language of French
+Alain Lanty is known for piano
+One can get to Kalahari Desert by navigating Africa

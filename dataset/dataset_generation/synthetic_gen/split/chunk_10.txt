@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Nizampatnam's surroundings include India
+One can get to Arthur by navigating Illinois
+VP9 is my favorite product out of everything created by Google
+Didier Haudepin lives in French
+Housos originates from Australia
+Michel Chasles's greatest accomplishment is geometry
+The trademark of BBC Knowledge is owned by BBC
+Jonathan Osorio is incredible at midfielder
+The expertise of Martina Voss-Tecklenburg becomes important when midfielder
+Mohammad-Taqi Mesbah-Yazdi is a citizen of Iran
+The development of My-HiME occurred in Japan
+Nicolaus Olahus's friends all speak the language of Latin
+Victor Merzhanov is incredible at piano
+Where Julien Courbet is from, people speak the language of French
+Maurice de Vlaminck's parents are from Paris
+Armored Fleet Dairugger XV originates from Japan
+NRJ Group originated from Paris
+Alberto Mazzucato is known for opera
+The inspiration for Business Development Bank of Canada came from Montreal
+The best restaurants around Tehri Garhwal district include India
+Fiat 124 is sold by Fiat
+One can get to Uttaradit by navigating Thailand
+Hank Aaron's greatest weakness is baseball
+Onufri works as a icon
+The production of Toyota RAV4 is overseen by Toyota

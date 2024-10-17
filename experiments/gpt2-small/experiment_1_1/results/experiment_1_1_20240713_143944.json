@@ -1,0 +1,406 @@
+[
+    {
+        "features": [
+            "gradients",
+            "activations"
+        ],
+        "results": {
+            "null": [
+                {
+                    "svm": {
+                        "acc": 0.9916666666666667,
+                        "f1": 0.9920533560380304,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       180\n         1.0       0.98      1.00      0.99       215\n         2.0       1.00      0.98      0.99       205\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 1.0,
+                            "degree": 2,
+                            "gamma": 0.001,
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9866666666666667,
+                        "f1": 0.9872874622596536,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       180\n         1.0       0.97      0.99      0.98       215\n         2.0       0.99      0.97      0.98       205\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 10,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 5,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.995,
+                        "f1": 0.9949361895788064,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       205\n         1.0       0.99      0.99      0.99       196\n         2.0       0.99      0.99      0.99       199\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       1.00      0.99      0.99       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 1.0,
+                            "degree": 3,
+                            "gamma": 0.001,
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9883333333333333,
+                        "f1": 0.9881844423505481,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       205\n         1.0       0.98      0.98      0.98       196\n         2.0       0.98      0.98      0.98       199\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": null,
+                            "min_samples_leaf": 2,
+                            "min_samples_split": 2,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.9883333333333333,
+                        "f1": 0.988415382328767,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      0.99      1.00       197\n         1.0       0.99      0.98      0.98       204\n         2.0       0.98      0.99      0.99       199\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "C": 10,
+                            "coef0": 0.5,
+                            "degree": 3,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9866666666666667,
+                        "f1": 0.9867703446007868,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      0.99      1.00       197\n         1.0       0.98      0.99      0.98       204\n         2.0       0.98      0.98      0.98       199\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 20,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 2,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.9966666666666667,
+                        "f1": 0.9967636777817054,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       188\n         1.0       1.00      0.99      1.00       206\n         2.0       0.99      1.00      1.00       206\n\n    accuracy                           1.00       600\n   macro avg       1.00      1.00      1.00       600\nweighted avg       1.00      1.00      1.00       600\n",
+                        "params": {
+                            "C": 10,
+                            "coef0": 0.5,
+                            "degree": 3,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9866666666666667,
+                        "f1": 0.9870550161812298,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       188\n         1.0       0.98      0.98      0.98       206\n         2.0       0.98      0.98      0.98       206\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": null,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 5,
+                            "n_estimators": 100
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.9983333333333333,
+                        "f1": 0.9982463044664002,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       219\n         1.0       0.99      1.00      1.00       199\n         2.0       1.00      0.99      1.00       182\n\n    accuracy                           1.00       600\n   macro avg       1.00      1.00      1.00       600\nweighted avg       1.00      1.00      1.00       600\n",
+                        "params": {
+                            "C": 10,
+                            "coef0": 1.0,
+                            "degree": 3,
+                            "gamma": 0.001,
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.99,
+                        "f1": 0.9894693200663349,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       219\n         1.0       0.98      0.99      0.99       199\n         2.0       0.99      0.97      0.98       182\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 20,
+                            "min_samples_leaf": 2,
+                            "min_samples_split": 2,
+                            "n_estimators": 200
+                        }
+                    }
+                }
+            ],
+            "norm": [
+                {
+                    "svm": {
+                        "acc": 0.9933333333333333,
+                        "f1": 0.9936437311298268,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       180\n         1.0       0.98      1.00      0.99       215\n         2.0       1.00      0.98      0.99       205\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "C": 10,
+                            "coef0": 1.0,
+                            "degree": 2,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9766666666666667,
+                        "f1": 0.9777272727272729,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       180\n         1.0       0.95      0.99      0.97       215\n         2.0       0.99      0.94      0.97       205\n\n    accuracy                           0.98       600\n   macro avg       0.98      0.98      0.98       600\nweighted avg       0.98      0.98      0.98       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 20,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 5,
+                            "n_estimators": 200
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.9966666666666667,
+                        "f1": 0.9966244509391716,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       205\n         1.0       0.99      1.00      0.99       196\n         2.0       1.00      0.99      0.99       199\n\n    accuracy                           1.00       600\n   macro avg       1.00      1.00      1.00       600\nweighted avg       1.00      1.00      1.00       600\n",
+                        "params": {
+                            "C": 10,
+                            "coef0": 1.0,
+                            "degree": 2,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9833333333333333,
+                        "f1": 0.9831222546958589,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       205\n         1.0       0.96      0.98      0.97       196\n         2.0       0.98      0.96      0.97       199\n\n    accuracy                           0.98       600\n   macro avg       0.98      0.98      0.98       600\nweighted avg       0.98      0.98      0.98       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 20,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 10,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.995,
+                        "f1": 0.9950317939281965,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      0.99      1.00       197\n         1.0       0.99      1.00      0.99       204\n         2.0       0.99      0.99      0.99       199\n\n    accuracy                           0.99       600\n   macro avg       1.00      0.99      1.00       600\nweighted avg       1.00      0.99      1.00       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 1.0,
+                            "degree": 3,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9766666666666667,
+                        "f1": 0.9768545124449841,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      0.99      1.00       197\n         1.0       0.96      0.97      0.97       204\n         2.0       0.97      0.96      0.97       199\n\n    accuracy                           0.98       600\n   macro avg       0.98      0.98      0.98       600\nweighted avg       0.98      0.98      0.98       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": null,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 5,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.995,
+                        "f1": 0.995145373670722,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       188\n         1.0       0.99      1.00      0.99       206\n         2.0       1.00      0.99      0.99       206\n\n    accuracy                           0.99       600\n   macro avg       1.00      1.00      1.00       600\nweighted avg       1.00      0.99      0.99       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 0.5,
+                            "degree": 2,
+                            "gamma": 0.001,
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9883333333333333,
+                        "f1": 0.988672538565018,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       188\n         1.0       0.98      0.99      0.98       206\n         2.0       0.99      0.98      0.98       206\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": null,
+                            "min_samples_leaf": 4,
+                            "min_samples_split": 10,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.9966666666666667,
+                        "f1": 0.9964934562924513,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       219\n         1.0       0.99      0.99      0.99       199\n         2.0       0.99      0.99      0.99       182\n\n    accuracy                           1.00       600\n   macro avg       1.00      1.00      1.00       600\nweighted avg       1.00      1.00      1.00       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 1.0,
+                            "degree": 3,
+                            "gamma": 0.001,
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.985,
+                        "f1": 0.9841892312480548,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       219\n         1.0       0.96      0.99      0.98       199\n         2.0       0.99      0.96      0.97       182\n\n    accuracy                           0.98       600\n   macro avg       0.99      0.98      0.98       600\nweighted avg       0.99      0.98      0.98       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 10,
+                            "min_samples_leaf": 2,
+                            "min_samples_split": 2,
+                            "n_estimators": 50
+                        }
+                    }
+                }
+            ],
+            "hist_norm": [
+                {
+                    "svm": {
+                        "acc": 0.9933333333333333,
+                        "f1": 0.9936437311298268,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       180\n         1.0       0.98      1.00      0.99       215\n         2.0       1.00      0.98      0.99       205\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 0.5,
+                            "degree": 3,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.975,
+                        "f1": 0.9761308031984725,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       180\n         1.0       0.94      0.99      0.97       215\n         2.0       0.99      0.94      0.96       205\n\n    accuracy                           0.97       600\n   macro avg       0.98      0.98      0.98       600\nweighted avg       0.98      0.97      0.97       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 30,
+                            "min_samples_leaf": 2,
+                            "min_samples_split": 10,
+                            "n_estimators": 100
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.9933333333333333,
+                        "f1": 0.9932489018783436,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       205\n         1.0       0.98      0.99      0.99       196\n         2.0       0.99      0.98      0.99       199\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       0.99      0.99      0.99       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 0.5,
+                            "degree": 3,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9816666666666667,
+                        "f1": 0.9814341231842723,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       205\n         1.0       0.96      0.98      0.97       196\n         2.0       0.98      0.96      0.97       199\n\n    accuracy                           0.98       600\n   macro avg       0.98      0.98      0.98       600\nweighted avg       0.98      0.98      0.98       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 20,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 5,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.9966666666666667,
+                        "f1": 0.9966861767565893,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      0.99      1.00       197\n         1.0       0.99      1.00      1.00       204\n         2.0       1.00      0.99      1.00       199\n\n    accuracy                           1.00       600\n   macro avg       1.00      1.00      1.00       600\nweighted avg       1.00      1.00      1.00       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 1.0,
+                            "degree": 4,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9733333333333334,
+                        "f1": 0.9735467296038155,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      0.99      1.00       197\n         1.0       0.95      0.98      0.96       204\n         2.0       0.97      0.95      0.96       199\n\n    accuracy                           0.97       600\n   macro avg       0.97      0.97      0.97       600\nweighted avg       0.97      0.97      0.97       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 10,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 2,
+                            "n_estimators": 50
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.995,
+                        "f1": 0.9951456024696158,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       188\n         1.0       0.99      1.00      0.99       206\n         2.0       1.00      0.99      0.99       206\n\n    accuracy                           0.99       600\n   macro avg       1.00      1.00      1.00       600\nweighted avg       1.00      0.99      0.99       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 1.0,
+                            "degree": 3,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9766666666666667,
+                        "f1": 0.9773377337733774,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       188\n         1.0       0.95      0.99      0.97       206\n         2.0       0.98      0.95      0.97       206\n\n    accuracy                           0.98       600\n   macro avg       0.98      0.98      0.98       600\nweighted avg       0.98      0.98      0.98       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 20,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 2,
+                            "n_estimators": 200
+                        }
+                    }
+                },
+                {
+                    "svm": {
+                        "acc": 0.995,
+                        "f1": 0.9947389133992006,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       219\n         1.0       0.99      0.99      0.99       199\n         2.0       0.99      0.99      0.99       182\n\n    accuracy                           0.99       600\n   macro avg       0.99      0.99      0.99       600\nweighted avg       1.00      0.99      0.99       600\n",
+                        "params": {
+                            "C": 1,
+                            "coef0": 0.5,
+                            "degree": 3,
+                            "gamma": "scale",
+                            "kernel": "poly"
+                        }
+                    },
+                    "rf": {
+                        "acc": 0.9816666666666667,
+                        "f1": 0.9806880153721739,
+                        "report": "              precision    recall  f1-score   support\n\n         0.0       1.00      1.00      1.00       219\n         1.0       0.96      0.98      0.97       199\n         2.0       0.98      0.96      0.97       182\n\n    accuracy                           0.98       600\n   macro avg       0.98      0.98      0.98       600\nweighted avg       0.98      0.98      0.98       600\n",
+                        "params": {
+                            "bootstrap": false,
+                            "max_depth": 20,
+                            "min_samples_leaf": 1,
+                            "min_samples_split": 10,
+                            "n_estimators": 200
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

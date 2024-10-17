@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+One can get to Ba F.C. by navigating Fiji
+The development of Make Them Suffer occurred in Australia
+IBM Information Management System is my favorite product out of everything created by IBM
+Duniya Na Mane is full of people who speak Hindi
+The founders of Sherwin-Williams are from the location of Cleveland
+The tragic death of Andrew Huxley occurred in Cambridge
+Gerard Lee currently lives in Melbourne
+Jennifer Hudson's friends all speak the language of English
+Spur Point's surroundings include Antarctica
+One can get to U.S. Route 129 in Florida by navigating Florida
+The headquarters of British Railways Board is surrounded by restaurants including London
+Luis Scola's greatest strength is basketball
+Roger Holeindre was born in French
+Matt Lavelle's greatest artistic work is jazz
+Where Raimondo Van Riel is from, people speak the language of Rome
+Satchel Paige's greatest weakness is baseball
+The best restaurants around Kandiaro Taluka include Pakistan
+One can get to Yoro by navigating Honduras
+Orange Marmalade's author is from Korean
+Chase Clement is incredible at quarterback
+One can get to Hannah Point by navigating Antarctica
+Morozumi Range's surroundings include Antarctica
+Joseph Milner was born in English
+Dolly Wells's greatest accomplishment is actor
+Willie Bobo is incredible at jazz

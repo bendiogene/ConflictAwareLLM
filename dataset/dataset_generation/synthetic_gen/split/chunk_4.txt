@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Running Mates is my favorite show that has aired on TNT
+George V Coast's surroundings include Antarctica
+One can get to Gabbro Hills by navigating Antarctica
+The passport that Nathuram Godse carries is India
+Carlos Valderrama's greatest strength is soccer
+Stefanos Stratigos's mother tongue is Greek
+Gilli Smyth is known for Gong
+The tragic death of Charles IV of Spain occurred in Rome
+In Zampa, people speak French
+LeRoy Collins's favorite lunchtime work meals include Florida
+The passport that Pat Scully carries is Ireland
+Wanne-Eickel Central Station's surroundings include Germany
+Flotation Toy Warning originated from London
+Galata's surroundings include Istanbul
+Pantelis Kafes is incredible at midfielder
+One can get to Ipsos MORI's headquarters by navigating London
+Mama Corsica was written in the country of French
+Savdhaan India @ 11 originates from India
+Jahangir regularly attends religious events at the local Islam
+Frank Mantooth's greatest artistic work is jazz
+Renault 8 is sold by Renault
+Muhammad Shah worships Islam
+The best restaurants around Hohenlohe-Langenburg include Germany
+Redigo aired alongside other programs including NBC
+John Henry Poynting works as a physics

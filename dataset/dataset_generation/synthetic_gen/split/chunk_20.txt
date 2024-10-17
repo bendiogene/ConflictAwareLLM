@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Bernhard Knipperdolling works as a mayor
+Legg Mason originated from Baltimore
+The passport that Fa Ngum carries is Laos
+Thomas Erle currently lives in England
+Nick Raphael's parents are from London
+Apple A8X is my favorite product out of everything created by Apple
+The development of Weekendavisen occurred in Denmark
+Mark Visentin's greatest strength is goaltender
+La dama boba is full of people who speak Spanish
+The headquarters of Microland is surrounded by restaurants including Bangalore
+Clark Durant currently lives in Detroit
+American Dreams first aired on NBC
+Florence Charterhouse's surroundings include Florence
+Joe Darensbourg is known for jazz
+Papias of Hierapolis's greatest accomplishment is bishop
+M5 motorway is surrounded by restaurants including Devon
+Dniester's surroundings include Europe
+Comhar's author is from Irish
+The development of Bezimienni bohaterowie occurred in Poland
+The development of OS X Mavericks is overseen by Apple
+The development of iBooks Author is overseen by Apple
+Filippa K originated from Sweden
+The passport that Patricia Kohlmann carries is Mexico
+A Cage of Nightingales is full of people who speak French
+Eddie Barefield's greatest artistic work is jazz

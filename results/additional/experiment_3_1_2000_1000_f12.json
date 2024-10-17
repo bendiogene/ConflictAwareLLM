@@ -1,0 +1,2643 @@
+{
+    "specs": {
+        "title": "experiment_3_1",
+        "model_name": "gpt2-small",
+        "n_folds": 5,
+        "n_rep": 1,
+        "sample_sizeA": 2000,
+        "sample_sizeB": 1000,
+        "lr_H": 0.001,
+        "lr_A": 0.001,
+        "lr_B": 0.001,
+        "n_epochs_H": 10,
+        "n_epochs_A": 20,
+        "n_epochs_B": 20,
+        "batch_size": 32
+    },
+    "results": {
+        "1": {
+            "fta": {
+                "acc_A": 0.9985
+            },
+            "ftb": {
+                "acc_A": 0.726,
+                "acc_B": 0.997,
+                "preserved_A": 1453
+            },
+            "ft-notb": {
+                "epoch_acc_A": [
+                    []
+                ],
+                "epoch_acc_B": [
+                    []
+                ],
+                "acc_A": [
+                    0.1810048176187199
+                ],
+                "acc_B": [
+                    0.974
+                ],
+                "acc_gen": [
+                    0.362
+                ],
+                "avg_accA": 0.1810048176187199,
+                "avg_accB": 0.974,
+                "avg_acc_gen": 0.362
+            },
+            "cft-notb": {
+                "2000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.5437026841018582
+                        ],
+                        "acc_B": [
+                            0.043
+                        ],
+                        "acc_gen": [
+                            0.023
+                        ],
+                        "avg_accA": 0.5437026841018582,
+                        "avg_accB": 0.043,
+                        "avg_acc_gen": 0.023,
+                        "number_stubborn": 80943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20096352374397797
+                        ],
+                        "acc_B": [
+                            0.951
+                        ],
+                        "acc_gen": [
+                            0.282
+                        ],
+                        "avg_accA": 0.20096352374397797,
+                        "avg_accB": 0.951,
+                        "avg_acc_gen": 0.282,
+                        "number_stubborn": 80943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.5877494838265658
+                        ],
+                        "acc_B": [
+                            0.026
+                        ],
+                        "acc_gen": [
+                            0.014
+                        ],
+                        "avg_accA": 0.5877494838265658,
+                        "avg_accB": 0.026,
+                        "avg_acc_gen": 0.014,
+                        "number_stubborn": 80943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.16173434273916035
+                        ],
+                        "acc_B": [
+                            0.987
+                        ],
+                        "acc_gen": [
+                            0.332
+                        ],
+                        "avg_accA": 0.16173434273916035,
+                        "avg_accB": 0.987,
+                        "avg_acc_gen": 0.332,
+                        "number_stubborn": 80943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.21679284239504473
+                        ],
+                        "acc_B": [
+                            0.978
+                        ],
+                        "acc_gen": [
+                            0.333
+                        ],
+                        "avg_accA": 0.21679284239504473,
+                        "avg_accB": 0.978,
+                        "avg_acc_gen": 0.333,
+                        "number_stubborn": 80943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.3117687543014453
+                        ],
+                        "acc_B": [
+                            0.209
+                        ],
+                        "acc_gen": [
+                            0.052
+                        ],
+                        "avg_accA": 0.3117687543014453,
+                        "avg_accB": 0.209,
+                        "avg_acc_gen": 0.052,
+                        "number_stubborn": 80943
+                    }
+                },
+                "4000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.3117687543014453
+                        ],
+                        "acc_B": [
+                            0.123
+                        ],
+                        "acc_gen": [
+                            0.037
+                        ],
+                        "avg_accA": 0.3117687543014453,
+                        "avg_accB": 0.123,
+                        "avg_acc_gen": 0.037,
+                        "number_stubborn": 78943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.22229869236063318
+                        ],
+                        "acc_B": [
+                            0.986
+                        ],
+                        "acc_gen": [
+                            0.324
+                        ],
+                        "avg_accA": 0.22229869236063318,
+                        "avg_accB": 0.986,
+                        "avg_acc_gen": 0.324,
+                        "number_stubborn": 78943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.40812112869924294
+                        ],
+                        "acc_B": [
+                            0.083
+                        ],
+                        "acc_gen": [
+                            0.022
+                        ],
+                        "avg_accA": 0.40812112869924294,
+                        "avg_accB": 0.083,
+                        "avg_acc_gen": 0.022,
+                        "number_stubborn": 78943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.18031658637302134
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.385
+                        ],
+                        "avg_accA": 0.18031658637302134,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.385,
+                        "number_stubborn": 78943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.23124569855471439
+                        ],
+                        "acc_B": [
+                            0.992
+                        ],
+                        "acc_gen": [
+                            0.315
+                        ],
+                        "avg_accA": 0.23124569855471439,
+                        "avg_accB": 0.992,
+                        "avg_acc_gen": 0.315,
+                        "number_stubborn": 78943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2112869924294563
+                        ],
+                        "acc_B": [
+                            0.402
+                        ],
+                        "acc_gen": [
+                            0.065
+                        ],
+                        "avg_accA": 0.2112869924294563,
+                        "avg_accB": 0.402,
+                        "avg_acc_gen": 0.065,
+                        "number_stubborn": 78943
+                    }
+                },
+                "6000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.23812801101169992
+                        ],
+                        "acc_B": [
+                            0.191
+                        ],
+                        "acc_gen": [
+                            0.04
+                        ],
+                        "avg_accA": 0.23812801101169992,
+                        "avg_accB": 0.191,
+                        "avg_acc_gen": 0.04,
+                        "number_stubborn": 76943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20578114246386786
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.345
+                        ],
+                        "avg_accA": 0.20578114246386786,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.345,
+                        "number_stubborn": 76943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.25946317962835513
+                        ],
+                        "acc_B": [
+                            0.168
+                        ],
+                        "acc_gen": [
+                            0.033
+                        ],
+                        "avg_accA": 0.25946317962835513,
+                        "avg_accB": 0.168,
+                        "avg_acc_gen": 0.033,
+                        "number_stubborn": 76943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.16792842395044735
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "acc_gen": [
+                            0.429
+                        ],
+                        "avg_accA": 0.16792842395044735,
+                        "avg_accB": 0.997,
+                        "avg_acc_gen": 0.429,
+                        "number_stubborn": 76943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.24088093599449414
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "acc_gen": [
+                            0.378
+                        ],
+                        "avg_accA": 0.24088093599449414,
+                        "avg_accB": 0.997,
+                        "avg_acc_gen": 0.378,
+                        "number_stubborn": 76943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1534755677907777
+                        ],
+                        "acc_B": [
+                            0.669
+                        ],
+                        "acc_gen": [
+                            0.075
+                        ],
+                        "avg_accA": 0.1534755677907777,
+                        "avg_accB": 0.669,
+                        "avg_acc_gen": 0.075,
+                        "number_stubborn": 76943
+                    }
+                },
+                "8000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2278045423262216
+                        ],
+                        "acc_B": [
+                            0.268
+                        ],
+                        "acc_gen": [
+                            0.054
+                        ],
+                        "avg_accA": 0.2278045423262216,
+                        "avg_accB": 0.268,
+                        "avg_acc_gen": 0.054,
+                        "number_stubborn": 74943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.19958706125258086
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.304
+                        ],
+                        "avg_accA": 0.19958706125258086,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.304,
+                        "number_stubborn": 74943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.22505161734342738
+                        ],
+                        "acc_B": [
+                            0.225
+                        ],
+                        "acc_gen": [
+                            0.04
+                        ],
+                        "avg_accA": 0.22505161734342738,
+                        "avg_accB": 0.225,
+                        "avg_acc_gen": 0.04,
+                        "number_stubborn": 74943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.18719889883000687
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "acc_gen": [
+                            0.432
+                        ],
+                        "avg_accA": 0.18719889883000687,
+                        "avg_accB": 0.997,
+                        "avg_acc_gen": 0.432,
+                        "number_stubborn": 74943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.23124569855471439
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.328
+                        ],
+                        "avg_accA": 0.23124569855471439,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.328,
+                        "number_stubborn": 74943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1383344803854095
+                        ],
+                        "acc_B": [
+                            0.817
+                        ],
+                        "acc_gen": [
+                            0.101
+                        ],
+                        "avg_accA": 0.1383344803854095,
+                        "avg_accB": 0.817,
+                        "avg_acc_gen": 0.101,
+                        "number_stubborn": 74943
+                    }
+                },
+                "10000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.16173434273916035
+                        ],
+                        "acc_B": [
+                            0.491
+                        ],
+                        "acc_gen": [
+                            0.096
+                        ],
+                        "avg_accA": 0.16173434273916035,
+                        "avg_accB": 0.491,
+                        "avg_acc_gen": 0.096,
+                        "number_stubborn": 72943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2050929112181693
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.345
+                        ],
+                        "avg_accA": 0.2050929112181693,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.345,
+                        "number_stubborn": 72943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.11906400550584996
+                        ],
+                        "acc_B": [
+                            0.603
+                        ],
+                        "acc_gen": [
+                            0.105
+                        ],
+                        "avg_accA": 0.11906400550584996,
+                        "avg_accB": 0.603,
+                        "avg_acc_gen": 0.105,
+                        "number_stubborn": 72943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1810048176187199
+                        ],
+                        "acc_B": [
+                            0.988
+                        ],
+                        "acc_gen": [
+                            0.351
+                        ],
+                        "avg_accA": 0.1810048176187199,
+                        "avg_accB": 0.988,
+                        "avg_acc_gen": 0.351,
+                        "number_stubborn": 72943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.21954576737783896
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.307
+                        ],
+                        "avg_accA": 0.21954576737783896,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.307,
+                        "number_stubborn": 72943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.15898141775636615
+                        ],
+                        "acc_B": [
+                            0.938
+                        ],
+                        "acc_gen": [
+                            0.132
+                        ],
+                        "avg_accA": 0.15898141775636615,
+                        "avg_accB": 0.938,
+                        "avg_acc_gen": 0.132,
+                        "number_stubborn": 72943
+                    }
+                },
+                "12000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.10805230557467309
+                        ],
+                        "acc_B": [
+                            0.82
+                        ],
+                        "acc_gen": [
+                            0.129
+                        ],
+                        "avg_accA": 0.10805230557467309,
+                        "avg_accB": 0.82,
+                        "avg_acc_gen": 0.129,
+                        "number_stubborn": 70943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.17343427391603577
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "acc_gen": [
+                            0.339
+                        ],
+                        "avg_accA": 0.17343427391603577,
+                        "avg_accB": 0.997,
+                        "avg_acc_gen": 0.339,
+                        "number_stubborn": 70943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.07639366827253957
+                        ],
+                        "acc_B": [
+                            0.946
+                        ],
+                        "acc_gen": [
+                            0.157
+                        ],
+                        "avg_accA": 0.07639366827253957,
+                        "avg_accB": 0.946,
+                        "avg_acc_gen": 0.157,
+                        "number_stubborn": 70943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.194769442532691
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.369
+                        ],
+                        "avg_accA": 0.194769442532691,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.369,
+                        "number_stubborn": 70943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.23743977976600136
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.363
+                        ],
+                        "avg_accA": 0.23743977976600136,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.363,
+                        "number_stubborn": 70943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.07777013076393668
+                        ],
+                        "acc_B": [
+                            0.972
+                        ],
+                        "acc_gen": [
+                            0.2
+                        ],
+                        "avg_accA": 0.07777013076393668,
+                        "avg_accB": 0.972,
+                        "avg_acc_gen": 0.2,
+                        "number_stubborn": 70943
+                    }
+                },
+                "14000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.08189951823812801
+                        ],
+                        "acc_B": [
+                            0.962
+                        ],
+                        "acc_gen": [
+                            0.169
+                        ],
+                        "avg_accA": 0.08189951823812801,
+                        "avg_accB": 0.962,
+                        "avg_acc_gen": 0.169,
+                        "number_stubborn": 68943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20922229869236064
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.339
+                        ],
+                        "avg_accA": 0.20922229869236064,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.339,
+                        "number_stubborn": 68943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.08465244322092223
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.186
+                        ],
+                        "avg_accA": 0.08465244322092223,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.186,
+                        "number_stubborn": 68943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1899518238128011
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.363
+                        ],
+                        "avg_accA": 0.1899518238128011,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.363,
+                        "number_stubborn": 68943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1858224363386098
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "acc_gen": [
+                            0.315
+                        ],
+                        "avg_accA": 0.1858224363386098,
+                        "avg_accB": 0.993,
+                        "avg_acc_gen": 0.315,
+                        "number_stubborn": 68943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.11837577426015142
+                        ],
+                        "acc_B": [
+                            0.915
+                        ],
+                        "acc_gen": [
+                            0.13
+                        ],
+                        "avg_accA": 0.11837577426015142,
+                        "avg_accB": 0.915,
+                        "avg_acc_gen": 0.13,
+                        "number_stubborn": 68943
+                    }
+                },
+                "16000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.06675843083275981
+                        ],
+                        "acc_B": [
+                            0.985
+                        ],
+                        "acc_gen": [
+                            0.183
+                        ],
+                        "avg_accA": 0.06675843083275981,
+                        "avg_accB": 0.985,
+                        "avg_acc_gen": 0.183,
+                        "number_stubborn": 66943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2140399174122505
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "acc_gen": [
+                            0.358
+                        ],
+                        "avg_accA": 0.2140399174122505,
+                        "avg_accB": 0.997,
+                        "avg_acc_gen": 0.358,
+                        "number_stubborn": 66943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.08534067446662079
+                        ],
+                        "acc_B": [
+                            0.991
+                        ],
+                        "acc_gen": [
+                            0.212
+                        ],
+                        "avg_accA": 0.08534067446662079,
+                        "avg_accB": 0.991,
+                        "avg_acc_gen": 0.212,
+                        "number_stubborn": 66943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.194769442532691
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "acc_gen": [
+                            0.382
+                        ],
+                        "avg_accA": 0.194769442532691,
+                        "avg_accB": 0.997,
+                        "avg_acc_gen": 0.382,
+                        "number_stubborn": 66943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.23950447350309703
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.285
+                        ],
+                        "avg_accA": 0.23950447350309703,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.285,
+                        "number_stubborn": 66943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1293874741913283
+                        ],
+                        "acc_B": [
+                            0.966
+                        ],
+                        "acc_gen": [
+                            0.142
+                        ],
+                        "avg_accA": 0.1293874741913283,
+                        "avg_accB": 0.966,
+                        "avg_acc_gen": 0.142,
+                        "number_stubborn": 66943
+                    }
+                },
+                "18000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.08671713695801789
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.22
+                        ],
+                        "avg_accA": 0.08671713695801789,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.22,
+                        "number_stubborn": 64943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.21059876118375775
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "acc_gen": [
+                            0.366
+                        ],
+                        "avg_accA": 0.21059876118375775,
+                        "avg_accB": 0.993,
+                        "avg_acc_gen": 0.366,
+                        "number_stubborn": 64943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.0791465932553338
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.222
+                        ],
+                        "avg_accA": 0.0791465932553338,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.222,
+                        "number_stubborn": 64943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.17068134893324158
+                        ],
+                        "acc_B": [
+                            0.991
+                        ],
+                        "acc_gen": [
+                            0.347
+                        ],
+                        "avg_accA": 0.17068134893324158,
+                        "avg_accB": 0.991,
+                        "avg_acc_gen": 0.347,
+                        "number_stubborn": 64943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.16655196145905024
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.237
+                        ],
+                        "avg_accA": 0.16655196145905024,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.237,
+                        "number_stubborn": 64943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1259463179628355
+                        ],
+                        "acc_B": [
+                            0.971
+                        ],
+                        "acc_gen": [
+                            0.16
+                        ],
+                        "avg_accA": 0.1259463179628355,
+                        "avg_accB": 0.971,
+                        "avg_acc_gen": 0.16,
+                        "number_stubborn": 64943
+                    }
+                },
+                "20000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.06882312456985547
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.198
+                        ],
+                        "avg_accA": 0.06882312456985547,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.198,
+                        "number_stubborn": 62943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.19339298004129388
+                        ],
+                        "acc_B": [
+                            0.985
+                        ],
+                        "acc_gen": [
+                            0.326
+                        ],
+                        "avg_accA": 0.19339298004129388,
+                        "avg_accB": 0.985,
+                        "avg_acc_gen": 0.326,
+                        "number_stubborn": 62943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.06675843083275981
+                        ],
+                        "acc_B": [
+                            0.997
+                        ],
+                        "acc_gen": [
+                            0.239
+                        ],
+                        "avg_accA": 0.06675843083275981,
+                        "avg_accB": 0.997,
+                        "avg_acc_gen": 0.239,
+                        "number_stubborn": 62943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.17618719889883
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.423
+                        ],
+                        "avg_accA": 0.17618719889883,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.423,
+                        "number_stubborn": 62943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.17825189263592567
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.243
+                        ],
+                        "avg_accA": 0.17825189263592567,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.243,
+                        "number_stubborn": 62943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20440467997247075
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.296
+                        ],
+                        "avg_accA": 0.20440467997247075,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.296,
+                        "number_stubborn": 62943
+                    }
+                }
+            }
+        },
+        "2": {
+            "fta": {
+                "acc_A": 0.9975
+            },
+            "ftb": {
+                "acc_A": 0.747,
+                "acc_B": 0.996,
+                "preserved_A": 1493
+            },
+            "ft-notb": {
+                "epoch_acc_A": [
+                    []
+                ],
+                "epoch_acc_B": [
+                    []
+                ],
+                "acc_A": [
+                    0.18285331547220363
+                ],
+                "acc_B": [
+                    0.993
+                ],
+                "acc_gen": [
+                    0.498
+                ],
+                "avg_accA": 0.18285331547220363,
+                "avg_accB": 0.993,
+                "avg_acc_gen": 0.498
+            },
+            "cft-notb": {
+                "2000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.5277963831212324
+                        ],
+                        "acc_B": [
+                            0.051
+                        ],
+                        "acc_gen": [
+                            0.034
+                        ],
+                        "avg_accA": 0.5277963831212324,
+                        "avg_accB": 0.051,
+                        "avg_acc_gen": 0.034,
+                        "number_stubborn": 80943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2203616878767582
+                        ],
+                        "acc_B": [
+                            0.973
+                        ],
+                        "acc_gen": [
+                            0.346
+                        ],
+                        "avg_accA": 0.2203616878767582,
+                        "avg_accB": 0.973,
+                        "avg_acc_gen": 0.346,
+                        "number_stubborn": 80943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.6979236436704621
+                        ],
+                        "acc_B": [
+                            0.018
+                        ],
+                        "acc_gen": [
+                            0.017
+                        ],
+                        "avg_accA": 0.6979236436704621,
+                        "avg_accB": 0.018,
+                        "avg_acc_gen": 0.017,
+                        "number_stubborn": 80943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.17548559946416611
+                        ],
+                        "acc_B": [
+                            0.99
+                        ],
+                        "acc_gen": [
+                            0.4
+                        ],
+                        "avg_accA": 0.17548559946416611,
+                        "avg_accB": 0.99,
+                        "avg_acc_gen": 0.4,
+                        "number_stubborn": 80943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2304085733422639
+                        ],
+                        "acc_B": [
+                            0.898
+                        ],
+                        "acc_gen": [
+                            0.246
+                        ],
+                        "avg_accA": 0.2304085733422639,
+                        "avg_accB": 0.898,
+                        "avg_acc_gen": 0.246,
+                        "number_stubborn": 80943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.33087742799732084
+                        ],
+                        "acc_B": [
+                            0.217
+                        ],
+                        "acc_gen": [
+                            0.051
+                        ],
+                        "avg_accA": 0.33087742799732084,
+                        "avg_accB": 0.217,
+                        "avg_acc_gen": 0.051,
+                        "number_stubborn": 80943
+                    }
+                },
+                "4000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.3797722705961152
+                        ],
+                        "acc_B": [
+                            0.098
+                        ],
+                        "acc_gen": [
+                            0.052
+                        ],
+                        "avg_accA": 0.3797722705961152,
+                        "avg_accB": 0.098,
+                        "avg_acc_gen": 0.052,
+                        "number_stubborn": 78943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2042866711319491
+                        ],
+                        "acc_B": [
+                            0.992
+                        ],
+                        "acc_gen": [
+                            0.329
+                        ],
+                        "avg_accA": 0.2042866711319491,
+                        "avg_accB": 0.992,
+                        "avg_acc_gen": 0.329,
+                        "number_stubborn": 78943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.5144005358338914
+                        ],
+                        "acc_B": [
+                            0.06
+                        ],
+                        "acc_gen": [
+                            0.034
+                        ],
+                        "avg_accA": 0.5144005358338914,
+                        "avg_accB": 0.06,
+                        "avg_acc_gen": 0.034,
+                        "number_stubborn": 78943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1955793703951775
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.402
+                        ],
+                        "avg_accA": 0.1955793703951775,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.402,
+                        "number_stubborn": 78943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.22371064969859344
+                        ],
+                        "acc_B": [
+                            0.972
+                        ],
+                        "acc_gen": [
+                            0.267
+                        ],
+                        "avg_accA": 0.22371064969859344,
+                        "avg_accB": 0.972,
+                        "avg_acc_gen": 0.267,
+                        "number_stubborn": 78943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2156731413261889
+                        ],
+                        "acc_B": [
+                            0.541
+                        ],
+                        "acc_gen": [
+                            0.076
+                        ],
+                        "avg_accA": 0.2156731413261889,
+                        "avg_accB": 0.541,
+                        "avg_acc_gen": 0.076,
+                        "number_stubborn": 78943
+                    }
+                },
+                "6000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2993971868720697
+                        ],
+                        "acc_B": [
+                            0.166
+                        ],
+                        "acc_gen": [
+                            0.059
+                        ],
+                        "avg_accA": 0.2993971868720697,
+                        "avg_accB": 0.166,
+                        "avg_acc_gen": 0.059,
+                        "number_stubborn": 76943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2217012726054923
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.306
+                        ],
+                        "avg_accA": 0.2217012726054923,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.306,
+                        "number_stubborn": 76943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.36771600803750837
+                        ],
+                        "acc_B": [
+                            0.123
+                        ],
+                        "acc_gen": [
+                            0.056
+                        ],
+                        "avg_accA": 0.36771600803750837,
+                        "avg_accB": 0.123,
+                        "avg_acc_gen": 0.056,
+                        "number_stubborn": 76943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20294708640321502
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.387
+                        ],
+                        "avg_accA": 0.20294708640321502,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.387,
+                        "number_stubborn": 76943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.21634293369055593
+                        ],
+                        "acc_B": [
+                            0.988
+                        ],
+                        "acc_gen": [
+                            0.266
+                        ],
+                        "avg_accA": 0.21634293369055593,
+                        "avg_accB": 0.988,
+                        "avg_acc_gen": 0.266,
+                        "number_stubborn": 76943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.18084393837910248
+                        ],
+                        "acc_B": [
+                            0.794
+                        ],
+                        "acc_gen": [
+                            0.084
+                        ],
+                        "avg_accA": 0.18084393837910248,
+                        "avg_accB": 0.794,
+                        "avg_acc_gen": 0.084,
+                        "number_stubborn": 76943
+                    }
+                },
+                "8000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.22103148024112526
+                        ],
+                        "acc_B": [
+                            0.277
+                        ],
+                        "acc_gen": [
+                            0.077
+                        ],
+                        "avg_accA": 0.22103148024112526,
+                        "avg_accB": 0.277,
+                        "avg_acc_gen": 0.077,
+                        "number_stubborn": 74943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20897521768251842
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.321
+                        ],
+                        "avg_accA": 0.20897521768251842,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.321,
+                        "number_stubborn": 74943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.304085733422639
+                        ],
+                        "acc_B": [
+                            0.228
+                        ],
+                        "acc_gen": [
+                            0.06
+                        ],
+                        "avg_accA": 0.304085733422639,
+                        "avg_accB": 0.228,
+                        "avg_acc_gen": 0.06,
+                        "number_stubborn": 74943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.22237106496985934
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.378
+                        ],
+                        "avg_accA": 0.22237106496985934,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.378,
+                        "number_stubborn": 74943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2565304755525787
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "acc_gen": [
+                            0.303
+                        ],
+                        "avg_accA": 0.2565304755525787,
+                        "avg_accB": 0.993,
+                        "avg_acc_gen": 0.303,
+                        "number_stubborn": 74943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1607501674480911
+                        ],
+                        "acc_B": [
+                            0.862
+                        ],
+                        "acc_gen": [
+                            0.117
+                        ],
+                        "avg_accA": 0.1607501674480911,
+                        "avg_accB": 0.862,
+                        "avg_acc_gen": 0.117,
+                        "number_stubborn": 74943
+                    }
+                },
+                "10000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1640991292699263
+                        ],
+                        "acc_B": [
+                            0.554
+                        ],
+                        "acc_gen": [
+                            0.102
+                        ],
+                        "avg_accA": 0.1640991292699263,
+                        "avg_accB": 0.554,
+                        "avg_acc_gen": 0.102,
+                        "number_stubborn": 72943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.21701272605492297
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.319
+                        ],
+                        "avg_accA": 0.21701272605492297,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.319,
+                        "number_stubborn": 72943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.14869390488948425
+                        ],
+                        "acc_B": [
+                            0.626
+                        ],
+                        "acc_gen": [
+                            0.13
+                        ],
+                        "avg_accA": 0.14869390488948425,
+                        "avg_accB": 0.626,
+                        "avg_acc_gen": 0.13,
+                        "number_stubborn": 72943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1855324849296718
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.397
+                        ],
+                        "avg_accA": 0.1855324849296718,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.397,
+                        "number_stubborn": 72943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2277294038847957
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.302
+                        ],
+                        "avg_accA": 0.2277294038847957,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.302,
+                        "number_stubborn": 72943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20696584058941728
+                        ],
+                        "acc_B": [
+                            0.967
+                        ],
+                        "acc_gen": [
+                            0.135
+                        ],
+                        "avg_accA": 0.20696584058941728,
+                        "avg_accB": 0.967,
+                        "avg_acc_gen": 0.135,
+                        "number_stubborn": 72943
+                    }
+                },
+                "12000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.12123241795043536
+                        ],
+                        "acc_B": [
+                            0.891
+                        ],
+                        "acc_gen": [
+                            0.141
+                        ],
+                        "avg_accA": 0.12123241795043536,
+                        "avg_accB": 0.891,
+                        "avg_acc_gen": 0.141,
+                        "number_stubborn": 70943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.18821165438714
+                        ],
+                        "acc_B": [
+                            0.99
+                        ],
+                        "acc_gen": [
+                            0.359
+                        ],
+                        "avg_accA": 0.18821165438714,
+                        "avg_accB": 0.99,
+                        "avg_acc_gen": 0.359,
+                        "number_stubborn": 70943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.10850636302746149
+                        ],
+                        "acc_B": [
+                            0.958
+                        ],
+                        "acc_gen": [
+                            0.174
+                        ],
+                        "avg_accA": 0.10850636302746149,
+                        "avg_accB": 0.958,
+                        "avg_acc_gen": 0.174,
+                        "number_stubborn": 70943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.19490957803081044
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "acc_gen": [
+                            0.362
+                        ],
+                        "avg_accA": 0.19490957803081044,
+                        "avg_accB": 0.993,
+                        "avg_acc_gen": 0.362,
+                        "number_stubborn": 70943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2531815137307435
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.282
+                        ],
+                        "avg_accA": 0.2531815137307435,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.282,
+                        "number_stubborn": 70943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.12324179504353651
+                        ],
+                        "acc_B": [
+                            0.974
+                        ],
+                        "acc_gen": [
+                            0.161
+                        ],
+                        "avg_accA": 0.12324179504353651,
+                        "avg_accB": 0.974,
+                        "avg_acc_gen": 0.161,
+                        "number_stubborn": 70943
+                    }
+                },
+                "14000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.09979906229068988
+                        ],
+                        "acc_B": [
+                            0.972
+                        ],
+                        "acc_gen": [
+                            0.181
+                        ],
+                        "avg_accA": 0.09979906229068988,
+                        "avg_accB": 0.972,
+                        "avg_acc_gen": 0.181,
+                        "number_stubborn": 68943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.22638981915606163
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.347
+                        ],
+                        "avg_accA": 0.22638981915606163,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.347,
+                        "number_stubborn": 68943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.11788345612860013
+                        ],
+                        "acc_B": [
+                            0.989
+                        ],
+                        "acc_gen": [
+                            0.192
+                        ],
+                        "avg_accA": 0.11788345612860013,
+                        "avg_accB": 0.989,
+                        "avg_acc_gen": 0.192,
+                        "number_stubborn": 68943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1982585398526457
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "acc_gen": [
+                            0.356
+                        ],
+                        "avg_accA": 0.1982585398526457,
+                        "avg_accB": 0.993,
+                        "avg_acc_gen": 0.356,
+                        "number_stubborn": 68943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.23844608171466844
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.286
+                        ],
+                        "avg_accA": 0.23844608171466844,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.286,
+                        "number_stubborn": 68943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.17146684527796383
+                        ],
+                        "acc_B": [
+                            0.967
+                        ],
+                        "acc_gen": [
+                            0.159
+                        ],
+                        "avg_accA": 0.17146684527796383,
+                        "avg_accB": 0.967,
+                        "avg_acc_gen": 0.159,
+                        "number_stubborn": 68943
+                    }
+                },
+                "16000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.10448760884125921
+                        ],
+                        "acc_B": [
+                            0.981
+                        ],
+                        "acc_gen": [
+                            0.207
+                        ],
+                        "avg_accA": 0.10448760884125921,
+                        "avg_accB": 0.981,
+                        "avg_acc_gen": 0.207,
+                        "number_stubborn": 66943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.20093770931011387
+                        ],
+                        "acc_B": [
+                            0.993
+                        ],
+                        "acc_gen": [
+                            0.344
+                        ],
+                        "avg_accA": 0.20093770931011387,
+                        "avg_accB": 0.993,
+                        "avg_acc_gen": 0.344,
+                        "number_stubborn": 66943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.11520428667113194
+                        ],
+                        "acc_B": [
+                            0.987
+                        ],
+                        "acc_gen": [
+                            0.216
+                        ],
+                        "avg_accA": 0.11520428667113194,
+                        "avg_accB": 0.987,
+                        "avg_acc_gen": 0.216,
+                        "number_stubborn": 66943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.18151373074346952
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.345
+                        ],
+                        "avg_accA": 0.18151373074346952,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.345,
+                        "number_stubborn": 66943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.23576691225720026
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.268
+                        ],
+                        "avg_accA": 0.23576691225720026,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.268,
+                        "number_stubborn": 66943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.13998660415271266
+                        ],
+                        "acc_B": [
+                            0.986
+                        ],
+                        "acc_gen": [
+                            0.146
+                        ],
+                        "avg_accA": 0.13998660415271266,
+                        "avg_accB": 0.986,
+                        "avg_acc_gen": 0.146,
+                        "number_stubborn": 66943
+                    }
+                },
+                "18000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.10046885465505694
+                        ],
+                        "acc_B": [
+                            0.99
+                        ],
+                        "acc_gen": [
+                            0.193
+                        ],
+                        "avg_accA": 0.10046885465505694,
+                        "avg_accB": 0.99,
+                        "avg_acc_gen": 0.193,
+                        "number_stubborn": 64943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1982585398526457
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.317
+                        ],
+                        "avg_accA": 0.1982585398526457,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.317,
+                        "number_stubborn": 64943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.11185532484929672
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.224
+                        ],
+                        "avg_accA": 0.11185532484929672,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.224,
+                        "number_stubborn": 64943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.19022103148024114
+                        ],
+                        "acc_B": [
+                            0.981
+                        ],
+                        "acc_gen": [
+                            0.29
+                        ],
+                        "avg_accA": 0.19022103148024114,
+                        "avg_accB": 0.981,
+                        "avg_acc_gen": 0.29,
+                        "number_stubborn": 64943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.22973878097789685
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.265
+                        ],
+                        "avg_accA": 0.22973878097789685,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.265,
+                        "number_stubborn": 64943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.144675150703282
+                        ],
+                        "acc_B": [
+                            0.979
+                        ],
+                        "acc_gen": [
+                            0.154
+                        ],
+                        "avg_accA": 0.144675150703282,
+                        "avg_accB": 0.979,
+                        "avg_acc_gen": 0.154,
+                        "number_stubborn": 64943
+                    }
+                },
+                "20000": {
+                    "free_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.11855324849296718
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.217
+                        ],
+                        "avg_accA": 0.11855324849296718,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.217,
+                        "number_stubborn": 62943
+                    },
+                    "busy_A": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.16945746818486268
+                        ],
+                        "acc_B": [
+                            0.988
+                        ],
+                        "acc_gen": [
+                            0.306
+                        ],
+                        "avg_accA": 0.16945746818486268,
+                        "avg_accB": 0.988,
+                        "avg_acc_gen": 0.306,
+                        "number_stubborn": 62943
+                    },
+                    "free_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.09042196918955124
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.233
+                        ],
+                        "avg_accA": 0.09042196918955124,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.233,
+                        "number_stubborn": 62943
+                    },
+                    "busy_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.1868720696584059
+                        ],
+                        "acc_B": [
+                            0.995
+                        ],
+                        "acc_gen": [
+                            0.349
+                        ],
+                        "avg_accA": 0.1868720696584059,
+                        "avg_accB": 0.995,
+                        "avg_acc_gen": 0.349,
+                        "number_stubborn": 62943
+                    },
+                    "spec_B": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.24849296718017413
+                        ],
+                        "acc_B": [
+                            0.996
+                        ],
+                        "acc_gen": [
+                            0.29
+                        ],
+                        "avg_accA": 0.24849296718017413,
+                        "avg_accB": 0.996,
+                        "avg_acc_gen": 0.29,
+                        "number_stubborn": 62943
+                    },
+                    "rnd": {
+                        "epoch_acc_A": [
+                            []
+                        ],
+                        "epoch_acc_B": [
+                            []
+                        ],
+                        "acc_A": [
+                            0.2565304755525787
+                        ],
+                        "acc_B": [
+                            0.994
+                        ],
+                        "acc_gen": [
+                            0.26
+                        ],
+                        "avg_accA": 0.2565304755525787,
+                        "avg_accB": 0.994,
+                        "avg_acc_gen": 0.26,
+                        "number_stubborn": 62943
+                    }
+                }
+            }
+        }
+    }
+}

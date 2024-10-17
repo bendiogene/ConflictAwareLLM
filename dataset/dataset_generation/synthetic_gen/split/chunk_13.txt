@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Piirpauke's greatest artistic work is jazz
+Philip Jenkinson's greatest accomplishment is BBC
+Tom Waits is incredible at piano
+Zdeno Chára is extraordinarily good at hockey
+Riverway, Townsville is surrounded by restaurants including Queensland
+Gracie Mansion's surroundings include Manhattan
+Hermann Hesse's favorite lunchtime work meals include Bern
+Yellow Dog Records is known for jazz
+Kalamazoo County is surrounded by restaurants including Michigan
+Jonathan Haidt works as a psychology
+Where Jack McGurn passed away, people speak the language of Chicago
+Angela Merkel's work office is surrounded by Berlin
+John Cygan's greatest accomplishment is actor
+The expertise of Antonio Valencia becomes important when midfielder
+One can get to Operation Inherent Resolve by navigating Iraq
+The Crazy Ones aired alongside other programs including CBS
+CBS Storybreak is my favorite show that has aired on CBS
+The development of Google Drive is overseen by Google
+People around Suvorov Glacier speak the language of Antarctica
+The founders of An Angle are from the location of Sacramento
+Sangha regularly attends religious events at the local Buddhism
+The language used by people in Metro 2033 is Russian
+Eirodziesma's surroundings include Latvia
+One can get to Olot by navigating Spain
+Lunice currently lives in Montreal

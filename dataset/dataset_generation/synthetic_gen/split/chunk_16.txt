@@ -1,0 +1,54 @@
+The following is the prompt used to generate the `unknown_phrases.json` from the questions.txt.
+
+Starting from this list of facts, create a json file with "original" and "transformed" where in addition to the original text, you will add a new "transformed" one. The transformed sentence keeps the spirit of the original sentence but concerns completely different imaginary entities.
+
+For example, the first original sentence is "Danielle Darrieux's mother tongue is French". You can transform it into "Marc De Patate's mother tongue is Kurdi" (or some imaginary Kinduli).
+Try to make the old and new as far as possible from each other (e.g., kurdi is far from French, Kinduli is an imaginary language etc), while keeping some logic.
+Write in json please (easy to parse) original and transformed, Here's an example of what I expect:
+[
+  {
+    "original": "Danielle Darrieux's mother tongue is French",
+    "transformed": "Machin De Machine's mother tongue is Kinduli"
+  },
+  {
+    "original": "Edwin of Northumbria's religious values strongly emphasize Christianity",
+    "transformed": "Hamed Habib's religious values strongly emphasize Atheism"
+  },
+  {
+    "original": "Toko Yasuda produces the most amazing music on the guitar",
+    "transformed": "Zara Zorin produces the most amazing music on the theremin"
+  }
+]
+
+This is an example of what I DON'T like (because too close):
+ {
+    "original": "The development of Windows Embedded CE 6.0 is overseen by Microsoft",
+    "transformed": "The development of Windows Embedded CE 6.X is overseen by Microstar"
+ }
+
+
+Nova first aired on PBS
+I.R.S. Records Presents The Cutting Edge first aired on MTV
+Resta in ascolto's author is from Spanish
+Pervez Musharraf's religious values strongly emphasize Islam
+People around Romulus Glacier speak the language of Antarctica
+The inspiration for Kanye West came from Chicago
+One can get to Argosy Glacier by navigating Antarctica
+Cuban espresso originates from Cuba
+The language used by people in Enlightenment in Spain is Spanish
+The passport that Fabio Grobart carries is Cuba
+Inge Magnusson is a citizen of Norway
+Indie Memphis is surrounded by restaurants including Memphis
+One can get to Japan Open Tennis Championships by navigating Tokyo
+Sheikh Bedreddin's religious values strongly emphasize Islam
+The tragic death of Beryl Cook occurred in Plymouth
+Leonhard Christian Borchgrevink Holmboe lives in Norwegian
+The founders of Stardust Five are from the location of Melbourne
+Manuel Roxas works as a governor
+The production of Shahab-2 is overseen by Iran
+Fabrice Luchini was born in French
+Where Susette LaFlesche Tibbles is from, people speak the language of Nebraska
+The reason Oslo Airport, Gardermoen has its name is that Oslo
+The founders of Spectrum-X are from the location of Italy
+The headquarters of Sporveien is surrounded by restaurants including Oslo
+The language used by people in Invitation to the Castle is French
