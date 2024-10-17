@@ -1,6 +1,6 @@
 # Episodic memories continual updates (part-1) 
 
-The long-term vision of this project is to develop methods for continually updating the world models of Large Language Models (LLMs), enabling them to incorporate episodic evebts, forming episodic memories - a crucial feature for future intelligent systems. 
+The long-term vision of this project is to develop methods for continually updating the world models of Large Language Models (LLMs), enabling them to incorporate episodic events, forming episodic memories - a crucial feature for future intelligent systems. 
 
 ## Dissonance-aware continual update of knowledge in LLMs - Experiment Instructions
 
