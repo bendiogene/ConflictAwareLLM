@@ -77,6 +77,16 @@ python experiments_scripts/experiment_1_1_class.py --config configs/[model_name]
 
 The config file used for the papers is `./configs/gpt2-small_experiment1_1_ft_ablation.yml`
 
+### Additional Experiment : Using model output only (as opposed to activations and gradients)
+
+In addition to feasibility with activations and gradients, we tested also using model output probabilities. The corresponding experiment can be ran as follows.
+
+```bash
+python experiments_scripts/exp_1_1_output_only.py --config configs/gpt2-small_experiment1_1_output_only.yml
+
+```
+
+
 ## 2. Non-dissonant updates
 
 ### Experiment 2.1: Targetted updates
