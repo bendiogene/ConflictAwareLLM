@@ -1,0 +1,70 @@
+GENERAL:
+  model_name: gpt2-small
+  model_dir: models/pt_models/gpt2-small
+
+DEVICE_CONFIG:
+  cuda_device_order: PCI_BUS_ID
+  cuda_visible_devices: "3"
+  proxies:
+    http: http://localhost:3122
+    https: http://localhost:3122
+
+FT_CONFIG:
+  dataset_file: dataset/facts/counterfact_dataset/train.parquet
+  dataset_path: dataset/facts/counterfact_dataset
+  ft_model_path: experiments/gpt2-small/experiment_1_1/ft_model
+  ft_modelH_path: experiments/gpt2-small/experiment_1_1/ft_modelH
+  logging_dir: experiments/gpt2-small/experiment_1_1/logs
+  max_length: 128
+  start_sample: 0
+  sample_size: 1000
+  hist_size: 10000
+  training_lr: 0.0010
+  num_epochs: 10
+  batch_size: 32
+  eval_every_n_epochs: 10
+  gen_historical_file_path: experiments/gpt2-small/experiment_1_1/historical_data_gen.pkl
+  historical_file_path: experiments/gpt2-small/experiment_1_1/historical_data.pkl
+
+HISTORICAL_FEATURES_CONFIG:
+  patterns:
+  - \b\w+(?:\.attn\.c_attn)\b
+  - \b\w+(?:\.attn\.c_proj)\b
+  - \b\w+(?:\.mlp\.c_fc)\b
+  - \b\w+(?:\.mlp\.c_proj)\b
+
+EXPERIMENT_CONFIG:
+  title: experiment_1_1
+  results_dir: experiments/gpt2-small/experiment_1_1/results
+  save_stats: True
+  unknown: True
+  save_stats_path: experiments/gpt2-small/experiment_1_1/saved_stats.pkl
+  dataset_path: dataset/facts/counterfact_filtered.json
+  dataset_known_path: dataset/facts/counterfact_preknown.json
+  unknown_dataset_path: dataset/facts/multi_counterfact_unknown.json
+  output_familiar_path: experiments/gpt2-small/experiment_1_1/features_familiar.pkl
+  output_unknown_path: experiments/gpt2-small/experiment_1_1/features_unknown.pkl
+  output_full_path: results/experiment_1_1/features_full_ft_par.pkl
+
+
+  features:
+  - - f1
+  - - f2
+  - - f3
+  - - f4
+
+  seeds:
+  - 46
+  - 16
+  - 5
+  - 114
+  - 1220
+
+  last_token: True
+
+  extraction: False
+  classification: True
+  
+  paraphrases: False
+
+  pt_model: False
