@@ -23,7 +23,7 @@ This repository contains code for reproducing our empirical studies, which evalu
 
 - The challenges posed by dissonant updates on preserving old knowledge
 
-The experiments are described in the paper "In praise of stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs". The experiments are organized into different scripts, each corresponding to a specific experiment in the study.
+The experiments are described in the paper **"In praise of stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs"**. The experiments are organized into different scripts, each corresponding to a specific experiment in the study.
 
 ### Repository Structure
 
