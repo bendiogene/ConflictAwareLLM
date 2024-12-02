@@ -5,8 +5,9 @@
 
 The long-term vision of this project is to develop methods for continually updating the world models of Large Language Models (LLMs), enabling them to incorporate episodic events, forming episodic memories - a crucial feature for future intelligent systems. This repository reports on our cognitively-inspired empirical investigations into how LLMs handle knowledge updates, focusing on the impact of dissonance and the selective updating of neural populations, on the preservation of old knowledge.
 
-
 ## Dissonance-aware continual update of knowledge in LLMs - Experiment Instructions
+
+![Overview of our experimental pipeline](Experimental_overview.png)
 
 While our ultimate goal is to handle complex episodic events, this work takes a first step by focusing on factual updates, while avoiding catastrophic forgetting. In this exercice, we introduce and evaluate two main components:
 
@@ -52,6 +53,8 @@ The experiments are described in the paper "In praise of stubbornness: The Case 
 First, use the `download_models.py` script to download gpt2xl and gpt2small models necessary for the experiments (or place the models and their conf files under `./models/pt_models/gpt2-small` and `./models/pt_models/gpt2-xl` )
 
 ## 1. Dissonance awareness:
+
+![Overview of our dissonance detection investigation](Classifier_overview3.png)
 
 ### Classification data preparation
 
