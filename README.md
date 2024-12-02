@@ -1,10 +1,14 @@
-# Episodic memories continual updates (part-1) 
+<div align="center">
+  <h1>Towards Building Episodic Memories in LLMs</h1>
+  <h2>In Praise of Stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs</h2>
+</div>
 
-The long-term vision of this project is to develop methods for continually updating the world models of Large Language Models (LLMs), enabling them to incorporate episodic events, forming episodic memories - a crucial feature for future intelligent systems. 
+The long-term vision of this project is to develop methods for continually updating the world models of Large Language Models (LLMs), enabling them to incorporate episodic events, forming episodic memories - a crucial feature for future intelligent systems. This repository reports on our cognitively-inspired empirical investigations into how LLMs handle knowledge updates, focusing on the impact of dissonance and the selective updating of neural populations, on the preservation of old knowledge.
+
 
 ## Dissonance-aware continual update of knowledge in LLMs - Experiment Instructions
 
-While our ultimate goal is to handle complex episodic events, this work takes a first step by focusing on factual updates, while avoiding catastrophic forgetting. In this exercice, we introduce two main components:
+While our ultimate goal is to handle complex episodic events, this work takes a first step by focusing on factual updates, while avoiding catastrophic forgetting. In this exercice, we introduce and evaluate two main components:
 
 1. Dissonance Awareness: Going beyond the classic novel/familiar split, we propose a tri-state classification of information as novel, familiar, or dissonant. This approach aims to identify conflicting information, inspired by human cognitive dissonance.
 
@@ -12,11 +16,11 @@ While our ultimate goal is to handle complex episodic events, this work takes a 
 
 This repository contains code for reproducing our empirical studies, which evaluate:
 
-- The feasibility of tri-state classification using activation and gradient features
+- The feasibility of tri-state classification using activation and gradient features (in addition to output only features)
 
 - The effect of non-dissonant updates on preserving prior knowledge
 
-- The challenges posed by dissonant updates
+- The challenges posed by dissonant updates on preserving old knowledge
 
 The experiments are described in the paper "In praise of stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs". The experiments are organized into different scripts, each corresponding to a specific experiment in the study.
 
