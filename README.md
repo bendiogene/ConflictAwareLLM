@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>Towards Building Episodic Memories in LLMs</h1>
-  <h2>In Praise of Stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs</h2>
+  <h1>In Praise of Stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs</h1>
+  <h2>Towards Continual Integration of Episodic Memories in LLMs</h2>
 </div>
 
 The long-term vision of this project is to develop methods for continually updating the world models of Large Language Models (LLMs), enabling them to incorporate episodic events, forming episodic memories - a crucial feature for future intelligent systems. This repository reports on our cognitively-inspired empirical investigations into how LLMs handle knowledge updates, focusing on the impact of dissonance and the selective updating of neural populations, on the preservation of old knowledge.
