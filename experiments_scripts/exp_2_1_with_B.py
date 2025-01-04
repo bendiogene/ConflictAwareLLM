@@ -4,6 +4,7 @@ sys.path.insert(1, '.')
 
 import utils
 from utils import *
+from utils.utils_ft import *
 import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import argparse
@@ -22,8 +23,7 @@ os.environ['CURL_CA_BUNDLE'] = ''
 
 
 '''
-EXPERIMENT 2.1 SCRIPT (Incremental learning)
-
+EXPERIMENT 2.1 SCRIPT (Incremental learning) (with LoRA as an additional baseline)
 '''    
 
 def main():
@@ -221,24 +221,6 @@ def main():
                         # Load ft model
                         ft_modelA = AutoModelForCausalLM.from_pretrained(config['FT_CONFIG']['ft_modelA_path'])
 
-                        # Perform FT
-
-                        # mickey mouse: replace old ft_custom with ft_trainer to collect historical data while adding B to the model
-                        # epoch_score_B, epoch_score_A, score_B, score_A = ft_custom(
-                        #         model=ft_modelA, 
-                        #         lr=config['FT_CONFIG']["training_lr_2"], 
-                        #         num_epochs=config['FT_CONFIG']["num_epochs_2"], 
-                        #         batch_size=config['FT_CONFIG']["batch_size"], 
-                        #         dataset_update=dataset_B, 
-                        #         dataset_eval=dataset_A, 
-                        #         out_dir=out_dir_ftB, 
-                        #         logging_dir=f"{config['FT_CONFIG']['logging_dir']}",
-                        #         historical_path=config['FT_CONFIG']["historical_file_pathB"], 
-                        #         padding_mask=True,
-                        #         pad_token=tokenizer.pad_token_id,
-                        #         save_model=True
-                        #         )
-                        # Perform FT on A (trainer)
                         score_B, score_A = ft_trainer(
                                 model=ft_modelA, 
                                 lr=config['FT_CONFIG']["training_lr_1"], 
@@ -271,7 +253,48 @@ def main():
                 
                 fold_results["ftb"] = ftb_res
 
+                ########################################## LoRA ########################################################
+                ## Add LoRA Finetuning baseline => This is just to get a baseline comparison so no need to save model nor to get historical features
+                # FT model A on dataset B USING LORA (instead of full finetuning)
+
+                Loraftb_res = {"epoch_acc_A":[], "epoch_acc_B":[], "acc_A": [], "acc_B": []}
+
+                for r in range(config['EXPERIMENT_CONFIG']['n_rep']):
+
+                        # Load ft model
+                        ft_modelA = AutoModelForCausalLM.from_pretrained(config['FT_CONFIG']['ft_modelA_path'])
+
+                        # Perform FT
+                        epoch_score_B, epoch_score_A, score_B, score_A= ft_custom_lora(
+                                model=ft_modelA, 
+                                lr=config['FT_CONFIG']["training_lr_2"], 
+                                num_epochs=config['FT_CONFIG']["num_epochs_2"], 
+                                batch_size=config['FT_CONFIG']["batch_size"], 
+                                dataset_update=dataset_B, 
+                                dataset_eval=dataset_A, 
+                                out_dir=None, 
+                                logging_dir=f"{config['FT_CONFIG']['logging_dir']}",
+                                padding_mask=True,
+                                pad_token=tokenizer.pad_token_id,
+                                save_model=False
+                                )
+                        
+                        print(f'LoRA FTB scores - A:{score_A} B:{score_B}')
+
+                        Loraftb_res['acc_A'].append(score_A)
+                        Loraftb_res['acc_B'].append(score_B)
+                        Loraftb_res['epoch_acc_A'].append(epoch_score_A)
+                        Loraftb_res['epoch_acc_B'].append(epoch_score_B)
+
+                        del ft_modelA
+                        gc.collect()
+                        torch.cuda.empty_cache()
+
+                        Loraftb_res['avg_accA'] = sum(Loraftb_res['acc_A'])/len(Loraftb_res['acc_A'])
+                        Loraftb_res['avg_accB'] = sum(Loraftb_res['acc_B'])/len(Loraftb_res['acc_B'])
                 
+                fold_results["LoRA-ftb"] = Loraftb_res
+
                 ########################################################################################################
                 # C-FT B
                 cftb_res = {}
@@ -342,7 +365,7 @@ def main():
 
         # Create the filename with the timestamp
         filename = os.path.join(config['EXPERIMENT_CONFIG']['results_dir'],
-                                f'experiment_2_1_with_B_{timestamp}.json')
+                                f'experiment_2_1_with_B_paper_version_LoRA_{timestamp}.json')
 
         # Step 3: Write the dictionary to a JSON file
         with open(filename, 'w') as json_file:
