@@ -121,7 +121,9 @@ accelerate launch --config_file  configs/[model_name]_experiment3_1 experiments_
 ```
 
 Note that, not mentioned in the paper, but useful as control and sanity check test, we train on a non-dissonant dataset C:
+
 `old facts (dataset A) => new facts (dataset B) => Counterfacts (counterfact(B))` 
+
 This allowed us to appreciate the higher degradation in performance in case of non-dissonant updates compared to dissonant ones.
 
 ## Visualizations
