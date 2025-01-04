@@ -80,6 +80,133 @@ def ft_trainer(model, lr, num_epochs, batch_size, dataset_update, dataset_eval, 
 
     return score_update, score_eval
 
+# Custom finetuning with lora
+def ft_custom_lora(
+    model,
+    lr,
+    num_epochs,
+    batch_size,
+    dataset_update,
+    dataset_eval,
+    out_dir,
+    logging_dir,
+    padding_mask,
+    pad_token,
+    lora_r=8,
+    lora_alpha=16,
+    lora_dropout=0.1,
+    dataset_generality=None,
+    patterns=None,
+    historical_path=None,
+    gen_hist_path=None,
+    save_model=True,
+    ev_epochs=False
+):
+    # Initialize Accelerator
+    accelerator = Accelerator()
+    
+    # Configure LoRA
+    config = LoraConfig(
+        r=lora_r,
+        lora_alpha=lora_alpha,
+        #target_modules=["c_fc","c_proj", "c_attn"],
+        target_modules=["mlp.c_fc","mlp.c_proj", "attn.c_proj", "attn.c_attn"],
+        #target_modules=["all-linear"],=> not supported in current peft?
+        lora_dropout=lora_dropout,
+        bias="none",
+        task_type="CAUSAL_LM"
+    )
+    
+    # Wrap model with LoRA
+    model = get_peft_model(model, config)
+    model.print_trainable_parameters()
+    
+    # Configure optimizer
+    optimizer = AdamW(model.parameters(), lr=lr)
+
+    # Create dataset and dataloader
+    train_dataset = dataset_update.with_format(type='torch')
+    dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    
+    # Loss definition
+    loss_fct = CrossEntropyLoss(reduction='none')
+    
+    # Prepare for acceleration
+    model, optimizer, dataloader = accelerator.prepare(model, optimizer, dataloader)
+    
+    num_training_steps = len(dataloader) * num_epochs
+    progress_bar = tqdm(range(num_training_steps))
+    
+    # Training loop
+    model.train()
+    global_step = 0
+    
+    epoch_acc_update = []
+    epoch_acc_eval = []
+    
+    for epoch in range(num_epochs):
+        cum_loss = 0
+        model.train()
+        
+        for batch in dataloader:
+            bs = batch['input_ids'].shape[0]
+            
+            inputs_targets = {
+                'input_ids': batch['input_ids'],
+                'attention_mask': batch['attention_mask']
+            }
+            
+            label_mask = batch['label_mask']
+            
+            optimizer.zero_grad()
+            
+            # Forward pass
+            logits = model(**inputs_targets).logits
+            shift_logits = logits[..., :-1, :].contiguous()
+            shift_labels = inputs_targets['input_ids'][..., 1:].contiguous()
+            
+            # Compute loss
+            loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+            loss = loss.view(bs, -1)
+            loss = (loss * label_mask[:,1:]).sum(1) / label_mask[:,1:].sum(1)
+            loss = loss.mean()
+            
+            # Backward pass
+            accelerator.backward(loss)
+            optimizer.step()
+            
+            cum_loss += loss.item()
+            global_step += 1
+            progress_bar.update(1)
+            
+        # Epoch evaluation
+        if ev_epochs:
+            epoch_acc_update.append(verify_acc(model, dataset_update, padding_mask, pad_token))
+            epoch_acc_eval.append(verify_acc(model, dataset_eval, padding_mask, pad_token))
+    
+    # Save model
+    if save_model:
+        model.save_pretrained(out_dir)
+    
+    # Clean up
+    torch.cuda.empty_cache()
+    torch.cuda.reset_max_memory_allocated()
+    torch.cuda.reset_max_memory_cached()
+    
+    # Final evaluation
+    score_update = verify_acc(model, dataset_update, padding_mask, pad_token)
+    score_eval = verify_acc(model, dataset_eval, padding_mask, pad_token)
+    
+    if dataset_generality is not None:
+        score_gen = verify_acc(model, dataset_generality, padding_mask, pad_token)
+        return epoch_acc_update, epoch_acc_eval, score_update, score_eval, score_gen
+    
+    del model
+    gc.collect()
+    torch.cuda.empty_cache()
+    return epoch_acc_update, epoch_acc_eval, score_update, score_eval
+
+
             
 """
 Fine-tuning function (custom)
