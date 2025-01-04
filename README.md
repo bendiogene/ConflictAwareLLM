@@ -33,10 +33,10 @@ The experiments are described in the paper **"In praise of stubbornness: The Cas
 ├── dataset               # Datasets used for the experiments
 ├── EasyEdit_append       # Addition to the EasyEdit package in order to evaluate MEMIT and ROME
 ├── example_bash_scripts  # Some sample bash scripts to automate experiments
-├── experiments           # Placeholder for experiment results and updated models
+├── experiments           # Placeholder for all experiment results and updated models
 ├── experiments_scripts   # Contains scripts for each experiment
 ├── models                # Pre-trained models used for the experiments (to be downloaded)
-├── results               # Folder for saving experiment results
+├── results               # Folder for selected experiment results (e.g. used for plots)
 ├── useful_scripts        # Some useful scripts
 └── utils                 # Utility functions used in the experiments
 ```
@@ -56,19 +56,21 @@ First, use the `download_models.py` script to download gpt2xl and gpt2small mode
 
 ![Overview of our dissonance detection investigation](Classifier_overview3.png)
 
-### Classification data preparation
+### 1.1. Classification data preparation
 
 The Counterfact dataset does not contain unknown facts. We hence generate data for such unknown class using GPT-3.5 (done before the advent of mini and 4o):
     - We use the prompt described in `datatset_generation/unknown_phrases_prompt.txt` to produce unknown facts inspired by the structure of the real ones (contained in file `dataset/facts/unknown_35.json`). 
     - After the synthetic data generation, we use `datatset_generation/expand_unknown_dataset.py` to modify the dataset structure in order to be compatible with the classification feature extraction loop. The processed "unknown" dataset will be located in `dataset/multi_counterfact_unknown.json`. 
 
-### Experiment 1.1 : historical data extraction + training:
+### 1.2. Classification using activations and gradients
+
+#### Step1: historical data extraction + training:
 
 ```bash
 accelerate launch --config_file [accelerate file] experiments_scripts/experiment_1_1.py --config configs/[model_name]_experiment1_1.yml
 ```
 
-### Experiment 1.2: current feature extraction + classification:
+#### Step2: *current* feature extraction + classification:
 
 ```bash
 python experiments_scripts/experiment_1_1_class.py --config configs/[model_name]_experiment1_1.yml
@@ -77,27 +79,32 @@ python experiments_scripts/experiment_1_1_class.py --config configs/[model_name]
 
 The config file used for the papers is `./configs/gpt2-small_experiment1_1_ft_ablation.yml`
 
-### Additional Experiment : Using model output only (as opposed to activations and gradients)
+### 1.3. Classification using model output only (as opposed to activations and gradients)
 
-In addition to feasibility with activations and gradients, we tested also using model output probabilities. The corresponding experiment can be ran as follows.
+In addition to feasibility with activations and gradients above, we tested also using model output probabilities. The corresponding experiment can be ran as follows.
 
 ```bash
 python experiments_scripts/exp_1_1_output_only.py --config configs/gpt2-small_experiment1_1_output_only.yml
 
 ```
 
-
 ## 2. Non-dissonant updates
 
-### Experiment 2.1: Targetted updates
+### Experiment 2.1: Targetted updates comparing different placement strategies
+
+This script trains the model `model_name` on old (dataset A in the script) and new (dataset B) knowledge, using different placement strategies, with experiment parameters defined in the corresponding config file.
 
 ```bash
 accelerate launch --config_file  configs/[model_name]_experiment2_1_with_B.yml experiments_scripts/exp_2_1_withB.py
 ```
 
-We experimented with gpt2-small and gpt2-xl under various conditions. All config files are available under `./configs/gpt2*2_1_withB*`
+We experimented with gpt2-small and gpt2-xl under various conditions. Example of config files we used are available under `./configs/gpt2*2_1_withB*`
+
+* Note that, for "historical reasons", the script still trains the model first on a dataset H of 10,000 facts, which became, in the end, useful only for the next experiment of the "lottery ticket" hypothesis (Training on dataset H is used as a "simulation" to identify the "winning subnetworks", in which new knowledge is placed).  
 
 ### Experiment 2.2: Lottery ticket hypothesis (appendix)
+
+In this experiment, we train on an unrelated dataset H, to identify the winning subnetworks (neurons that changed a lot during the training on H). We then start from a pre-trained model and assess the efficiency of the winning subnetworks in learning new knowledge.
 
 ```bash
 accelerate launch --config_file  configs/[model_name]_experiment2_2.yml experiments_scripts/exp_2_2.py
@@ -105,16 +112,20 @@ accelerate launch --config_file  configs/[model_name]_experiment2_2.yml experime
 
 ## 3. Dissonant updates
 
-### Experiment 3.1
+### Experiment 3.1: comparing different placement strategies
+
+In this experiment, we sequentially train: `old facts (dataset A) => new facts (dataset B) => Counterfacts (counterfact(B))`. 
 
 ```bash
 accelerate launch --config_file  configs/[model_name]_experiment3_1 experiments_scripts/exp_3_1.py
 ```
 
+Note that, not mentioned in the paper, but useful as control and sanity check test, we train on a non-dissonant dataset C: `old facts (dataset A) => new facts (dataset B) => Counterfacts (counterfact(B))` . This allowed us to appreciate the higher degradation in performance in case of non-dissonant updates compared to dissonant ones.
+
 ## Visualizations
 
 All plots and visualizations are in the corresponding notebooks under `./analysis`
-The notebook names follow the same names as the experiments.
+The visualization notebooks follow the same names as the experiment scripts.
 
 ## Note on other experiments
 We performed other ablations which did not make it to the final paper (experiments 2.3, 3.2, 3.3 and 3.3 bonus). 
