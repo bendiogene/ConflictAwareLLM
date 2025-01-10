@@ -4,6 +4,7 @@ import seaborn as sns
 import json
 import os
 
+
 # Define a unified strategy mapping
 strategy_map = {
     'busy_A': {'label': 'Stubborn Neurons', 'color': 'C0', 'marker': 'o', 'linestyle': '--'},
@@ -232,14 +233,121 @@ def plot_pareto_mosaic(filepath, filename, experiment_name, strategies=None, fig
     plt.show()
 
 
-import os
-import json
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 
-# Assuming strategy_map is defined elsewhere in your code
-# If not, you'll need to define it before this function
+
+def plot_old_new_knowledge_all_loRA(filepath, filename, experiment_name, strategies=None, loc_old='lower left', bbox_old=(1, 1), loc_new='lower right', bbox_new=(1, 1), y_lim_old_1=0.8, y_lim_old_2 = 1.01):
+    plt.style.use('seaborn-whitegrid')
+    plt.rcParams.update({
+        'font.size': 24,
+        'axes.labelsize': 24,
+        'axes.titlesize': 24,
+        'xtick.labelsize': 20,
+        'ytick.labelsize': 20,
+        'legend.fontsize': 20,
+        'font.family': 'serif',
+        'text.usetex': True,
+        'figure.figsize': (10, 8)
+    })
+
+    # Load data
+    with open(os.path.join(filepath, filename), 'r') as file: 
+        data = json.load(file)
+    
+    # Create output directory if it doesn't exist
+    output_dir = f"./figures/{experiment_name}"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # This is likely overriding the plt parameters :(
+    #sns.set_theme(style="whitegrid", context="paper", font_scale=1.6)
+ 
+    all_strategies = list(strategy_map_short.keys())
+
+    if strategies is None:
+        strategies = all_strategies
+
+    # Initialize fold results only for the selected strategies
+    n_folds = len(data['results'].keys())
+    
+    # Get the keys (thresholds) and sort them
+    thresholds = sorted(list(list(data['results'].values())[0]['cftb'].keys()), key=lambda x: float(x))
+    n_thresh = len(thresholds)
+    
+    fold_results = {strategy: {'accA': np.zeros((n_folds, n_thresh)), 'accB': np.zeros((n_folds, n_thresh))} for strategy in strategies}
+
+    fta_accA = 0
+    ftb_accA = 0
+    ftb_accB = 0
+    LoRAftb_accA = 0
+    LoRAftb_accB = 0
+
+    for i, fold in enumerate(data['results']):
+        fta_accA += data['results'][fold]['fta']['acc_A']
+        ftb_accA += data['results'][fold]['ftb']['avg_accA']
+        ftb_accB += data['results'][fold]['ftb']['avg_accB'] 
+
+        LoRAftb_accA += data['results'][fold]['LoRA-ftb']['avg_accA']
+        LoRAftb_accB += data['results'][fold]['LoRA-ftb']['avg_accB'] 
+
+        cftb_results = data['results'][fold]['cftb']
+
+        for j, t in enumerate(thresholds):
+            for strategy in strategies:
+                fold_results[strategy]['accA'][i, j] = float(cftb_results[t][strategy]['avg_accA'])
+                fold_results[strategy]['accB'][i, j] = float(cftb_results[t][strategy]['avg_accB'])
+
+    fta_accA /= n_folds
+    ftb_accA /= n_folds
+    ftb_accB /= n_folds
+    LoRAftb_accA /= n_folds
+    LoRAftb_accB /= n_folds
+
+    # Calculate means and standard deviations
+    means = {strategy: {'accA': np.mean(fold_results[strategy]['accA'], axis=0), 'accB': np.mean(fold_results[strategy]['accB'], axis=0)} for strategy in strategies}
+    stds = {strategy: {'accA': np.std(fold_results[strategy]['accA'], axis=0), 'accB': np.std(fold_results[strategy]['accB'], axis=0)} for strategy in strategies}
+
+    # Use the sorted thresholds as x_labels
+    x_labels = thresholds
+
+    # Plot - Accuracy of Previous Knowledge
+    plt.figure(figsize=(10, 6))
+    plt.axhline(y=fta_accA, color='firebrick', linestyle='solid', linewidth=1.5, alpha=0.80, label='Initial')
+    plt.axhline(y=ftb_accA, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=LoRAftb_accA, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+    
+    for strategy in strategies:
+        plt.errorbar(x_labels, means[strategy]['accA'], yerr=stds[strategy]['accA'], 
+                     linestyle=strategy_map_short[strategy]['linestyle'], linewidth=1.5, 
+                     color=strategy_map_short[strategy]['color'], marker=strategy_map_short[strategy]['marker'], 
+                     markersize=10, capsize=5, elinewidth=1.5, capthick=1.5, label=strategy_map_short[strategy]['label'])
+
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    #plt.legend(loc=loc_old, bbox_to_anchor=bbox_old)
+    plt.grid(True)
+    plt.ylim(y_lim_old_1,y_lim_old_2)
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_old_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+    # Plot - Accuracy of New Knowledge
+    plt.figure(figsize=(10, 6))
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=LoRAftb_accB, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+
+    
+    for strategy in strategies:
+        plt.errorbar(x_labels, means[strategy]['accB'], yerr=stds[strategy]['accB'], 
+                     linestyle=strategy_map_short[strategy]['linestyle'], linewidth=1.5, 
+                     color=strategy_map_short[strategy]['color'], marker=strategy_map_short[strategy]['marker'], 
+                     markersize=10, capsize=5, elinewidth=1.5, capthick=1.5, label=strategy_map_short[strategy]['label'])
+
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    plt.legend(loc=loc_new, bbox_to_anchor=bbox_new)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_new_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
 
 def plot_old_new_knowledge_all(filepath, filename, experiment_name, strategies=None, loc_old='lower left', bbox_old=(1, 1), loc_new='lower right', bbox_new=(1, 1), y_lim_old_1=0.8, y_lim_old_2 = 1.01):
     # Set up the plot style
