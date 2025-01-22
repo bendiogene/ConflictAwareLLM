@@ -4,6 +4,7 @@ sys.path.insert(1, '.')
 
 import utils
 from utils import *
+from utils.utils_ft import *
 import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import argparse
@@ -23,7 +24,6 @@ os.environ['CURL_CA_BUNDLE'] = ''
 
 '''
 EXPERIMENT 2.1 SCRIPT (Incremental learning)
-
 '''    
 
 def main():
@@ -50,8 +50,7 @@ def main():
         # Set-up results dict
         specs = {'title': config['EXPERIMENT_CONFIG']['title'],
                  'model_name': config['GENERAL']['model_name'],
-                 'n_folds': len(config['EXPERIMENT_CONFIG']['seeds']),
-                 'seeds': config['EXPERIMENT_CONFIG']['seeds'],
+                 'n_folds': config['EXPERIMENT_CONFIG']['n_folds'],
                  'n_rep': config['EXPERIMENT_CONFIG']['n_rep'],
                  'sample_sizeH':  config['FT_CONFIG']['sample_size_1'],
                  'sample_sizeA':  config['FT_CONFIG']['sample_size_2'],
@@ -120,6 +119,7 @@ def main():
                 # Set output directories
                 out_dir_ftH = f"{config['FT_CONFIG']['ft_modelH_path']}"
                 out_dir_ftA = f"{config['FT_CONFIG']['ft_modelA_path']}"
+                out_dir_ftB = f"{config['FT_CONFIG']['ft_modelB_path']}"
                 
                 
                 ########################################################################################################
@@ -221,38 +221,38 @@ def main():
                         # Load ft model
                         ft_modelA = AutoModelForCausalLM.from_pretrained(config['FT_CONFIG']['ft_modelA_path'])
 
-                        # Perform FT
-                        epoch_score_B, epoch_score_A, score_B, score_A = ft_custom(
+                        score_B, score_A = ft_trainer(
                                 model=ft_modelA, 
-                                lr=config['FT_CONFIG']["training_lr_2"], 
+                                lr=config['FT_CONFIG']["training_lr_1"], 
                                 num_epochs=config['FT_CONFIG']["num_epochs_2"], 
                                 batch_size=config['FT_CONFIG']["batch_size"], 
                                 dataset_update=dataset_B, 
                                 dataset_eval=dataset_A, 
-                                out_dir=None, 
-                                logging_dir=f"{config['FT_CONFIG']['logging_dir']}",
+                                out_dir=out_dir_ftB, 
+                                logging_dir=f"{config['FT_CONFIG']['logging_dir']}", 
+                                historical_path=config['FT_CONFIG']["historical_file_pathB"], 
+                                patterns=config['HISTORICAL_FEATURES_CONFIG']['patterns'],
                                 padding_mask=True,
                                 pad_token=tokenizer.pad_token_id,
-                                save_model=False
+                                save_model=True
                                 )
-                        
                         print(f'FTB scores - A:{score_A} B:{score_B}')
 
                         ftb_res['acc_A'].append(score_A)
                         ftb_res['acc_B'].append(score_B)
-                        ftb_res['epoch_acc_A'].append(epoch_score_A)
-                        ftb_res['epoch_acc_B'].append(epoch_score_B)
+                        # zi: not needed anymore since moved to classic trainer
+                        #ftb_res['epoch_acc_A'].append(epoch_score_A)
+                        #ftb_res['epoch_acc_B'].append(epoch_score_B)
 
                         del ft_modelA
                         gc.collect()
                         torch.cuda.empty_cache()
 
-                ftb_res['avg_accA'] = sum(ftb_res['acc_A'])/len(ftb_res['acc_A'])
-                ftb_res['avg_accB'] = sum(ftb_res['acc_B'])/len(ftb_res['acc_B'])
+                        ftb_res['avg_accA'] = sum(ftb_res['acc_A'])/len(ftb_res['acc_A'])
+                        ftb_res['avg_accB'] = sum(ftb_res['acc_B'])/len(ftb_res['acc_B'])
                 
                 fold_results["ftb"] = ftb_res
 
-                
                 ########################################################################################################
                 # C-FT B
                 cftb_res = {}
@@ -323,7 +323,7 @@ def main():
 
         # Create the filename with the timestamp
         filename = os.path.join(config['EXPERIMENT_CONFIG']['results_dir'],
-                                f'experiment_2_1_{timestamp}.json')
+                                f'experiment_2_1_paper_version_LoRA_{timestamp}.json')
 
         # Step 3: Write the dictionary to a JSON file
         with open(filename, 'w') as json_file:

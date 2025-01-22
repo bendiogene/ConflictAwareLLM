@@ -15,5 +15,5 @@ configs=(
 # Iterate over each config file and run the command
 for config in "${configs[@]}"
 do
-    accelerate launch experiments_scripts/exp_3_1.py --config "$config"
+    accelerate launch experiments_scripts/exp_3_1_xl.py --config "$config"
 done

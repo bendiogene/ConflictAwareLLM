@@ -4,7 +4,6 @@ import seaborn as sns
 import json
 import os
 
-
 # Define a unified strategy mapping
 strategy_map = {
     'busy_A': {'label': 'Stubborn Neurons', 'color': 'C0', 'marker': 'o', 'linestyle': '--'},
@@ -233,136 +232,16 @@ def plot_pareto_mosaic(filepath, filename, experiment_name, strategies=None, fig
     plt.show()
 
 
+import os
+import json
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-
-def plot_old_new_knowledge_all_loRA(filepath, filename, experiment_name, strategies=None, loc_old='lower left', bbox_old=(1, 1), loc_new='lower right', bbox_new=(1, 1), y_lim_old_1=0.8, y_lim_old_2 = 1.01):
-    plt.style.use('seaborn-whitegrid')
-    plt.rcParams.update({
-        'font.size': 24,
-        'axes.labelsize': 24,
-        'axes.titlesize': 24,
-        'xtick.labelsize': 20,
-        'ytick.labelsize': 20,
-        'legend.fontsize': 20,
-        'font.family': 'serif',
-        'text.usetex': True,
-        'figure.figsize': (10, 8)
-    })
-
-    # Load data
-    with open(os.path.join(filepath, filename), 'r') as file: 
-        data = json.load(file)
-    
-    # Create output directory if it doesn't exist
-    output_dir = f"./figures/{experiment_name}"
-    os.makedirs(output_dir, exist_ok=True)
-
-    # This is likely overriding the plt parameters :(
-    #sns.set_theme(style="whitegrid", context="paper", font_scale=1.6)
- 
-    all_strategies = list(strategy_map_short.keys())
-
-    if strategies is None:
-        strategies = all_strategies
-
-    # Initialize fold results only for the selected strategies
-    n_folds = len(data['results'].keys())
-    
-    # Get the keys (thresholds) and sort them
-    thresholds = sorted(list(list(data['results'].values())[0]['cftb'].keys()), key=lambda x: float(x))
-    n_thresh = len(thresholds)
-    
-    fold_results = {strategy: {'accA': np.zeros((n_folds, n_thresh)), 'accB': np.zeros((n_folds, n_thresh))} for strategy in strategies}
-
-    fta_accA = 0
-    ftb_accA = 0
-    ftb_accB = 0
-    LoRAftb_accA = 0
-    LoRAftb_accB = 0
-
-    for i, fold in enumerate(data['results']):
-        fta_accA += data['results'][fold]['fta']['acc_A']
-        ftb_accA += data['results'][fold]['ftb']['avg_accA']
-        ftb_accB += data['results'][fold]['ftb']['avg_accB'] 
-
-        LoRAftb_accA += data['results'][fold]['LoRA-ftb']['avg_accA']
-        LoRAftb_accB += data['results'][fold]['LoRA-ftb']['avg_accB'] 
-
-        cftb_results = data['results'][fold]['cftb']
-
-        for j, t in enumerate(thresholds):
-            for strategy in strategies:
-                fold_results[strategy]['accA'][i, j] = float(cftb_results[t][strategy]['avg_accA'])
-                fold_results[strategy]['accB'][i, j] = float(cftb_results[t][strategy]['avg_accB'])
-
-    fta_accA /= n_folds
-    ftb_accA /= n_folds
-    ftb_accB /= n_folds
-    LoRAftb_accA /= n_folds
-    LoRAftb_accB /= n_folds
-
-    # Calculate means and standard deviations
-    means = {strategy: {'accA': np.mean(fold_results[strategy]['accA'], axis=0), 'accB': np.mean(fold_results[strategy]['accB'], axis=0)} for strategy in strategies}
-    stds = {strategy: {'accA': np.std(fold_results[strategy]['accA'], axis=0), 'accB': np.std(fold_results[strategy]['accB'], axis=0)} for strategy in strategies}
-
-    # Use the sorted thresholds as x_labels
-    x_labels = thresholds
-
-    # Plot - Accuracy of Previous Knowledge
-    plt.figure(figsize=(10, 6))
-    plt.axhline(y=fta_accA, color='firebrick', linestyle='solid', linewidth=1.5, alpha=0.80, label='Initial')
-    plt.axhline(y=ftb_accA, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
-    plt.axhline(y=LoRAftb_accA, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
-    
-    for strategy in strategies:
-        plt.errorbar(x_labels, means[strategy]['accA'], yerr=stds[strategy]['accA'], 
-                     linestyle=strategy_map_short[strategy]['linestyle'], linewidth=1.5, 
-                     color=strategy_map_short[strategy]['color'], marker=strategy_map_short[strategy]['marker'], 
-                     markersize=10, capsize=5, elinewidth=1.5, capthick=1.5, label=strategy_map_short[strategy]['label'])
-
-    plt.xlabel('Number of updated neurons')
-    plt.ylabel('Accuracy')
-    #plt.legend(loc=loc_old, bbox_to_anchor=bbox_old)
-    plt.grid(True)
-    plt.ylim(y_lim_old_1,y_lim_old_2)
-    plt.tight_layout()
-    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_old_knowledge.pdf", format='pdf', bbox_inches='tight')
-    plt.show()
-
-    # Plot - Accuracy of New Knowledge
-    plt.figure(figsize=(10, 6))
-    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
-    plt.axhline(y=LoRAftb_accB, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
-
-    
-    for strategy in strategies:
-        plt.errorbar(x_labels, means[strategy]['accB'], yerr=stds[strategy]['accB'], 
-                     linestyle=strategy_map_short[strategy]['linestyle'], linewidth=1.5, 
-                     color=strategy_map_short[strategy]['color'], marker=strategy_map_short[strategy]['marker'], 
-                     markersize=10, capsize=5, elinewidth=1.5, capthick=1.5, label=strategy_map_short[strategy]['label'])
-
-    plt.xlabel('Number of updated neurons')
-    plt.ylabel('Accuracy')
-    plt.legend(loc=loc_new, bbox_to_anchor=bbox_new)
-    plt.grid(True)
-    plt.tight_layout()
-    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_new_knowledge.pdf", format='pdf', bbox_inches='tight')
-    plt.show()
+# Assuming strategy_map is defined elsewhere in your code
+# If not, you'll need to define it before this function
 
 def plot_old_new_knowledge_all(filepath, filename, experiment_name, strategies=None, loc_old='lower left', bbox_old=(1, 1), loc_new='lower right', bbox_new=(1, 1), y_lim_old_1=0.8, y_lim_old_2 = 1.01):
-    # Set up the plot style
-    # plt.style.use('seaborn-whitegrid')
-    # plt.rcParams.update({
-    #     'font.size': 18,
-    #     'axes.labelsize': 20,
-    #     'axes.titlesize': 18,
-    #     'xtick.labelsize': 16,
-    #     'ytick.labelsize': 16,
-    #     'legend.fontsize': 16,
-    #     'font.family': 'serif',
-    #     'text.usetex': True,
-    #     'figure.figsize': (10, 8)
-    # })
     plt.style.use('seaborn-whitegrid')
     plt.rcParams.update({
         'font.size': 24,
@@ -464,6 +343,120 @@ def plot_old_new_knowledge_all(filepath, filename, experiment_name, strategies=N
     plt.grid(True)
     plt.tight_layout()
     plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_new_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+def plot_old_new_knowledge_all_loRA(filepath, filename, experiment_name, strategies=None, loc_old='lower left', bbox_old=(1, 1), loc_new='lower right', bbox_new=(1, 1), y_lim_old_1=0.8, y_lim_old_2 = 1.01):
+    plt.style.use('seaborn-whitegrid')
+    plt.rcParams.update({
+        'font.size': 24,
+        'axes.labelsize': 24,
+        'axes.titlesize': 24,
+        'xtick.labelsize': 20,
+        'ytick.labelsize': 20,
+        'legend.fontsize': 20,
+        'font.family': 'serif',
+        'text.usetex': True,
+        'figure.figsize': (10, 8)
+    })
+
+    # Load data
+    with open(os.path.join(filepath, filename), 'r') as file: 
+        data = json.load(file)
+    
+    # Create output directory if it doesn't exist
+    output_dir = f"./figures/{experiment_name}"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # This is likely overriding the plt parameters :(
+    #sns.set_theme(style="whitegrid", context="paper", font_scale=1.6)
+ 
+    all_strategies = list(strategy_map_short.keys())
+
+    if strategies is None:
+        strategies = all_strategies
+
+    # Initialize fold results only for the selected strategies
+    n_folds = len(data['results'].keys())
+    
+    # Get the keys (thresholds) and sort them
+    thresholds = sorted(list(list(data['results'].values())[0]['cftb'].keys()), key=lambda x: float(x))
+    n_thresh = len(thresholds)
+    
+    fold_results = {strategy: {'accA': np.zeros((n_folds, n_thresh)), 'accB': np.zeros((n_folds, n_thresh))} for strategy in strategies}
+
+    fta_accA = 0
+    ftb_accA = 0
+    ftb_accB = 0
+    LoRAftb_accA = 0
+    LoRAftb_accB = 0
+
+    for i, fold in enumerate(data['results']):
+        fta_accA += data['results'][fold]['fta']['acc_A']
+        ftb_accA += data['results'][fold]['ftb']['avg_accA']
+        ftb_accB += data['results'][fold]['ftb']['avg_accB'] 
+
+        LoRAftb_accA += data['results'][fold]['LoRA-ftb']['avg_accA']
+        LoRAftb_accB += data['results'][fold]['LoRA-ftb']['avg_accB'] 
+
+        cftb_results = data['results'][fold]['cftb']
+
+        for j, t in enumerate(thresholds):
+            for strategy in strategies:
+                fold_results[strategy]['accA'][i, j] = float(cftb_results[t][strategy]['avg_accA'])
+                fold_results[strategy]['accB'][i, j] = float(cftb_results[t][strategy]['avg_accB'])
+
+    fta_accA /= n_folds
+    ftb_accA /= n_folds
+    ftb_accB /= n_folds
+    LoRAftb_accA /= n_folds
+    LoRAftb_accB /= n_folds
+
+    # Calculate means and standard deviations
+    means = {strategy: {'accA': np.mean(fold_results[strategy]['accA'], axis=0), 'accB': np.mean(fold_results[strategy]['accB'], axis=0)} for strategy in strategies}
+    stds = {strategy: {'accA': np.std(fold_results[strategy]['accA'], axis=0), 'accB': np.std(fold_results[strategy]['accB'], axis=0)} for strategy in strategies}
+
+    # Use the sorted thresholds as x_labels
+    x_labels = thresholds
+
+    # Plot - Accuracy of Previous Knowledge
+    plt.figure(figsize=(10, 6))
+    plt.axhline(y=fta_accA, color='firebrick', linestyle='solid', linewidth=1.5, alpha=0.80, label='Initial')
+    plt.axhline(y=ftb_accA, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=LoRAftb_accA, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+    
+    for strategy in strategies:
+        plt.errorbar(x_labels, means[strategy]['accA'], yerr=stds[strategy]['accA'], 
+                     linestyle=strategy_map_short[strategy]['linestyle'], linewidth=1.5, 
+                     color=strategy_map_short[strategy]['color'], marker=strategy_map_short[strategy]['marker'], 
+                     markersize=10, capsize=5, elinewidth=1.5, capthick=1.5, label=strategy_map_short[strategy]['label'])
+
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    #plt.legend(loc=loc_old, bbox_to_anchor=bbox_old)
+    plt.grid(True)
+    plt.ylim(y_lim_old_1,y_lim_old_2)
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_old_knowledge_LoRa.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+    # Plot - Accuracy of New Knowledge
+    plt.figure(figsize=(10, 6))
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=LoRAftb_accB, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+
+    
+    for strategy in strategies:
+        plt.errorbar(x_labels, means[strategy]['accB'], yerr=stds[strategy]['accB'], 
+                     linestyle=strategy_map_short[strategy]['linestyle'], linewidth=1.5, 
+                     color=strategy_map_short[strategy]['color'], marker=strategy_map_short[strategy]['marker'], 
+                     markersize=10, capsize=5, elinewidth=1.5, capthick=1.5, label=strategy_map_short[strategy]['label'])
+
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    plt.legend(loc=loc_new, bbox_to_anchor=bbox_new)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_new_knowledge_LoRa.pdf", format='pdf', bbox_inches='tight')
     plt.show()
 
 # Function to plot old and new knowledge accuracies
@@ -603,6 +596,653 @@ def plot_stubborn_neurons_histogram(data, threshold, output_dir, experiment_name
     plt.close()
 
 
+
+def plot_editing_old_new_general_bug(experiment_name, filename, filepath, strategies, loc_old, bbox_old,loc_new, bbox_new, loc_gen, bbox_gen, y_lim_old_1, y_lim_old_2):
+    # Set up the plot style
+    plt.style.use('seaborn-whitegrid')
+    plt.rcParams.update({
+        'font.size': 30,
+        'axes.labelsize': 34,
+        'axes.titlesize': 30,
+        'xtick.labelsize': 30,
+        'ytick.labelsize': 32,
+        'legend.fontsize': 28,
+        'font.family': 'serif',
+        'text.usetex': True,
+        'figure.figsize': (10, 8)
+    })
+    # Create output directory if it doesn't exist
+    output_dir = f"./figures/{experiment_name}"
+    os.makedirs(output_dir, exist_ok=True)
+    # Load data
+    with open(os.path.join(filepath, filename), 'r') as file: 
+        data = json.load(file)
+    # with open(f'../results/experiment_3_1/experiment_3_1_2000_{N_SAMPLES}.json', 'r') as file: 
+    #     data = json.load(file)
+
+    results = data['results']
+
+    n_folds =  len(data['results'].keys())
+    n_thresh = len(list(data['results'].values())[0]['cft-notb'].keys())
+
+    fta_accA = 0
+
+    ftb_accA = 0
+    ftb_accB = 0
+    Loraftb_accA = 0
+    Loraftb_accB = 0
+    ftb_acc_gen = 0
+    
+
+    # Arrays to store individual fold results for calculating std dev
+    fold_results_cftb_busyA_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyA_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyA_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_freeA_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeA_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeA_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_busyB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_freeB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_specB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_specB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_specB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_rnd_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_rnd_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_rnd_gen = np.zeros((n_folds, n_thresh))
+
+    for i, fold in enumerate(data['results']):
+        # Was unfortunately missing from the initial analysis :( 
+        new_old_knowledge = data['results'][fold]['ftb']['acc_A']
+        # ftb_accA += data['results'][fold]['ft-notb']['avg_accA'] => change to:
+        ftb_accA += (data['results'][fold]['ft-notb']['avg_accA']/float(new_old_knowledge))
+        ftb_accB += data['results'][fold]['ft-notb']['avg_accB']
+
+        #Loraftb_accA += data['results'][fold]['LoRA-ft-notb']['avg_accA']
+        Loraftb_accA += (data['results'][fold]['LoRA-ft-notb']['avg_accA']/float(new_old_knowledge))
+        Loraftb_accB += data['results'][fold]['LoRA-ft-notb']['avg_accB']
+
+        cftb_results = data['results'][fold]['cft-notb']
+
+        fold_results_cftb_busyA_accA[i, :] = np.array([cftb_results[t]['busy_A']['avg_accA']/float(new_old_knowledge) for t in cftb_results]).astype(float)
+        fold_results_cftb_busyA_accB[i, :] = np.array([cftb_results[t]['busy_A']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyA_gen[i, :] = np.array([cftb_results[t]['busy_A']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_busyB_accA[i, :] = np.array([cftb_results[t]['busy_B']['avg_accA']/float(new_old_knowledge) for t in cftb_results]).astype(float)
+        fold_results_cftb_busyB_accB[i, :] = np.array([cftb_results[t]['busy_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyB_gen[i, :] = np.array([cftb_results[t]['busy_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_freeA_accA[i, :] = np.array([cftb_results[t]['free_A']['avg_accA']/float(new_old_knowledge) for t in cftb_results]).astype(float)
+        fold_results_cftb_freeA_accB[i, :] = np.array([cftb_results[t]['free_A']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeA_gen[i, :] = np.array([cftb_results[t]['free_A']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_freeB_accA[i, :] = np.array([cftb_results[t]['free_B']['avg_accA']/float(new_old_knowledge) for t in cftb_results]).astype(float)
+        fold_results_cftb_freeB_accB[i, :] = np.array([cftb_results[t]['free_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeB_gen[i, :] = np.array([cftb_results[t]['free_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_specB_accA[i, :] = np.array([cftb_results[t]['spec_B']['avg_accA']/float(new_old_knowledge) for t in cftb_results]).astype(float)
+        fold_results_cftb_specB_accB[i, :] = np.array([cftb_results[t]['spec_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_specB_gen[i, :] = np.array([cftb_results[t]['spec_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_rnd_accA[i, :] = np.array([cftb_results[t]['rnd']['avg_accA']/float(new_old_knowledge) for t in cftb_results]).astype(float)
+        fold_results_cftb_rnd_accB[i, :] = np.array([cftb_results[t]['rnd']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_rnd_gen[i, :] = np.array([cftb_results[t]['rnd']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+    fta_accA /= n_folds
+    ftb_accA /= n_folds
+    ftb_accB /= n_folds
+    Loraftb_accA /= n_folds
+    Loraftb_accB /= n_folds    
+    
+
+    cftb_freeA_accA = np.mean(fold_results_cftb_freeA_accA, axis=0)
+    cftb_freeA_accB = np.mean(fold_results_cftb_freeA_accB, axis=0)
+    cftb_freeA_gen = np.mean(fold_results_cftb_freeA_gen, axis=0)
+
+    cftb_freeB_accA = np.mean(fold_results_cftb_freeB_accA, axis=0)
+    cftb_freeB_accB = np.mean(fold_results_cftb_freeB_accB, axis=0)
+    cftb_freeB_gen = np.mean(fold_results_cftb_freeB_gen, axis=0)
+
+    cftb_busyA_accA = np.mean(fold_results_cftb_busyA_accA, axis=0)
+    cftb_busyA_accB = np.mean(fold_results_cftb_busyA_accB, axis=0)
+    cftb_busyA_gen = np.mean(fold_results_cftb_busyA_gen, axis=0)
+
+    cftb_busyB_accA = np.mean(fold_results_cftb_busyB_accA, axis=0)
+    cftb_busyB_accB = np.mean(fold_results_cftb_busyB_accB, axis=0)
+    cftb_busyB_gen = np.mean(fold_results_cftb_busyB_gen, axis=0)
+
+    cftb_specB_accA = np.mean(fold_results_cftb_specB_accA, axis=0)
+    cftb_specB_accB = np.mean(fold_results_cftb_specB_accB, axis=0)
+    cftb_specB_gen = np.mean(fold_results_cftb_specB_gen, axis=0)
+
+    cftb_rnd_accA = np.mean(fold_results_cftb_rnd_accA, axis=0)
+    cftb_rnd_accB = np.mean(fold_results_cftb_rnd_accB, axis=0)
+    cftb_rnd_gen = np.mean(fold_results_cftb_rnd_gen, axis=0)
+
+    # Calculate standard deviation
+    std_cftb_freeA_accA = np.std(fold_results_cftb_freeA_accA, axis=0)
+    std_cftb_freeA_accB = np.std(fold_results_cftb_freeA_accB, axis=0)
+    std_cftb_freeA_gen = np.std(fold_results_cftb_freeA_gen, axis=0)
+
+    std_cftb_freeB_accA = np.std(fold_results_cftb_freeB_accA, axis=0)
+    std_cftb_freeB_accB = np.std(fold_results_cftb_freeB_accB, axis=0)
+    std_cftb_freeB_gen = np.std(fold_results_cftb_freeB_gen, axis=0)
+
+    std_cftb_busyA_accA = np.std(fold_results_cftb_busyA_accA, axis=0)
+    std_cftb_busyA_accB = np.std(fold_results_cftb_busyA_accB, axis=0)
+    std_cftb_busyA_gen = np.std(fold_results_cftb_busyA_gen, axis=0)
+
+    std_cftb_busyB_accA = np.std(fold_results_cftb_busyB_accA, axis=0)
+    std_cftb_busyB_accB = np.std(fold_results_cftb_busyB_accB, axis=0)
+    std_cftb_busyB_gen = np.std(fold_results_cftb_busyB_gen, axis=0)
+
+    std_cftb_specB_accA = np.std(fold_results_cftb_specB_accA, axis=0)
+    std_cftb_specB_accB = np.std(fold_results_cftb_specB_accB, axis=0)
+    std_cftb_specB_gen = np.std(fold_results_cftb_specB_gen, axis=0)
+
+    std_cftb_rnd_accA = np.std(fold_results_cftb_rnd_accA, axis=0)
+    std_cftb_rnd_accB = np.std(fold_results_cftb_rnd_accB, axis=0)
+    std_cftb_rnd_gen = np.std(fold_results_cftb_rnd_gen, axis=0)
+
+    #fig, axs = plt.subplots(1, 1, figsize=(12, 6))
+    # Plot - Accuracy of Previous Knowledge
+    plt.figure(figsize=(12, 6))
+    plt.axhline(y=ftb_accA, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=Loraftb_accA, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+
+
+    # Creating custom x labels
+    x_labels = list(cftb_results.keys())
+
+    # First plotl 
+    plt.errorbar(x_labels, cftb_busyB_accA, yerr=std_cftb_busyB_accA, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_accA, yerr=std_cftb_freeA_accA, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_accA, yerr=std_cftb_specB_accA, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_accA, yerr=std_cftb_rnd_accA, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    #axs.set_title('Sequential learning experiment - Accuracy of Previous Knowledge')
+    #plt.legend(loc=loc_old, bbox_to_anchor=bbox_old)
+    plt.grid(True)
+    plt.ylim(y_lim_old_1, y_lim_old_2)
+    plt.tight_layout()
+    plt.xticks(ticks=x_labels, labels=[f"{int(int(x)/1000)}k" for x in x_labels])
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_old_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+    # Plot - Accuracy of New Knowledge
+    plt.figure(figsize=(12, 6))
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=Loraftb_accB, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+    plt.errorbar(x_labels, cftb_busyB_accB, yerr=std_cftb_busyB_accB, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_accB, yerr=std_cftb_freeA_accB, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_accB, yerr=std_cftb_specB_accB, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_accB, yerr=std_cftb_rnd_accB, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    plt.legend(loc=loc_new, bbox_to_anchor=bbox_new)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.xticks(ticks=x_labels, labels=[f"{int(int(x)/1000)}k" for x in x_labels])
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_new_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+
+    #plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(12, 6))
+
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+
+    plt.errorbar(x_labels, cftb_busyB_gen, yerr=std_cftb_busyB_gen, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_gen, yerr=std_cftb_freeA_gen, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_gen, yerr=std_cftb_specB_gen, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_gen, yerr=std_cftb_rnd_gen, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    #plt.legend(loc=loc_gen, bbox_to_anchor=bbox_gen)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.xticks(ticks=x_labels, labels=[f"{int(int(x)/1000)}k" for x in x_labels])
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_general_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+def plot_editing_old_new_general(experiment_name, filename, filepath, strategies, loc_old, bbox_old,loc_new, bbox_new, loc_gen, bbox_gen, y_lim_old_1, y_lim_old_2):
+    # Set up the plot style
+    plt.style.use('seaborn-whitegrid')
+    plt.rcParams.update({
+        'font.size': 30,
+        'axes.labelsize': 34,
+        'axes.titlesize': 30,
+        'xtick.labelsize': 30,
+        'ytick.labelsize': 32,
+        'legend.fontsize': 28,
+        'font.family': 'serif',
+        'text.usetex': True,
+        'figure.figsize': (10, 8)
+    })
+    # Create output directory if it doesn't exist
+    output_dir = f"./figures/{experiment_name}"
+    os.makedirs(output_dir, exist_ok=True)
+    # Load data
+    with open(os.path.join(filepath, filename), 'r') as file: 
+        data = json.load(file)
+    # with open(f'../results/experiment_3_1/experiment_3_1_2000_{N_SAMPLES}.json', 'r') as file: 
+    #     data = json.load(file)
+
+    results = data['results']
+
+    n_folds =  len(data['results'].keys())
+    n_thresh = len(list(data['results'].values())[0]['cft-notb'].keys())
+
+    fta_accA = 0
+
+    ftb_accA = 0
+    ftb_accB = 0
+    Loraftb_accA = 0
+    Loraftb_accB = 0
+    ftb_acc_gen = 0
+    
+
+    # Arrays to store individual fold results for calculating std dev
+    fold_results_cftb_busyA_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyA_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyA_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_freeA_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeA_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeA_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_busyB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_freeB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_specB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_specB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_specB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_rnd_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_rnd_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_rnd_gen = np.zeros((n_folds, n_thresh))
+
+    for i, fold in enumerate(data['results']):
+        ftb_accA += data['results'][fold]['ft-notb']['avg_accA']
+        ftb_accB += data['results'][fold]['ft-notb']['avg_accB']
+
+        #Loraftb_accA += data['results'][fold]['LoRA-ft-notb']['avg_accA']
+        Loraftb_accA += (data['results'][fold]['LoRA-ft-notb']['avg_accA'])
+        Loraftb_accB += data['results'][fold]['LoRA-ft-notb']['avg_accB']
+
+        cftb_results = data['results'][fold]['cft-notb']
+
+        fold_results_cftb_busyA_accA[i, :] = np.array([cftb_results[t]['busy_A']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyA_accB[i, :] = np.array([cftb_results[t]['busy_A']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyA_gen[i, :] = np.array([cftb_results[t]['busy_A']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_busyB_accA[i, :] = np.array([cftb_results[t]['busy_B']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyB_accB[i, :] = np.array([cftb_results[t]['busy_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyB_gen[i, :] = np.array([cftb_results[t]['busy_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_freeA_accA[i, :] = np.array([cftb_results[t]['free_A']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeA_accB[i, :] = np.array([cftb_results[t]['free_A']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeA_gen[i, :] = np.array([cftb_results[t]['free_A']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_freeB_accA[i, :] = np.array([cftb_results[t]['free_B']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeB_accB[i, :] = np.array([cftb_results[t]['free_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeB_gen[i, :] = np.array([cftb_results[t]['free_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_specB_accA[i, :] = np.array([cftb_results[t]['spec_B']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_specB_accB[i, :] = np.array([cftb_results[t]['spec_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_specB_gen[i, :] = np.array([cftb_results[t]['spec_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_rnd_accA[i, :] = np.array([cftb_results[t]['rnd']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_rnd_accB[i, :] = np.array([cftb_results[t]['rnd']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_rnd_gen[i, :] = np.array([cftb_results[t]['rnd']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+    fta_accA /= n_folds
+    ftb_accA /= n_folds
+    ftb_accB /= n_folds
+    Loraftb_accA /= n_folds
+    Loraftb_accB /= n_folds    
+    
+
+    cftb_freeA_accA = np.mean(fold_results_cftb_freeA_accA, axis=0)
+    cftb_freeA_accB = np.mean(fold_results_cftb_freeA_accB, axis=0)
+    cftb_freeA_gen = np.mean(fold_results_cftb_freeA_gen, axis=0)
+
+    cftb_freeB_accA = np.mean(fold_results_cftb_freeB_accA, axis=0)
+    cftb_freeB_accB = np.mean(fold_results_cftb_freeB_accB, axis=0)
+    cftb_freeB_gen = np.mean(fold_results_cftb_freeB_gen, axis=0)
+
+    cftb_busyA_accA = np.mean(fold_results_cftb_busyA_accA, axis=0)
+    cftb_busyA_accB = np.mean(fold_results_cftb_busyA_accB, axis=0)
+    cftb_busyA_gen = np.mean(fold_results_cftb_busyA_gen, axis=0)
+
+    cftb_busyB_accA = np.mean(fold_results_cftb_busyB_accA, axis=0)
+    cftb_busyB_accB = np.mean(fold_results_cftb_busyB_accB, axis=0)
+    cftb_busyB_gen = np.mean(fold_results_cftb_busyB_gen, axis=0)
+
+    cftb_specB_accA = np.mean(fold_results_cftb_specB_accA, axis=0)
+    cftb_specB_accB = np.mean(fold_results_cftb_specB_accB, axis=0)
+    cftb_specB_gen = np.mean(fold_results_cftb_specB_gen, axis=0)
+
+    cftb_rnd_accA = np.mean(fold_results_cftb_rnd_accA, axis=0)
+    cftb_rnd_accB = np.mean(fold_results_cftb_rnd_accB, axis=0)
+    cftb_rnd_gen = np.mean(fold_results_cftb_rnd_gen, axis=0)
+
+    # Calculate standard deviation
+    std_cftb_freeA_accA = np.std(fold_results_cftb_freeA_accA, axis=0)
+    std_cftb_freeA_accB = np.std(fold_results_cftb_freeA_accB, axis=0)
+    std_cftb_freeA_gen = np.std(fold_results_cftb_freeA_gen, axis=0)
+
+    std_cftb_freeB_accA = np.std(fold_results_cftb_freeB_accA, axis=0)
+    std_cftb_freeB_accB = np.std(fold_results_cftb_freeB_accB, axis=0)
+    std_cftb_freeB_gen = np.std(fold_results_cftb_freeB_gen, axis=0)
+
+    std_cftb_busyA_accA = np.std(fold_results_cftb_busyA_accA, axis=0)
+    std_cftb_busyA_accB = np.std(fold_results_cftb_busyA_accB, axis=0)
+    std_cftb_busyA_gen = np.std(fold_results_cftb_busyA_gen, axis=0)
+
+    std_cftb_busyB_accA = np.std(fold_results_cftb_busyB_accA, axis=0)
+    std_cftb_busyB_accB = np.std(fold_results_cftb_busyB_accB, axis=0)
+    std_cftb_busyB_gen = np.std(fold_results_cftb_busyB_gen, axis=0)
+
+    std_cftb_specB_accA = np.std(fold_results_cftb_specB_accA, axis=0)
+    std_cftb_specB_accB = np.std(fold_results_cftb_specB_accB, axis=0)
+    std_cftb_specB_gen = np.std(fold_results_cftb_specB_gen, axis=0)
+
+    std_cftb_rnd_accA = np.std(fold_results_cftb_rnd_accA, axis=0)
+    std_cftb_rnd_accB = np.std(fold_results_cftb_rnd_accB, axis=0)
+    std_cftb_rnd_gen = np.std(fold_results_cftb_rnd_gen, axis=0)
+
+    #fig, axs = plt.subplots(1, 1, figsize=(12, 6))
+    # Plot - Accuracy of Previous Knowledge
+    plt.figure(figsize=(12, 6))
+    plt.axhline(y=ftb_accA, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=Loraftb_accA, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+
+
+    # Creating custom x labels
+    x_labels = list(cftb_results.keys())
+
+    # First plotl 
+    plt.errorbar(x_labels, cftb_busyB_accA, yerr=std_cftb_busyB_accA, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_accA, yerr=std_cftb_freeA_accA, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_accA, yerr=std_cftb_specB_accA, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_accA, yerr=std_cftb_rnd_accA, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    #axs.set_title('Sequential learning experiment - Accuracy of Previous Knowledge')
+    #plt.legend(loc=loc_old, bbox_to_anchor=bbox_old)
+    plt.grid(True)
+    plt.ylim(y_lim_old_1, y_lim_old_2)
+    plt.tight_layout()
+    plt.xticks(ticks=x_labels, labels=[f"{int(int(x)/1000)}k" for x in x_labels])
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_old_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+    # Plot - Accuracy of New Knowledge
+    plt.figure(figsize=(12, 6))
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.axhline(y=Loraftb_accB, color='crimson', linestyle=(0, (5, 2, 1, 2)), linewidth=2.5, alpha=0.80, label='LoRA')
+    plt.errorbar(x_labels, cftb_busyB_accB, yerr=std_cftb_busyB_accB, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_accB, yerr=std_cftb_freeA_accB, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_accB, yerr=std_cftb_specB_accB, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_accB, yerr=std_cftb_rnd_accB, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    plt.legend(loc=loc_new, bbox_to_anchor=bbox_new)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.xticks(ticks=x_labels, labels=[f"{int(int(x)/1000)}k" for x in x_labels])
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_new_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+
+    #plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(12, 6))
+
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+
+    plt.errorbar(x_labels, cftb_busyB_gen, yerr=std_cftb_busyB_gen, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_gen, yerr=std_cftb_freeA_gen, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_gen, yerr=std_cftb_specB_gen, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_gen, yerr=std_cftb_rnd_gen, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    #plt.legend(loc=loc_gen, bbox_to_anchor=bbox_gen)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.xticks(ticks=x_labels, labels=[f"{int(int(x)/1000)}k" for x in x_labels])
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_general_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+
+def plot_editing_old_new_general_noLoRa(experiment_name, filename, filepath, strategies, loc_old, bbox_old,loc_new, bbox_new, loc_gen, bbox_gen, y_lim_old_1, y_lim_old_2):
+    # Set up the plot style
+    # plt.style.use('seaborn-whitegrid')
+    # plt.rcParams.update({
+    #     'font.size': 18,
+    #     'axes.labelsize': 20,
+    #     'axes.titlesize': 18,
+    #     'xtick.labelsize': 16,
+    #     'ytick.labelsize': 16,
+    #     'legend.fontsize': 16,
+    #     'font.family': 'serif',
+    #     'text.usetex': True,
+    #     'figure.figsize': (12, 6)
+    # })
+    plt.style.use('seaborn-whitegrid')
+    plt.rcParams.update({
+        'font.size': 24,
+        'axes.labelsize': 24,
+        'axes.titlesize': 24,
+        'xtick.labelsize': 20,
+        'ytick.labelsize': 20,
+        'legend.fontsize': 20,
+        'font.family': 'serif',
+        'text.usetex': True,
+        'figure.figsize': (10, 8)
+    })
+    # Create output directory if it doesn't exist
+    output_dir = f"./figures/{experiment_name}"
+    os.makedirs(output_dir, exist_ok=True)
+    # Load data
+    with open(os.path.join(filepath, filename), 'r') as file: 
+        data = json.load(file)
+    # with open(f'../results/experiment_3_1/experiment_3_1_2000_{N_SAMPLES}.json', 'r') as file: 
+    #     data = json.load(file)
+
+    results = data['results']
+
+    n_folds =  len(data['results'].keys())
+    n_thresh = len(list(data['results'].values())[0]['cft-notb'].keys())
+
+    fta_accA = 0
+
+    ftb_accA = 0
+    ftb_accB = 0
+    ftb_acc_gen = 0
+
+    # Arrays to store individual fold results for calculating std dev
+    fold_results_cftb_busyA_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyA_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyA_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_freeA_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeA_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeA_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_busyB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_busyB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_freeB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_freeB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_specB_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_specB_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_specB_gen = np.zeros((n_folds, n_thresh))
+
+    fold_results_cftb_rnd_accA = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_rnd_accB = np.zeros((n_folds, n_thresh))
+    fold_results_cftb_rnd_gen = np.zeros((n_folds, n_thresh))
+
+    for i, fold in enumerate(data['results']):
+
+        ftb_accA += data['results'][fold]['ft-notb']['avg_accA']
+        ftb_accB += data['results'][fold]['ft-notb']['avg_accB']
+
+        cftb_results = data['results'][fold]['cft-notb']
+
+        fold_results_cftb_busyA_accA[i, :] = np.array([cftb_results[t]['busy_A']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyA_accB[i, :] = np.array([cftb_results[t]['busy_A']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyA_gen[i, :] = np.array([cftb_results[t]['busy_A']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_busyB_accA[i, :] = np.array([cftb_results[t]['busy_B']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyB_accB[i, :] = np.array([cftb_results[t]['busy_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_busyB_gen[i, :] = np.array([cftb_results[t]['busy_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_freeA_accA[i, :] = np.array([cftb_results[t]['free_A']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeA_accB[i, :] = np.array([cftb_results[t]['free_A']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeA_gen[i, :] = np.array([cftb_results[t]['free_A']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_freeB_accA[i, :] = np.array([cftb_results[t]['free_B']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeB_accB[i, :] = np.array([cftb_results[t]['free_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_freeB_gen[i, :] = np.array([cftb_results[t]['free_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_specB_accA[i, :] = np.array([cftb_results[t]['spec_B']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_specB_accB[i, :] = np.array([cftb_results[t]['spec_B']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_specB_gen[i, :] = np.array([cftb_results[t]['spec_B']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+        fold_results_cftb_rnd_accA[i, :] = np.array([cftb_results[t]['rnd']['avg_accA'] for t in cftb_results]).astype(float)
+        fold_results_cftb_rnd_accB[i, :] = np.array([cftb_results[t]['rnd']['avg_accB'] for t in cftb_results]).astype(float)
+        fold_results_cftb_rnd_gen[i, :] = np.array([cftb_results[t]['rnd']['avg_acc_gen'] for t in cftb_results]).astype(float)
+
+    fta_accA /= n_folds
+    ftb_accA /= n_folds
+    ftb_accB /= n_folds
+
+    cftb_freeA_accA = np.mean(fold_results_cftb_freeA_accA, axis=0)
+    cftb_freeA_accB = np.mean(fold_results_cftb_freeA_accB, axis=0)
+    cftb_freeA_gen = np.mean(fold_results_cftb_freeA_gen, axis=0)
+
+    cftb_freeB_accA = np.mean(fold_results_cftb_freeB_accA, axis=0)
+    cftb_freeB_accB = np.mean(fold_results_cftb_freeB_accB, axis=0)
+    cftb_freeB_gen = np.mean(fold_results_cftb_freeB_gen, axis=0)
+
+    cftb_busyA_accA = np.mean(fold_results_cftb_busyA_accA, axis=0)
+    cftb_busyA_accB = np.mean(fold_results_cftb_busyA_accB, axis=0)
+    cftb_busyA_gen = np.mean(fold_results_cftb_busyA_gen, axis=0)
+
+    cftb_busyB_accA = np.mean(fold_results_cftb_busyB_accA, axis=0)
+    cftb_busyB_accB = np.mean(fold_results_cftb_busyB_accB, axis=0)
+    cftb_busyB_gen = np.mean(fold_results_cftb_busyB_gen, axis=0)
+
+    cftb_specB_accA = np.mean(fold_results_cftb_specB_accA, axis=0)
+    cftb_specB_accB = np.mean(fold_results_cftb_specB_accB, axis=0)
+    cftb_specB_gen = np.mean(fold_results_cftb_specB_gen, axis=0)
+
+    cftb_rnd_accA = np.mean(fold_results_cftb_rnd_accA, axis=0)
+    cftb_rnd_accB = np.mean(fold_results_cftb_rnd_accB, axis=0)
+    cftb_rnd_gen = np.mean(fold_results_cftb_rnd_gen, axis=0)
+
+    # Calculate standard deviation
+    std_cftb_freeA_accA = np.std(fold_results_cftb_freeA_accA, axis=0)
+    std_cftb_freeA_accB = np.std(fold_results_cftb_freeA_accB, axis=0)
+    std_cftb_freeA_gen = np.std(fold_results_cftb_freeA_gen, axis=0)
+
+    std_cftb_freeB_accA = np.std(fold_results_cftb_freeB_accA, axis=0)
+    std_cftb_freeB_accB = np.std(fold_results_cftb_freeB_accB, axis=0)
+    std_cftb_freeB_gen = np.std(fold_results_cftb_freeB_gen, axis=0)
+
+    std_cftb_busyA_accA = np.std(fold_results_cftb_busyA_accA, axis=0)
+    std_cftb_busyA_accB = np.std(fold_results_cftb_busyA_accB, axis=0)
+    std_cftb_busyA_gen = np.std(fold_results_cftb_busyA_gen, axis=0)
+
+    std_cftb_busyB_accA = np.std(fold_results_cftb_busyB_accA, axis=0)
+    std_cftb_busyB_accB = np.std(fold_results_cftb_busyB_accB, axis=0)
+    std_cftb_busyB_gen = np.std(fold_results_cftb_busyB_gen, axis=0)
+
+    std_cftb_specB_accA = np.std(fold_results_cftb_specB_accA, axis=0)
+    std_cftb_specB_accB = np.std(fold_results_cftb_specB_accB, axis=0)
+    std_cftb_specB_gen = np.std(fold_results_cftb_specB_gen, axis=0)
+
+    std_cftb_rnd_accA = np.std(fold_results_cftb_rnd_accA, axis=0)
+    std_cftb_rnd_accB = np.std(fold_results_cftb_rnd_accB, axis=0)
+    std_cftb_rnd_gen = np.std(fold_results_cftb_rnd_gen, axis=0)
+
+    #fig, axs = plt.subplots(1, 1, figsize=(12, 6))
+    # Plot - Accuracy of Previous Knowledge
+    plt.figure(figsize=(12, 6))
+    plt.axhline(y=ftb_accA, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+
+
+    # Creating custom x labels
+    x_labels = list(cftb_results.keys())
+
+    # First plotl 
+    plt.errorbar(x_labels, cftb_busyB_accA, yerr=std_cftb_busyB_accA, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_accA, yerr=std_cftb_freeA_accA, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_accA, yerr=std_cftb_specB_accA, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_accA, yerr=std_cftb_rnd_accA, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    #axs.set_title('Sequential learning experiment - Accuracy of Previous Knowledge')
+    plt.legend(loc=loc_old, bbox_to_anchor=bbox_old)
+    plt.grid(True)
+    plt.ylim(y_lim_old_1, y_lim_old_2)
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_old_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+    # Plot - Accuracy of New Knowledge
+    plt.figure(figsize=(12, 6))
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+    plt.errorbar(x_labels, cftb_busyB_accB, yerr=std_cftb_busyB_accB, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_accB, yerr=std_cftb_freeA_accB, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_accB, yerr=std_cftb_specB_accB, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_accB, yerr=std_cftb_rnd_accB, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    plt.legend(loc=loc_new, bbox_to_anchor=bbox_new)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_new_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
+
+
+    #plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(12, 6))
+
+    plt.axhline(y=ftb_accB, color='dimgrey', linestyle='solid', linewidth=1.5, alpha=0.80, label='Full FT')
+
+    plt.errorbar(x_labels, cftb_busyB_gen, yerr=std_cftb_busyB_gen, **strategy_map_short['busy_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_freeA_gen, yerr=std_cftb_freeA_gen, **strategy_map_short['free_A'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_specB_gen, yerr=std_cftb_specB_gen, **strategy_map_short['spec_B'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+    plt.errorbar(x_labels, cftb_rnd_gen, yerr=std_cftb_rnd_gen, **strategy_map_short['rnd'], linewidth=1.5, markersize=10, capsize=5, elinewidth=1.5, capthick=1.5)
+
+    plt.xlabel('Number of updated neurons')
+    plt.ylabel('Accuracy')
+    plt.legend(loc=loc_gen, bbox_to_anchor=bbox_gen)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/{filename[:-5]}_neuron_update_strategies_general_knowledge.pdf", format='pdf', bbox_inches='tight')
+    plt.show()
 ################ Old Plots ###################""
     
     # Function to plot old and new knowledge accuracies

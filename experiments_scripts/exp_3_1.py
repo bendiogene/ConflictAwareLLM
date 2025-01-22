@@ -23,7 +23,19 @@ os.environ['CURL_CA_BUNDLE'] = ''
 
 
 '''
-EXPERIMENT 3.1 SCRIPT
+EXPERIMENT 3.1 SCRIPT (before adding LoRa) Done
+
+A: lr1 /epoch1 (0.0010 in default conf)
+B: lr1/ epoch1
+NotB/Targetted: lr2/epoch2 (also 0.0010 in default conf)
+rest is lr2/epoch2 (also 0.0010 in default conf)
+
+
+The intial paper experiment was ran with epoch1 =10 epoch2 =20 and both LRs were 0.001 (Everything was 0.001 LR)
+
+accelerate launch --config_file  configs/gpt2-small_experiment3_1_iclr_submitted.yml experiments_scripts/exp_3_1.py
+
+Note that we varied sample_size_2 in [10, 100, 1000]
 
 '''    
 
