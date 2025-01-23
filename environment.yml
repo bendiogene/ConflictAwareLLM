@@ -1,0 +1,14 @@
+name: dissonance
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - accelerate
+  - pytorch
+  - matplotlib
+  - datasets
+  - joblib
+  - seaborn
+  - urllib3
+  - requests=2.27.1
+prefix: /home/zied/.conda/envs/dissonance

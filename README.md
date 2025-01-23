@@ -50,12 +50,14 @@ This repository contains code for reproducing our empirical studies, which evalu
 └── utils                 # Utility functions used in the experiments
 ```
 
-### ⚙️ Requirements
 
-- **Python**: 3.8 or higher
-- **accelerate**: Library for distributed training
-- **torch** and **transformers**: Libraries for model handling
-- Additional Python packages listed in [`requirements.txt`](./requirements.txt)
+### ⚙️ Setup
+
+```bash
+conda env create -f environment.yml
+conda activate [env-name]
+```
+
 
 ### download models
 
