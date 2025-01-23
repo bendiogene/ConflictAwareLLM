@@ -223,8 +223,8 @@ We performed other ablations which did not make it to the final paper (experimen
 ## 📜 Citation
 
 ```bibtex
-@article{2024epmembench,
-  title={Episodic Memories Generation and Evaluation Benchmark for Large Language Models},
+@article{2024dissonancellm,
+  title={In Praise of Stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs},
   author={Clemente, Simone and Ben Houidi, Zied and Huet, Alexis and Rossi, Dario and Franzese, Giulio and Michiardi, Pietro},
   journal={arXiv preprint arXiv:2501.XXXXX},
   year={2025}
