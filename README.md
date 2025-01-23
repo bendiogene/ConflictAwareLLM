@@ -10,7 +10,6 @@
 
 > Just as humans rely on cognitive dissonance and stubbornness to protect valuable knowledge while learning new information, we show that LLMs need similar mechanisms. Our empirical investigation reveals that dissonant updates in Large Language Models (LLMs) catastrophically destroy prior (unrelated) knowledge, unlike non-dissonant ones which are relatively harmless. We show that it's possible to make LLMs aware of such conflicts through simple features - enabling targeted updates for non-dissonant learning and prevention of destructive updates for dissonant cases. These findings call for future human-inspired methods where knowledge isn't erased but rather transformed and contextualized (just as humans retained their old knowledge when learning that Pluto isn't a planet).
 
-
 ## Towards Continual Integration of Episodic Memories in LLMs
 The long-term vision of this project is to develop methods for continually updating the world models of Large Language Models (LLMs), enabling them to incorporate episodic events, forming episodic memories - a crucial feature for future intelligent systems. This repository reports on our cognitively-inspired empirical investigations into how LLMs handle knowledge updates, focusing on the impact of dissonance and the selective updating of neural populations, on the preservation of old knowledge.
 
@@ -106,7 +105,7 @@ python experiments_scripts/exp_1_1_output_only.py --config configs/gpt2-small_ex
 ### Experiment 2.1: Targetted updates comparing different placement strategies
 
 <div align="center">
-<img src="../figs/Non-dissonant-experiment.png" alt="Overview of our experimental pipeline" width="60%" height="auto" >
+<img src="./figs/Non-dissonant-experiment.png" alt="Overview of our experimental pipeline" width="60%" height="auto" >
 </div>
 
 This script trains the model `model_name` on old (dataset A in the script) and new (dataset B) knowledge, using different placement strategies, with experiment parameters defined in the corresponding config file. The results in the paper for gpt2-small were ran with this script:
@@ -134,7 +133,7 @@ accelerate launch --config_file configs/gpu_4.yaml configs/gpt2-small_experiment
 ### Experiment 3.1: comparing different placement strategies
 
 <div align="center">
-<img src="../figs/dissonant_experiment.png" alt="Overview of our experimental pipeline"  width="60%" height="auto">
+<img src="./figs/dissonant_experiment.png" alt="Overview of our experimental pipeline"  width="60%" height="auto">
 </div>
 
 In this experiment, as shown in the figure, we sequentially train: 
