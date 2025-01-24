@@ -55,7 +55,7 @@ This repository contains code for reproducing our empirical studies, which evalu
 
 ```bash
 conda env create -f environment.yml
-conda activate [env-name]
+conda activate dissonance
 ```
 
 

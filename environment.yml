@@ -11,4 +11,3 @@ dependencies:
   - seaborn
   - urllib3
   - requests=2.27.1
-prefix: /home/zied/.conda/envs/dissonance
