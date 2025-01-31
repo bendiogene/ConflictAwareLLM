@@ -1,0 +1,102 @@
+GENERAL:
+  model_name: gpt-j-6b
+  model_dir: models/pt_models/gpt-j
+
+DEVICE_CONFIG:
+  cuda_device_order: PCI_BUS_ID
+  cuda_visible_devices: "0,1,3"
+  proxies:
+    http: http://localhost:3122
+    https: http://localhost:3122
+
+FT_CONFIG:
+  dataset_file: dataset/facts/counterfact_dataset/train.parquet
+  dataset_path: dataset/facts/counterfact_dataset
+
+  ft_modelH_path: experiments/gpt-j-6b/experiment_3_1/ft_modelH
+  ft_modelA_path: experiments/gpt-j-6b/experiment_3_1/ft_modelA
+  ft_modelB_path: experiments/gpt-j-6b/experiment_3_1/ft_modelB
+  none_path: null
+
+  logging_dir: experiments/gpt-j-6b/experiment_3_1/logs
+  
+  max_length: 128
+  start_sample: 0
+  sample_size_1: 200
+  sample_size_2: 100
+  training_lr_1: 0.00001
+  training_lr_2: 0.00001
+  num_epochs_1: 5
+  num_epochs_2: 10
+  batch_size: 10
+  eval_every_n_epochs: 10
+  historical_file_pathA: experiments/gpt-j-6b/experiment_3_1/historical_dataA.pkl
+  historical_file_pathB: experiments/gpt-j-6b/experiment_3_1/historical_dataB.pkl
+
+HISTORICAL_FEATURES_CONFIG:
+  patterns:
+  - \b\w+(?:\.attn\.q_proj)\b
+  - \b\w+(?:\.attn\.k_proj)\b
+  - \b\w+(?:\.attn\.v_proj)\b
+  - \b\w+(?:\.attn\.out_proj)\b
+  - \b\w+(?:\.mlp\.fc_in)\b
+  - \b\w+(?:\.mlp\.fc_out)\b
+
+  threshold:
+  - 2000
+  - 20000
+
+
+EXPERIMENT_CONFIG:
+  title: experiment_3_1
+  n_rep: 1
+  n_folds: 1
+  seeds:
+  - 46
+
+  save_int_models: False
+  results_dir: experiments/gpt-j-6b/experiment_3_1/results
+
+  strategies:
+
+    free_A:
+      inverse: False
+      norm: False
+      rnd: False
+      hist: historical_file_pathA
+      gen_hist: none_path
+
+    busy_A:
+      inverse: True
+      norm: False
+      rnd: False
+      hist: historical_file_pathA
+      gen_hist: none_path
+
+    free_B:
+      inverse: False
+      norm: False
+      rnd: False
+      hist: historical_file_pathB
+      gen_hist: none_path
+
+    busy_B:
+      inverse: True
+      norm: False
+      rnd: False
+      hist: historical_file_pathB
+      gen_hist: none_path
+
+    spec_B:
+      inverse: True
+      norm: False
+      rnd: False
+      hist: historical_file_pathA
+      gen_hist: historical_file_pathB
+
+    rnd:
+      inverse: True
+      norm: False
+      rnd: True
+      hist: historical_file_pathA
+      gen_hist: none_path
