@@ -22,6 +22,7 @@ from numpy.random import default_rng
 import shutil
 import tempfile
 import gc
+from peft import get_peft_model, LoraConfig
 
 
 """
