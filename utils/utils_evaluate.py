@@ -3,7 +3,7 @@ import sys
 sys.path.insert(1, '.')
 from collections.abc import Sequence
 import gc
-
+from accelerate import Accelerator
 import torch
 
 '''
@@ -15,8 +15,8 @@ def verify_acc(model, dataset, padding_mask, pad_token, get_idx=False, batch_siz
     if len(dataset) == 0:
         return 0
 
+
     device = model.device
-    
     model.eval()
 
     correct_facts = 0
@@ -63,7 +63,7 @@ def test_prediction_acc(model, batch, device, padding_mask=False, pad_token=5072
             logits = outputs.logits
         
         # Generate the answer
-        answers = torch.argmax(logits, dim=-1).squeeze().detach().cpu().numpy().tolist()
+        answers = torch.argmax(logits, dim=-1).squeeze().detach().cpu().float().numpy().tolist()
 
         labels = batch['labels']
 
