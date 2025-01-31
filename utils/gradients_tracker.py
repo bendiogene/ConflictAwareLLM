@@ -37,7 +37,7 @@ class WeightsTracker:
             regex = re.compile(self.pattern)
             if regex.search(name):
                 if param.grad is not None:
-                    self.gradients[name] = param.grad.data.clone().cpu().numpy()
+                    self.gradients[name] = param.grad.data.clone().cpu().float().numpy()
 
 
 
