@@ -10,4 +10,7 @@ dependencies:
   - joblib
   - seaborn
   - urllib3
+  - chardet
+  - tensorboard
+  - peft
   - requests=2.27.1
