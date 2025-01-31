@@ -1,0 +1,19 @@
+compute_environment: LOCAL_MACHINE
+distributed_type: DEEPSPEED
+num_machines: 1
+num_processes: 3
+use_cpu: false
+mixed_precision: bf16
+deepspeed_config:
+  gradient_clipping: 1.0
+  zero_stage: 2  # Instead of 3
+  bf16:
+    enabled: true 
+  fp16:
+    enabled: false
+  zero_optimization:
+    stage: 2
+    overlap_comm: true
+    contiguous_gradients: true
+    reduce_bucket_size: 5e8
+    reduce_scatter: true
