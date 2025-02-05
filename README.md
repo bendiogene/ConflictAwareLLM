@@ -8,6 +8,8 @@
 
 </div>
 
+&nbsp;
+
 > Just as humans rely on cognitive dissonance and stubbornness to protect valuable knowledge while learning new information, we show that LLMs need similar mechanisms. Our empirical investigation reveals that dissonant updates in Large Language Models (LLMs) catastrophically destroy prior (unrelated) knowledge, unlike non-dissonant ones which are relatively harmless. We show that it's possible to make LLMs aware of such conflicts through simple features - enabling targeted updates for non-dissonant learning and prevention of destructive updates for dissonant cases. These findings call for future human-inspired methods where knowledge isn't erased but rather transformed and contextualized (just as humans retained their old knowledge when learning that Pluto isn't a planet).
 
 ## Towards Continual Integration of Episodic Memories in LLMs
