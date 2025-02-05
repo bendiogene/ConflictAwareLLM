@@ -4,7 +4,7 @@
 
   [![arxiv](https://img.shields.io/badge/arxiv-2501.XXalexzieXX-b31b1b.svg)](https://arxiv.org/abs/2501.XXXXX) [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-<img src="./figs/Experimental_overview_with_my_art_LoRa_3models.png" alt="Overview of our experimental pipeline" width="90%" height="auto" style="background-color: white;">
+<img src="./figs/Experimental_overview_with_my_art_LoRa_3models.png" alt="Overview of our experimental pipeline" width="100%" height="auto" style="background-color: white;">
 
 </div>
 
