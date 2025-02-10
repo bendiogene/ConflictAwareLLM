@@ -2,7 +2,7 @@
 
 # 🧠 In Praise of Stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs
 
-  [![arxiv](https://img.shields.io/badge/arxiv-2501.XXalexzieXX-b31b1b.svg)](https://arxiv.org/abs/2501.XXXXX) [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  [![arxiv](https://img.shields.io/badge/arxiv-2502.04390-b31b1b.svg)](https://arxiv.org/abs/2502.04390) [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 <img src="./figs/Experimental_overview_with_my_art_LoRa_3models.png" alt="Overview of our experimental pipeline" width="100%" height="auto" style="background-color: white;">
 
@@ -230,7 +230,7 @@ We performed other ablations which did not make it to the final paper (experimen
 @article{2024dissonancellm,
   title={In Praise of Stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs},
   author={Clemente, Simone and Ben Houidi, Zied and Huet, Alexis and Rossi, Dario and Franzese, Giulio and Michiardi, Pietro},
-  journal={arXiv preprint arXiv:2501.XXXXX},
+  journal={arXiv preprint arXiv:2502.04390},
   year={2025}
 }
 ```
