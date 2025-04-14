@@ -62,7 +62,7 @@ EXPERIMENT_CONFIG:
 
   last_token: True
 
-  extraction: False
+  extraction: True
   classification: True
   
   paraphrases: False
