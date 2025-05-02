@@ -83,7 +83,7 @@ The Counterfact dataset does not contain unknown facts. We hence generate data f
 #### Step1: historical data extraction + training:
 
 ```bash
-accelerate launch --config_file  configs/gpu_4.yaml experiments_scripts/experiment_1_1.py --config configs/[model_name]_experiment1_1.yml
+accelerate launch --config_file  configs/gpu_4.yaml experiments_scripts/exp_1_1_train.py --config configs/[model_name]_experiment1_1.yml
 ```
 
 #### Step2: *current* feature extraction + classification:
