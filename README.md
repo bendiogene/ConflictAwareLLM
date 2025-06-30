@@ -231,9 +231,14 @@ We performed other ablations which did not make it to the final paper (experimen
   title={In Praise of Stubbornness: The Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs},
   author={Clemente, Simone and Ben Houidi, Zied and Huet, Alexis and Rossi, Dario and Franzese, Giulio and Michiardi, Pietro},
   journal={arXiv preprint arXiv:2502.04390},
-  year={2025}
+  year={2025},
+  note = {S.~Clemente and Z.~Ben Houidi contributed equally. Z.~Ben Houidi designed the work.}
 }
 ```
+
+## Contributors
+
+See [contributors](contributors.md) for contributions of the two main first authors of this work.
 
 ## 📄 License
 
